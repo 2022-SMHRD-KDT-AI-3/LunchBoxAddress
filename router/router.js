@@ -17,6 +17,18 @@ router.get("/main", function (request, response) {
     }) // 로그인x :null / 로그인o : 사용자정보
 })
 
+router.get("/restaurant", function (request, response) {
+    
+    // console.log(`세션에 저장된 email 값 ${request.session.user.email}`);
+    // console.log(`세션에 저장된 tel 값 ${request.session.user.tel}`);
+    // console.log(`세션에 저장된 address 값 ${request.session.user.address}`);
+
+    response.render("message", {
+        user: request.session.user
+        
+    }) // 로그인x :null / 로그인o : 사용자정보
+})
+
 router.post("/Join", function (request,response) {
     let email = request.body.email;
     let pw = request.body.pw;

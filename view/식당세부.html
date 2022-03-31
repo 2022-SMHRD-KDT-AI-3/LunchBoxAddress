@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>OnePage Bootstrap Template - Index</title>
+  <title>식당페이지 만드는 중</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -13,15 +13,10 @@
   <link href="../public/assets/img/favicon.png" rel="icon">
   <link href="../public/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-
   <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
-
 
   <!-- Vendor CSS Files -->
   <link href="../public/assets/vendor/aos/aos.css" rel="stylesheet">
@@ -44,104 +39,120 @@
 </head>
 
 <body>
-  <main id="main">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03"
-          aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="navbarColor03">
-          <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Home
-                <span class="visually-hidden">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-                aria-expanded="false">Dropdown</a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Separated link</a>
-              </div>
-            </li>
-          </ul>
-          <form class="d-flex">
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
 
-            <!--검색바!!  -->
-            <!-- <input class="form-control me-sm-2" type="text" placeholder="Search"> -->
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+      <h1 class="logo"><a href="메인페이지.html">Lunch Box</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar menu" class="navbar">
+        <ul class="links">
+          <!-- <li><a class="nav-link scrollto " href="#hero">Home</a></li> -->
+          <li class="dropdown"><a href="#"><span></span> <i class="bi bi-search"></i></a></li>
+          <li>
+            <h5>로그인</h5>
+          </li>
+          <form action="http://127.0.0.1:3000/Login" method="post">
+            <li><input type="text" name="email" placeholder="Email을 입력하세요"></li>
+            <li><input type="password" name="pw" placeholder="PW를 입력하세요"></li>
+            <li><input type="submit" value="LogIn" class="button fit"></li>
           </form>
-        </div>
-      </div>
-    </nav>
+        </ul>
+        <ul class="actions vertical">
+          <li>
+            <h5>회원가입</h5>
+          </li>
+          <form action="http://127.0.0.1:3000/Join" method="post">
+            <li><input type="text" name="email" placeholder="Email을 입력하세요"></li>
+            <li><input type="password" name="pw" placeholder="PW를 입력하세요"></li>
+            <li><input type="text" name="tel" placeholder="전화번호를 입력하세요"></li>
+            <li><input type="text" name="address" placeholder="집주소를 입력하세요"></li>
+            <li><input type="submit" value="JoinUs" class="button fit"></li>
+          </form>
+          <li><a class="getstarted scrollto" href="#about">로그인</a></li>
+        </ul>
+      </nav><!-- .navbar -->
 
-    <!-- ======= About Video Section ======= -->
-    <section id="about-video" class="about-video">
-      <div class="container" data-aos="fade-up">
+    </div>
+  </header><!-- End Header -->
 
-        <div class="row">
+  <main id="main">
 
-          <div class="col-lg-6 video-box align-self-baseline" data-aos="fade-right" data-aos-delay="100">
-            <img src="../public/assets/img/about-video.jpg" class="img-fluid" alt="">
-            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4" data-vbtype="video"
-              data-autoplay="true"></a>
-          </div>
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
 
-          <div class="col-lg-6 pt-3 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-            <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua.
-            </p>
-            <ul>
-              <li>
-                <i class="bx bx-check-double"></i>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </li>
-              <li>
-                <i class="bx bx-check-double"></i>
-                Duis aute irure dolor in reprehenderit in voluptate velit.
-              </li>
-              <li>
-                <i class="bx bx-check-double"></i>
-                Voluptate repellendus pariatur reprehenderit corporis sint.
-              </li>
-              <li>
-                <i class="bx bx-check-double"></i>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat
-                nulla pariatur.
-              </li>
-            </ul>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-              in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-              deserunt mollit anim id est laborum
-            </p>
-          </div>
-
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>식당명변수 넣는 곳</h2>
+          <ol>
+            <li><a href="메인페이지.html">Home</a></li>
+            <li>식당명변수 넣기</li>
+          </ol>
         </div>
 
       </div>
-    </section>
-    <!-- End About Video Section -->
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="../public/assets/img/portfolio/portfolio-1.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="../public/assets/img/portfolio/portfolio-2.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="../public/assets/img/portfolio/portfolio-3.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>식당명변수 넣기</h3>
+              <ul>
+                <li><strong>식당 업태</strong>: 업태변수 넣기</li>
+                <li><strong>주소 및 현재위치로부터 식당거리</strong>: 주소및 거리변수 넣기</li>
+                <li><strong>연락처</strong>: 연락처 변수넣기</li>
+                <li><strong>영업시간</strong>: 영업시간 변수 넣기</li>
+                <li><strong> 휴무일 (+브레이크 타임)</strong>:휴무일 변수 넣기</li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>메뉴정보</h2>
+              <p>
+              <ul>
+                <li>
+                  <p>
+                    <span>메뉴 명</span>
+                  </p>
+                  <p>가격</p>
+                </li>
+              </ul>
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
 
     <!-- ======= Counts Section ======= -->
     <section id="counts" class="counts section-bg">
@@ -153,7 +164,7 @@
             <div class="count-box">
               <span data-purecounter-start="0" data-purecounter-end="65" data-purecounter-duration="2"
                 class="purecounter"></span>
-              <p>Happy Clients</p>
+              <p>총 평가점수</p>
             </div>
           </div>
 
@@ -161,7 +172,7 @@
             <div class="count-box">
               <span data-purecounter-start="0" data-purecounter-end="85" data-purecounter-duration="2"
                 class="purecounter"></span>
-              <p>Projects</p>
+              <p>맛 점수</p>
             </div>
           </div>
 
@@ -169,7 +180,7 @@
             <div class="count-box">
               <span data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="2"
                 class="purecounter"></span>
-              <p>Years of experience</p>
+              <p>가격 점수 </p>
             </div>
           </div>
 
@@ -177,7 +188,7 @@
             <div class="count-box">
               <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="2"
                 class="purecounter"></span>
-              <p>Awards</p>
+              <p>서비스 점수</p>
             </div>
           </div>
 
@@ -186,48 +197,14 @@
       </div>
     </section><!-- End Counts Section -->
 
-    <!-- ======= Clients Section ======= -->
-    <!-- <section id="clients" class="clients section-bg">
-          <div class="container">
-    
-            <div class="row">
-    
-              <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center" data-aos="zoom-in">
-                <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
-              </div>
-    
-              <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center" data-aos="zoom-in">
-                <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
-              </div>
-    
-              <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center" data-aos="zoom-in">
-                <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
-              </div>
-    
-              <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center" data-aos="zoom-in">
-                <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
-              </div>
-    
-              <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center" data-aos="zoom-in">
-                <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
-              </div>
-    
-              <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center" data-aos="zoom-in">
-                <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
-              </div>
-    
-            </div>
-    
-          </div>
-        </section>End Clients Section -->
 
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>--블로그리뷰 보여주기--</h2>
-          <p>지연콩의 뿡빠랑삥뽕 맛집탐방</p>
+          <h2>사용자 리뷰</h2>
+          <p>설명글 넣기</p>
         </div>
 
         <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
@@ -242,7 +219,7 @@
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <img src="../public/assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
+                <h3>찬둘루</h3>
                 <h4>Ceo &amp; Founder</h4>
               </div>
             </div><!-- End testimonial item -->
@@ -256,7 +233,7 @@
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <img src="../public/assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
+                <h3>김준용</h3>
                 <h4>Designer</h4>
               </div>
             </div><!-- End testimonial item -->
@@ -270,7 +247,7 @@
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <img src="../public/assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
+                <h3>공지연</h3>
                 <h4>Store Owner</h4>
               </div>
             </div><!-- End testimonial item -->
@@ -284,7 +261,7 @@
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <img src="../public/assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
+                <h3>이상원</h3>
                 <h4>Freelancer</h4>
               </div>
             </div><!-- End testimonial item -->
@@ -298,7 +275,7 @@
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <img src="../public/assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
+                <h3>안영균</h3>
                 <h4>Entrepreneur</h4>
               </div>
             </div><!-- End testimonial item -->
@@ -315,10 +292,8 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Sevices</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-            in iste officiis commodi quidem hic quas.</p>
+          <h2>블로그리뷰</h2>
+          <p>광고/ 비광고로 구분했고 참고하시오~</p>
         </div>
 
         <div class="row">
@@ -332,8 +307,8 @@
                 </svg>
                 <i class="bx bxl-dribbble"></i>
               </div>
-              <h4><a href="">Lorem Ipsum</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+              <h4><a href="">네이버 광고리뷰입니둥</a></h4>
+              <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
             </div>
           </div>
 
@@ -348,8 +323,8 @@
                 </svg>
                 <i class="bx bx-file"></i>
               </div>
-              <h4><a href="">Sed Perspiciatis</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+              <h4><a href="">네이버 광고리뷰임둥</a></h4>
+              <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
             </div>
           </div>
 
@@ -364,7 +339,7 @@
                 </svg>
                 <i class="bx bx-tachometer"></i>
               </div>
-              <h4><a href="">Magni Dolores</a></h4>
+              <h4><a href="">네이버 광고리뷰임둥</a></h4>
               <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
             </div>
           </div>
@@ -379,7 +354,7 @@
                 </svg>
                 <i class="bx bx-layer"></i>
               </div>
-              <h4><a href="">Nemo Enim</a></h4>
+              <h4><a href="">네이버 비광고리뷰임둥</a></h4>
               <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
             </div>
           </div>
@@ -394,7 +369,7 @@
                 </svg>
                 <i class="bx bx-slideshow"></i>
               </div>
-              <h4><a href="">Dele Cardo</a></h4>
+              <h4><a href="">네이버 비광고리뷰임둥</a></h4>
               <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
             </div>
           </div>
@@ -409,7 +384,7 @@
                 </svg>
                 <i class="bx bx-arch"></i>
               </div>
-              <h4><a href="">Divera Don</a></h4>
+              <h4><a href="">네이버 비광고리뷰임둥</a></h4>
               <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
             </div>
           </div>
@@ -420,8 +395,87 @@
     </section><!-- End Sevices Section -->
 
 
-
   </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>OnePage</h3>
+            <p>
+              A108 Adam Street <br>
+              New York, NY 535022<br>
+              United States <br><br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Join Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>OnePage</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/ -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="../public/assets/vendor/purecounter/purecounter.js"></script>
