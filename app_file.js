@@ -6,7 +6,7 @@ var fs = require('fs');
 
 var storage = multer.diskStorage({
     destination: function(req, file, cb) { //cb -> call back함수 줄임말
-        cb(null, 'uploads/')
+        cb(null, 'public/assets/img/review_img')
     },
     filename: function(req, file, cb) { //파일이름이 중복되지않게 변수설정
         const ext = path.extname(file.originalname);
@@ -20,7 +20,7 @@ var app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.locals.pretty = true;
-app.use('/UploadPractice', express.static('uploads'));
+app.use('/LunchBoxAddress', express.static('uploads'));
 app.set('views', './views_file'); //템플릿 파일의 경로 세팅
 app.set('view engine', 'jade'); //뷰엔진 jadf를 사용하겠다는 명시
 app.get('/upload', function(req, res){
