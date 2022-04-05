@@ -9,11 +9,11 @@ const session_mysql_save = require("express-mysql-session");
 
 //1-1 mysql의 session에 대한 정보
 let DB_info = {
-    host: '127.0.0.1',
-    user: 'root',
-    password: '1234',
-    port: '3306',
-    database: 'nodejs'
+     host: 'project-db-stu.ddns.net',
+    user: 'campus_g_0325_2',
+    password: 'smhrd2',
+    port: '3307',
+    database: 'campus_g_0325_2'
 
 }
 //1-2 저장하기위한 모듈을 사용하는데 그안에 있는 정보는 DB_info에서 가져옴

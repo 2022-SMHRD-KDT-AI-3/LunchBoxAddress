@@ -3,11 +3,11 @@ const mysql = require("mysql");
 
 // mysql연결
 let conn = mysql.createConnection({
-    host: '127.0.0.1',
-    user: 'root',
-    password: '1234',
-    port: '3306',
-    database: 'nodejs'
+     host: 'project-db-stu.ddns.net',
+    user: 'campus_g_0325_2',
+    password: 'smhrd2',
+    port: '3307',
+    database: 'campus_g_0325_2'
 });
 conn.connect();
 
