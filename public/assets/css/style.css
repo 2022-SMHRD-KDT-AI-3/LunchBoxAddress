@@ -125,6 +125,7 @@ h6 {
   z-index: 997;
   padding: 15px 0;
   border-bottom: 1px solid #e6f2fb;
+  padding-left: 5%;
 }
 #header.header-scrolled {
   border-color: #fff;
@@ -411,12 +412,14 @@ h6 {
 }
 #hero .icon-boxes {
   margin-top: 100px;
+  
 }
 #hero .icon-box {
-  padding: 50px 30px;
+
+  padding: 30px 30px;
   /* position: relative; */
-  width: 500px;
-  height: 320px;
+  width: 100%;
+  height: 60%;
   overflow: hidden;
   background: #fff;
   box-shadow: 0 0 29px 0 rgba(18, 66, 101, 0.08);
@@ -426,8 +429,9 @@ h6 {
 }
 #hero .icon-box .title {
   font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 18px;
+  margin: bottom 30px;
+  font-size: 15px;
+  text-align: center;
 }
 #hero .icon-box .title a {
   color: #124265;
@@ -438,7 +442,10 @@ h6 {
   line-height: 28px;
   margin-bottom: 0;
 }
-#hero .icon-box .icon {
+#box_1.row.icon-boxes_1 {
+ margin-top: 10px;
+}
+/* #hero .icon-box .icon {
   margin-bottom: 20px;
   padding-top: 10px;
   display: inline-block;
@@ -446,7 +453,7 @@ h6 {
   font-size: 36px;
   line-height: 1;
   color: #2487ce;
-}
+} */
 #hero .icon-box:hover {
   transform: scale(1.08);
 }
@@ -1735,4 +1742,61 @@ section {
   height: 250px;
   /*서브메뉴 li한개의 높이 50*5*/
   transition-duration: 1s;
+}
+
+
+
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+/* weegle 이미지
+header .logo {
+  padding-top: 150px;
+  width: 600px;
+} */
+
+/* search :bar */
+.search input {
+  margin-left: 5%;
+  width: 40%;
+  height: 50%;
+  border: 2px solid rgb(209, 207, 207);
+  border-radius: 15px;
+}
+
+
+
+h1.logo {
+  /* overflow:hiddlen;
+  white-space:nowrap; */
+  display : inline-block;
+  margin-left: 500%;
+}
+
+.material-icons-outlined{
+  /* width: 30%;
+  height: 50%;
+  right: -145%;
+   padding-top: -%; 
+  
+  text-align: center;
+  line-height: 0%;
+  position: relative; */
+  vertical-align: middle;
+
+}
+#box_1,#box_2{
+  text-align: center;
 }
