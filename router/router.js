@@ -1,7 +1,7 @@
 const { Router } = require("express");
 const express = require("express");
 const expressMysqlSession = require("express-mysql-session");
-// const req = require("express/lib/request");
+const req = require("express/lib/request");
 const router = express.Router();
 const conn = require("../config/DB.js");
 
@@ -22,7 +22,8 @@ router.post("/Join", function (request, response) {
     let nick = request.body.nick;
 
     let sql = "insert into user_info values(?,?,?,?, now())";
-    conn.query(sql, [email, pw, nick, gender], function (err, rows) {
+    conn.query(sql, [email, pw, gender, nick], function (err, rows) {
+
         if (rows) {
             console.log("회원가입성공");
             response.redirect("http://127.0.0.1:3307/login");
@@ -46,6 +47,7 @@ router.post("/login", function (request,response) {
                 "gender": rows[0].gender,
                 "nick": rows[0].nick
             }
+            response.redirect("http://127.0.0.1:3307/main");
         } else {
             console.log("로그인실패임둥");
         }
