@@ -14,7 +14,6 @@ let DB_info = {
     password: 'smhrd2',
     port: '3307',
     database: 'campus_g_0325_2'
-
 }
 
 let s_m_s = new session_mysql_save(DB_info);

@@ -22,7 +22,7 @@ router.post("/Join", function (request, response) {
     let nick = request.body.nick;
 
     let sql = "insert into user_info values(?,?,?,?, now())";
-    conn.query(sql, [email, pw, gender, nick], function (err, rows) {
+    conn.query(sql, [email, pw, nick, gender], function (err, rows) {
         if (rows) {
             console.log("회원가입성공");
             response.redirect("http://127.0.0.1:3307/login");
@@ -35,7 +35,6 @@ router.post("/Join", function (request, response) {
 router.post("/login", function (request,response) {
     let email = request.body.email;
     let pw = request.body.pw;
-    let ck_id = request.body.ck_id;
 
     let sql = "select * from user_info where email = ? and pw = ?";
     conn.query(sql, [email, pw], function (err, rows) {
