@@ -5,9 +5,12 @@
     "express": "^4.17.3",
     "express-mysql-session": "^2.1.7",
     "express-session": "^1.17.2",
+    "flask": "^0.2.10",
     "jade": "^1.11.0",
     "multer": "^1.4.4",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "request": "^2.88.2",
+    "scikit-learn": "^0.1.0"
   },
   "name": "lunchbox",
   "version": "1.0.0",

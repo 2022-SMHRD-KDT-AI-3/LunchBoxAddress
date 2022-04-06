@@ -78,4 +78,17 @@ router.get("/reco", function(request, response) { // main에서 값을 받는 �
     });
 });
 
+
+// 식당페이지 ====
+
+
+router.get("/resPage", function (request, response) {
+
+    
+    response.render("resPage", {
+        restaurant: request.session.user
+        
+    }) 
+});
+
 module.exports = router;

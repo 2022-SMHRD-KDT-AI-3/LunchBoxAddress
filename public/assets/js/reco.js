@@ -1,7 +1,7 @@
 function test1(){
     let btn = document.querySelector("#test1").value;
     $.ajax({
-        url : "http://127.0.0.1:5000/reco", // 데이터를 요청할 서버의 경로(플라스크 서버)
+        url : "http://127.0.0.1:3307/reco", // 데이터를 요청할 서버의 경로(플라스크 서버)
         data : {"data" : btn}, // 플라스크 서버에 데이터를 요청할 때 "data" 라는 이름으로 btn 변수의 값을 보냄
         success : (result) => { // 데이터를 성공적으로 가져올 경우에
             // location.href = "#recoTitle"; // 식당 목록 섹션으로 이동하고(확인차 주석 처리함)
@@ -33,7 +33,7 @@ function test1(){
 function test2(){
     let btn = document.querySelector("#test2").value;
     $.ajax({
-        url : "http://127.0.0.1:5000/reco",
+        url : "http://127.0.0.1:3307/reco",
         data : {"data" : btn},
         success : (result) => {
             const entries = Object.entries(result);
@@ -64,7 +64,7 @@ function test2(){
 function test3(){
     let btn = document.querySelector("#test3").value;
     $.ajax({
-        url : "http://127.0.0.1:5000/reco",
+        url : "http://127.0.0.1:3307/reco",
         data : {"data" : btn},
         success : (result) => {
             const entries = Object.entries(result);
@@ -95,7 +95,7 @@ function test3(){
 function test4(){
     let btn = document.querySelector("#test4").value;
     $.ajax({
-        url : "http://127.0.0.1:5000/reco",
+        url : "http://127.0.0.1:3307/reco",
         data : {"data" : btn},
         success : (result) => {
             const entries = Object.entries(result);
@@ -126,7 +126,7 @@ function test4(){
 function test5(){
     let btn = document.querySelector("#test5").value;
     $.ajax({
-        url : "http://127.0.0.1:5000/reco",
+        url : "http://127.0.0.1:3307/reco",
         data : {"data" : btn},
         success : (result) => {
             const entries = Object.entries(result);
@@ -157,7 +157,7 @@ function test5(){
 function test6(){
     let btn = document.querySelector("#test6").value;
     $.ajax({
-        url : "http://127.0.0.1:5000/reco",
+        url : "http://127.0.0.1:3307/reco",
         data : {"data" : btn},
         success : (result) => {
             const entries = Object.entries(result);
@@ -188,7 +188,7 @@ function test6(){
 function test7(){
     let btn = document.querySelector("#test7").value;
     $.ajax({
-        url : "http://127.0.0.1:5000/reco",
+        url : "http://127.0.0.1:3307/reco",
         data : {"data" : btn},
         success : (result) => {
             const entries = Object.entries(result);
@@ -219,7 +219,7 @@ function test7(){
 function test8(){
     let btn = document.querySelector("#test8").value;
     $.ajax({
-        url : "http://127.0.0.1:5000/reco",
+        url : "http://127.0.0.1:3307/reco",
         data : {"data" : btn},
         success : (result) => {
             const entries = Object.entries(result);
