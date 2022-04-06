@@ -1,12 +1,13 @@
 const express = require("express");
 const cookieParser = require('cookie-parser');
-const app = express();
+
 const router = require("./router/router.js");
 const bodyparser = require("body-parser");
 const ejs = require("ejs");
 const path = require("path");
 const session = require("express-session");
 const session_mysql_save = require("express-mysql-session");
+const app = express();
 
 let DB_info = {
     host: 'project-db-stu.ddns.net',
