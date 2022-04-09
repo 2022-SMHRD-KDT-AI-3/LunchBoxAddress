@@ -9,12 +9,20 @@ const conn = require("../config/DB.js");
 
 
 
-router.get("/main", function (request, response) {
+router.get(["/main","/resPage/:id"], function (request, response) {
     
-    response.render("main", {
-        user: request.session.user
+    let sql = "select rest_id, rest_name from rest_info";
+    conn.query(sql, (err, rows) => {
+        if (err) {
+            console.error("query error" + err);
+        } else {
+            response.render("main", {
+                user: request.session.user,
+                rows: rows
         
-    }) 
+            });
+        }
+    });
 });
 
 router.post("/Join", function (request, response) {
@@ -87,25 +95,99 @@ router.get("/reco", function(request, response) { // main에서 값을 받는 �
 // 식당페이지 ====
 
 
-router.get("/resPage", function (request, response) {
-    let sql = "select * from rest_info";
-    // let baseName = path.basename(fileName);
-    conn.query(sql, (err, rows) => {
-        if (err) {
-            console.error("query error" + err);
-            response.status(500).send("Internal Server Error😢");
+// router.get(["/resPage","/resPage/:id"], function (request, response) {
+//     let sql = "select * from rest_info";
+//     // let baseName = path.basename(fileName);
+//     conn.query(sql, (err, rows) => {
+//         if (err) {
+//             console.error("query error" + err);
+//             response.status(500).send("Internal Server Error😢");
+
+//         } else {
+            
+//             // console.log( "파일이름: %s", baseName);
+//             response.render("resPage", {
+//                 user: request.session.user,
+//                 rows: rows
+        
+//             });
+//         };
+//     });
+    
+// });
+
+router.get("/resPage", function (request, response) { // main에서 값을 받는 거라 reco가 main.ejs로 가야할 거임
+    console.log(request.query.id);
+    let rest_id = request.query.id;
+
+    let sql = "select * from rest_info where rest_id = ?";
+    conn.query(sql, [rest_id], function (err, rows) {
+        console.log("식당 찾기 성공!");
+        // console.log(rows.length);
+
+        if (rows.length > 0) {
+            request.session.rest = {
+                "id": rows[0].rest_id,
+                "name": rows[0].rest_name,
+                "address": rows[0].rest_address,
+                "type": rows[0].rest_type,
+                "latitude": rows[0].rest_latitude,
+                "longitude": rows[0].rest_logitude,
+                "distance": rows[0].rest_distance,
+                "tel": rows[0].rest_tel,
+                "ontime": rows[0].rest_ontime,
+                "offtime": rows[0].rest_offtime,
+                "naver": rows[0].rest_naver
+            }
+            console.log(request.session.rest.id);
+            console.log(request.session.rest.name);
+            console.log(request.session.rest.address);
+            console.log(request.session.rest.type);
+            console.log(request.session.rest.latitude);
+
+            response.redirect("http://127.0.0.1:3307/test");
 
         } else {
-            
-            // console.log( "파일이름: %s", baseName);
-            response.render("resPage", {
-                user: request.session.user,
-                rows: rows
-        
-            });
-        };
+            console.log("식당못찾음 ㅅㄱ");
+        }
     });
+
+    // 디비에서 아이디 매칭해서 정보를 배열변수 담아서 뿌리면
+});
+
+
+
+router.get("/test", function (request, response) {
     
+    response.render("test", {
+        info : request.session.rest
+    });
+
+
+}); // 라우터 닫음
+
+
+
+router.post("/login", function (request, response) {
+    let email = request.body.email;
+    let pw = request.body.pw;
+
+    let sql = "select * from user_info where email = ? and pw = ?";
+    conn.query(sql, [email, pw], function (err, rows) {
+        console.log("로그인 성공");
+        console.log(rows.length);
+        if (rows.length > 0) {
+            request.session.user = {
+                "email": rows[0].email,
+                "gender": rows[0].gender,
+                "nick": rows[0].nick
+            }
+            response.redirect("http://127.0.0.1:3307/main");
+
+        } else {
+            console.log("로그인실패임둥");
+        }
+    });
 });
 
 module.exports = router;
