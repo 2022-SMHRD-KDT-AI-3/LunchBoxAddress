@@ -9,12 +9,20 @@ const conn = require("../config/DB.js");
 
 
 
-router.get("/main", function (request, response) {
+router.get(["/main","/resPage/:id"], function (request, response) {
     
-    response.render("main", {
-        user: request.session.user
+    let sql = "select rest_id, rest_name from rest_info";
+    conn.query(sql, (err, rows) => {
+        if (err) {
+            console.error("query error" + err);
+        } else {
+            response.render("main", {
+                user: request.session.user,
+                rows: rows
         
-    }) 
+            });
+        }
+    });
 });
 
 router.post("/Join", function (request, response) {
@@ -84,7 +92,7 @@ router.get("/reco", function(request, response) { // main에서 값을 받는 �
 // 식당페이지 ====
 
 
-router.get("/resPage", function (request, response) {
+router.get(["/resPage","/resPage/:id"], function (request, response) {
     let sql = "select * from rest_info";
     // let baseName = path.basename(fileName);
     conn.query(sql, (err, rows) => {
