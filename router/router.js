@@ -116,7 +116,7 @@ router.get("/reco", function(request, response) { // main에서 값을 받는 �
     
 // });
 
-router.get("/resPage", function (request, response) { // main에서 값을 받는 거라 reco가 main.ejs로 가야할 거임
+router.get("/resPae", function (request, response) { // main에서 값을 받는 거라 reco가 main.ejs로 가야할 거임
     console.log(request.query.id);
     let rest_id = request.query.id;
 
@@ -145,7 +145,7 @@ router.get("/resPage", function (request, response) { // main에서 값을 받�
             console.log(request.session.rest.type);
             console.log(request.session.rest.latitude);
 
-            response.redirect("http://127.0.0.1:3307/test");
+            response.redirect("http://127.0.0.1:3307/resPage");
 
         } else {
             console.log("식당못찾음 ㅅㄱ");
@@ -157,9 +157,9 @@ router.get("/resPage", function (request, response) { // main에서 값을 받�
 
 
 
-router.get("/test", function (request, response) {
+router.get("/resPage", function (request, response) {
     
-    response.render("test", {
+    response.render("resPage", {
         info : request.session.rest
     });
 
