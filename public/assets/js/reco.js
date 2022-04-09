@@ -9,17 +9,22 @@ function cate1(){
             console.log(result); // 콘솔창에 가져온 데이터를 보여줌
             for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
                 $(".portfolio-info h4")[i].innerHTML = (`
-                <a href="">
-                    식당 이름 : ${result[i].rest_name}<br>
-                    식당 ID : ${result[i].rest_id}<br>
-                    메뉴 이름 : ${result[i].menu_name}<br>
-                    식당 주소 : ${result[i].rest_address}<br>
-                    식당 거리 : ${result[i].rest_distance}m<br>
-                    식당 휴무일 : ${result[i].rest_offtime}<br>
-                    식당 영업시간 : ${result[i].rest_ontime}<br>
-                    식당 연락처 : ${result[i].rest_tel}<br>
+                <form action="http://127.0.0.1:3307/resPage" method="get">
+                <input type="submit" name="${result[i].rest_id}" value="
+                
+                식당 이름 : ${result[i].rest_name}
+                    식당 ID : ${result[i].rest_id}
+                    메뉴 이름 : ${result[i].menu_name}
+                    식당 주소 : ${result[i].rest_address}
+                    식당 거리 : ${result[i].rest_distance}m
+                    식당 휴무일 : ${result[i].rest_offtime}
+                    식당 영업시간 : ${result[i].rest_ontime}
+                    식당 연락처 : ${result[i].rest_tel}
                     네이버 별점 : ${result[i].rest_naver}
-                </a>
+
+                ">
+
+                </form>
                 `); // a 태그 요소 안의 텍스트를 변경함
             }
         },
@@ -39,7 +44,7 @@ function cate2(){
             console.log(result); // 콘솔창에 가져온 데이터를 보여줌
             for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
                 $(".portfolio-info h4")[i].innerHTML = (`
-                <a href="">
+                <a href="http://naver.com">
                     식당 이름 : ${result[i].rest_name}<br>
                     식당 ID : ${result[i].rest_id}<br>
                     메뉴 이름 : ${result[i].menu_name}<br>
