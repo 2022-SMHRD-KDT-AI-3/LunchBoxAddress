@@ -8,15 +8,18 @@ function cate1(){
             const entries = Object.entries(result); // 가져온 데이터를 배열 형태로 변환함(CORS 정책 때문에)
             console.log(result); // 콘솔창에 가져온 데이터를 보여줌
             for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
-                $(".portfolio-info h4 a")[i].innerText = (`
-                    식당 이름 : ${result[i].rest_name}
-                    메뉴 이름 : ${result[i].menu_name}
-                    식당 주소 : ${result[i].rest_address}
-                    식당 거리 : ${result[i].rest_distance}
-                    식당 휴무일 : ${result[i].rest_offtime}
-                    식당 영업시간 : ${result[i].rest_ontime}
-                    식당 연락처 : ${result[i].rest_tel}
+                $(".portfolio-info h4")[i].innerHTML = (`
+                <a href="">
+                    식당 이름 : ${result[i].rest_name}<br>
+                    식당 ID : ${result[i].rest_id}<br>
+                    메뉴 이름 : ${result[i].menu_name}<br>
+                    식당 주소 : ${result[i].rest_address}<br>
+                    식당 거리 : ${result[i].rest_distance}m<br>
+                    식당 휴무일 : ${result[i].rest_offtime}<br>
+                    식당 영업시간 : ${result[i].rest_ontime}<br>
+                    식당 연락처 : ${result[i].rest_tel}<br>
                     네이버 별점 : ${result[i].rest_naver}
+                </a>
                 `); // a 태그 요소 안의 텍스트를 변경함
             }
         },
@@ -35,15 +38,18 @@ function cate2(){
             const entries = Object.entries(result); // 가져온 데이터를 배열 형태로 변환함(CORS 정책 때문에)
             console.log(result); // 콘솔창에 가져온 데이터를 보여줌
             for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
-                $(".portfolio-info h4 a")[i].innerText = (`
-                    식당 이름 : ${result[i].rest_name}
-                    메뉴 이름 : ${result[i].menu_name}
-                    식당 주소 : ${result[i].rest_address}
-                    식당 거리 : ${result[i].rest_distance}
-                    식당 휴무일 : ${result[i].rest_offtime}
-                    식당 영업시간 : ${result[i].rest_ontime}
-                    식당 연락처 : ${result[i].rest_tel}
+                $(".portfolio-info h4")[i].innerHTML = (`
+                <a href="">
+                    식당 이름 : ${result[i].rest_name}<br>
+                    식당 ID : ${result[i].rest_id}<br>
+                    메뉴 이름 : ${result[i].menu_name}<br>
+                    식당 주소 : ${result[i].rest_address}<br>
+                    식당 거리 : ${result[i].rest_distance}m<br>
+                    식당 휴무일 : ${result[i].rest_offtime}<br>
+                    식당 영업시간 : ${result[i].rest_ontime}<br>
+                    식당 연락처 : ${result[i].rest_tel}<br>
                     네이버 별점 : ${result[i].rest_naver}
+                </a>
                 `); // a 태그 요소 안의 텍스트를 변경함
             }
         },
@@ -62,15 +68,18 @@ function cate3(){
             const entries = Object.entries(result); // 가져온 데이터를 배열 형태로 변환함(CORS 정책 때문에)
             console.log(result); // 콘솔창에 가져온 데이터를 보여줌
             for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
-                $(".portfolio-info h4 a")[i].innerText = (`
-                    식당 이름 : ${result[i].rest_name}
-                    메뉴 이름 : ${result[i].menu_name}
-                    식당 주소 : ${result[i].rest_address}
-                    식당 거리 : ${result[i].rest_distance}
-                    식당 휴무일 : ${result[i].rest_offtime}
-                    식당 영업시간 : ${result[i].rest_ontime}
-                    식당 연락처 : ${result[i].rest_tel}
-                    네이버 별점 : ${result[i].rest_naver}
+                $(".portfolio-info h4")[i].innerHTML = (`
+                <a href="">
+                    식당 이름 : ${result[i].rest_name}<br>
+                    식당 ID : ${result[i].rest_id}<br>
+                    메뉴 이름 : ${result[i].menu_name}<br>
+                    식당 주소 : ${result[i].rest_address}<br>
+                    식당 거리 : ${result[i].rest_distance}m<br>
+                    식당 휴무일 : ${result[i].rest_offtime}<br>
+                    식당 영업시간 : ${result[i].rest_ontime}<br>
+                    식당 연락처 : ${result[i].rest_tel}<br>
+                    네이버 별점 : ${result[i].rest_naver}<br>
+                </a>
                 `); // a 태그 요소 안의 텍스트를 변경함
             }
         },
@@ -89,15 +98,18 @@ function cate4(){
             const entries = Object.entries(result); // 가져온 데이터를 배열 형태로 변환함(CORS 정책 때문에)
             console.log(result); // 콘솔창에 가져온 데이터를 보여줌
             for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
-                $(".portfolio-info h4 a")[i].innerText = (`
-                    식당 이름 : ${result[i].rest_name}
-                    메뉴 이름 : ${result[i].menu_name}
-                    식당 주소 : ${result[i].rest_address}
-                    식당 거리 : ${result[i].rest_distance}
-                    식당 휴무일 : ${result[i].rest_offtime}
-                    식당 영업시간 : ${result[i].rest_ontime}
-                    식당 연락처 : ${result[i].rest_tel}
+                $(".portfolio-info h4")[i].innerHTML = (`
+                <a href="">
+                    식당 이름 : ${result[i].rest_name}<br>
+                    식당 ID : ${result[i].rest_id}<br>
+                    메뉴 이름 : ${result[i].menu_name}<br>
+                    식당 주소 : ${result[i].rest_address}<br>
+                    식당 거리 : ${result[i].rest_distance}m<br>
+                    식당 휴무일 : ${result[i].rest_offtime}<br>
+                    식당 영업시간 : ${result[i].rest_ontime}<br>
+                    식당 연락처 : ${result[i].rest_tel}<br>
                     네이버 별점 : ${result[i].rest_naver}
+                </a>
                 `); // a 태그 요소 안의 텍스트를 변경함
             }
         },
@@ -116,15 +128,18 @@ function cate5(){
             const entries = Object.entries(result); // 가져온 데이터를 배열 형태로 변환함(CORS 정책 때문에)
             console.log(result); // 콘솔창에 가져온 데이터를 보여줌
             for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
-                $(".portfolio-info h4 a")[i].innerText = (`
-                    식당 이름 : ${result[i].rest_name}
-                    메뉴 이름 : ${result[i].menu_name}
-                    식당 주소 : ${result[i].rest_address}
-                    식당 거리 : ${result[i].rest_distance}
-                    식당 휴무일 : ${result[i].rest_offtime}
-                    식당 영업시간 : ${result[i].rest_ontime}
-                    식당 연락처 : ${result[i].rest_tel}
+                $(".portfolio-info h4")[i].innerHTML = (`
+                <a href="">
+                    식당 이름 : ${result[i].rest_name}<br>
+                    식당 ID : ${result[i].rest_id}<br>
+                    메뉴 이름 : ${result[i].menu_name}<br>
+                    식당 주소 : ${result[i].rest_address}<br>
+                    식당 거리 : ${result[i].rest_distance}m<br>
+                    식당 휴무일 : ${result[i].rest_offtime}<br>
+                    식당 영업시간 : ${result[i].rest_ontime}<br>
+                    식당 연락처 : ${result[i].rest_tel}<br>
                     네이버 별점 : ${result[i].rest_naver}
+                </a>
                 `); // a 태그 요소 안의 텍스트를 변경함
             }
         },
@@ -143,15 +158,18 @@ function cate6(){
             const entries = Object.entries(result); // 가져온 데이터를 배열 형태로 변환함(CORS 정책 때문에)
             console.log(result); // 콘솔창에 가져온 데이터를 보여줌
             for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
-                $(".portfolio-info h4 a")[i].innerText = (`
-                    식당 이름 : ${result[i].rest_name}
-                    메뉴 이름 : ${result[i].menu_name}
-                    식당 주소 : ${result[i].rest_address}
-                    식당 거리 : ${result[i].rest_distance}
-                    식당 휴무일 : ${result[i].rest_offtime}
-                    식당 영업시간 : ${result[i].rest_ontime}
-                    식당 연락처 : ${result[i].rest_tel}
+                $(".portfolio-info h4")[i].innerHTML = (`
+                <a href="">
+                    식당 이름 : ${result[i].rest_name}<br>
+                    식당 ID : ${result[i].rest_id}<br>
+                    메뉴 이름 : ${result[i].menu_name}<br>
+                    식당 주소 : ${result[i].rest_address}<br>
+                    식당 거리 : ${result[i].rest_distance}m<br>
+                    식당 휴무일 : ${result[i].rest_offtime}<br>
+                    식당 영업시간 : ${result[i].rest_ontime}<br>
+                    식당 연락처 : ${result[i].rest_tel}<br>
                     네이버 별점 : ${result[i].rest_naver}
+                </a>
                 `); // a 태그 요소 안의 텍스트를 변경함
             }
         },
@@ -170,15 +188,18 @@ function cate7(){
             const entries = Object.entries(result); // 가져온 데이터를 배열 형태로 변환함(CORS 정책 때문에)
             console.log(result); // 콘솔창에 가져온 데이터를 보여줌
             for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
-                $(".portfolio-info h4 a")[i].innerText = (`
-                    식당 이름 : ${result[i].rest_name}
-                    메뉴 이름 : ${result[i].menu_name}
-                    식당 주소 : ${result[i].rest_address}
-                    식당 거리 : ${result[i].rest_distance}
-                    식당 휴무일 : ${result[i].rest_offtime}
-                    식당 영업시간 : ${result[i].rest_ontime}
-                    식당 연락처 : ${result[i].rest_tel}
+                $(".portfolio-info h4")[i].innerHTML = (`
+                <a href="">
+                    식당 이름 : ${result[i].rest_name}<br>
+                    식당 ID : ${result[i].rest_id}<br>
+                    메뉴 이름 : ${result[i].menu_name}<br>
+                    식당 주소 : ${result[i].rest_address}<br>
+                    식당 거리 : ${result[i].rest_distance}m<br>
+                    식당 휴무일 : ${result[i].rest_offtime}<br>
+                    식당 영업시간 : ${result[i].rest_ontime}<br>
+                    식당 연락처 : ${result[i].rest_tel}<br>
                     네이버 별점 : ${result[i].rest_naver}
+                </a>
                 `); // a 태그 요소 안의 텍스트를 변경함
             }
         },
@@ -197,15 +218,18 @@ function cate8(){
             const entries = Object.entries(result); // 가져온 데이터를 배열 형태로 변환함(CORS 정책 때문에)
             console.log(result); // 콘솔창에 가져온 데이터를 보여줌
             for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
-                $(".portfolio-info h4 a")[i].innerText = (`
-                    식당 이름 : ${result[i].rest_name}
-                    메뉴 이름 : ${result[i].menu_name}
-                    식당 주소 : ${result[i].rest_address}
-                    식당 거리 : ${result[i].rest_distance}
-                    식당 휴무일 : ${result[i].rest_offtime}
-                    식당 영업시간 : ${result[i].rest_ontime}
-                    식당 연락처 : ${result[i].rest_tel}
+                $(".portfolio-info h4")[i].innerHTML = (`
+                <a href="">
+                    식당 이름 : ${result[i].rest_name}<br>
+                    식당 ID : ${result[i].rest_id}<br>
+                    메뉴 이름 : ${result[i].menu_name}<br>
+                    식당 주소 : ${result[i].rest_address}<br>
+                    식당 거리 : ${result[i].rest_distance}m<br>
+                    식당 휴무일 : ${result[i].rest_offtime}<br>
+                    식당 영업시간 : ${result[i].rest_ontime}<br>
+                    식당 연락처 : ${result[i].rest_tel}<br>
                     네이버 별점 : ${result[i].rest_naver}
+                </a>
                 `); // a 태그 요소 안의 텍스트를 변경함
             }
         },
@@ -224,15 +248,18 @@ function cate9(){
             const entries = Object.entries(result); // 가져온 데이터를 배열 형태로 변환함(CORS 정책 때문에)
             console.log(result); // 콘솔창에 가져온 데이터를 보여줌
             for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
-                $(".portfolio-info h4 a")[i].innerText = (`
-                    식당 이름 : ${result[i].rest_name}
-                    메뉴 이름 : ${result[i].menu_name}
-                    식당 주소 : ${result[i].rest_address}
-                    식당 거리 : ${result[i].rest_distance}
-                    식당 휴무일 : ${result[i].rest_offtime}
-                    식당 영업시간 : ${result[i].rest_ontime}
-                    식당 연락처 : ${result[i].rest_tel}
+                $(".portfolio-info h4")[i].innerHTML = (`
+                <a href="">
+                    식당 이름 : ${result[i].rest_name}<br>
+                    식당 ID : ${result[i].rest_id}<br>
+                    메뉴 이름 : ${result[i].menu_name}<br>
+                    식당 주소 : ${result[i].rest_address}<br>
+                    식당 거리 : ${result[i].rest_distance}m<br>
+                    식당 휴무일 : ${result[i].rest_offtime}<br>
+                    식당 영업시간 : ${result[i].rest_ontime}<br>
+                    식당 연락처 : ${result[i].rest_tel}<br>
                     네이버 별점 : ${result[i].rest_naver}
+                </a>
                 `); // a 태그 요소 안의 텍스트를 변경함
             }
         },

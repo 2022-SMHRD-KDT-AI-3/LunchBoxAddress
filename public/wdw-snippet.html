@@ -140,7 +140,8 @@
                 <h3>Welcome</h3>
                 <p>당신이 기대하는 가장 정확하고 신뢰하는 맛집을 지금 Lunch Box 에서 확인하세요.</p>
 
-                <!-- <input type="button" name="ck_id" onclick="location.href='/non_log'" value="비회원으로 시작"> -->
+                <!-- <input type="button" name="ck_id" onclick="location.href='/non_log'"
+                    value="비회원으로 시작"> -->
                 <br>
             </div>
             <div class="col-md-9 register-right">
@@ -156,77 +157,93 @@
                 </ul>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                        <h3 class="register-heading">로그인을 통해<br> Lunch Box의 다양한 혜택을 누리세요
+                        <h3 class="register-heading">로그인을 통해<br>
+                            Lunch Box의 다양한 혜택을 누리세요
                         </h3>
                         <!-- 로그인 폼 -->
-
+                        <!-- 폼 시작 -->
                         <div class="row register-form">
-                            <div class="col-md-6">
-                                <form action="http://127.0.0.1:3307/login" enctype="application/x-www-form-urlencoded"
-                                    method="post">
+                            <form action="http://127.0.0.1:3307/login" enctype="application/x-www-form-urlencoded"
+                                method="post">
+                                <div class="col-md-6">
+
                                     <div class="form-group">
 
                                         <input type="email" name="email" class="form-control" placeholder="Your Email *"
                                             value="">
                                     </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="password" name="pw" class="form-control" placeholder="Password *"
-                                        value="">
                                 </div>
-                                <input type="submit" class="btnRegister" value="로그인">
-
-                            </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="password" name="pw" class="form-control" placeholder="Password *"
+                                            value="">
+                                    </div>
+                                    <input type="submit" class="btnRegister" value="로그인">
+                                </div>
+                            </form>
                         </div>
-                        </form>
                     </div>
                     <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                         <h3 class="register-heading">아직 LunchBox 회원이 아니신가요?</h3>
                         <!-- 회원가입 폼 -->
-
-                        <div class="row register-form">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <form action="http://127.0.0.1:3307/join"
-                                        enctype="application/x-www-form-urlencoded" method="post">
+                        <!-- 폼 시작 -->
+                        <form action="http://127.0.0.1:3307/join" enctype="application/x-www-form-urlencoded"
+                            method="post">
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <!-- 이메일입력시작 -->
+                                        <!-- 이메일 -->
                                         <input type="email" name="email" class="form-control"
                                             placeholder="Your Email *">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" name="nick" id="nick" class="form-control"
-                                        placeholder="Nick Name *" onchange="check_nick()">
-                                </div>
-                                <div class="form-group"><span id="check_n"></span></div>
-                                <div class="form-group">
-                                    <div class="maxl">
-                                        <label class="radio inline">
-                                            <input type="radio" name="gender" value="male" checked="">
-                                            <span> Male </span>
-                                        </label>
-                                        <label class="radio inline">
-                                            <input type="radio" name="gender" value="female">
-                                            <span>Female </span>
-                                        </label>
                                     </div>
+
+                                    <div class="form-group">
+                                        <!-- 닉네임입력시작 -->
+                                        <input type="text" name="nick" id="nick" class="form-control"
+                                            placeholder="Nick Name *" onchange="check_nick()">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <!-- 성별입력시작 -->
+                                        <span id="check_n"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="maxl">
+                                            <label class="radio inline">
+                                                <input type="radio" name="gender" value="male" checked="">
+                                                <span>
+                                                    Male
+                                                </span>
+                                            </label>
+                                            <label class="radio inline">
+                                                <input type="radio" name="gender" value="female">
+                                                <span>Female
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="password" id="pw" name="pw" class="form-control"
+                                            placeholder="Password *" value="" onchange="check_pw()">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" id="pw2" name="pwck" class="form-control"
+                                            placeholder="Confirm Password *" value="" onchange="check_pw()">
+                                    </div>
+                                    <div class="form-group">
+                                        <span id="check"></span>
+                                    </div>
+                                    <input type="submit" id="child" class="btnRegister"
+                                        onclick="location.href='#profile'" value="회원가입">
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="password" id="pw" name="pw" class="form-control"
-                                        placeholder="Password *" value="" onchange="check_pw()">
-                                </div>
-                                <div class="form-group">
-                                    <input type="password" id="pw2" name="pwck" class="form-control"
-                                        placeholder="Confirm Password *" value="" onchange="check_pw()">
-                                </div>
-                                <div class="form-group">
-                                    <span id="check"></span>
-                                </div>
-                                <input type="submit" id="child" class="btnRegister" onclick="location.href='#profile'"
-                                    value="회원가입">
-                            </div>
-                        </div>
                         </form>
                     </div>
                 </div>
@@ -237,13 +254,17 @@
     <script>
         function check_pw() {
 
-            var pw = document.getElementById('pw').value;
+            var pw = document
+                .getElementById('pw')
+                .value;
             var SC = ["!", "@", "#", "$", "%"];
             var check_SC = 0;
 
             if (pw.length < 6 || pw.length > 16) {
                 window.alert('비밀번호는 6글자 이상, 16글자 이하만 이용 가능합니다.');
-                document.getElementById('pw').value = '';
+                document
+                    .getElementById('pw')
+                    .value = '';
             }
             for (var i = 0; i < SC.length; i++) {
                 if (pw.indexOf(SC[i]) != -1) {
@@ -252,35 +273,56 @@
             }
             if (check_SC == 0) {
                 window.alert('!,@,#,$,% 의 특수문자가 들어가 있지 않습니다.')
-                document.getElementById('pw').value = '';
+                document
+                    .getElementById('pw')
+                    .value = '';
             }
             if (document.getElementById('pw').value != '' && document.getElementById('pw2').value != '') {
                 if (document.getElementById('pw').value == document.getElementById('pw2').value) {
-                    document.getElementById('check').innerHTML = '비밀번호가 일치합니다.'
-                    document.getElementById('check').style.color = 'blue';
-                }
-                else {
-                    document.getElementById('check').innerHTML = '비밀번호가 일치하지 않습니다.';
-                    document.getElementById('check').style.color = 'red';
+                    document
+                        .getElementById('check')
+                        .innerHTML = '비밀번호가 일치합니다.'
+                    document
+                        .getElementById('check')
+                        .style
+                        .color = 'blue';
+                } else {
+                    document
+                        .getElementById('check')
+                        .innerHTML = '비밀번호가 일치하지 않습니다.';
+                    document
+                        .getElementById('check')
+                        .style
+                        .color = 'red';
                 }
             }
         }
         function check_nick() {
-            var nick = document.getElementById('nick').value;
+            var nick = document
+                .getElementById('nick')
+                .value;
             if (user.nick == document.getElementById('nick').value) {
-                document.getElementById('check_n').innerHTML = '이미 존재하는 닉네임 입니다.';
-                document.getElementById('check_n').style.color = 'red';
+                document
+                    .getElementById('check_n')
+                    .innerHTML = '이미 존재하는 닉네임 입니다.';
+                document
+                    .getElementById('check_n')
+                    .style
+                    .color = 'red';
             } else {
-                document.getElementById('check_n').innerHTML = '사용가능한 닉네임입니다.';
-                document.getElementById('check_n').style.color = 'blue';
+                document
+                    .getElementById('check_n')
+                    .innerHTML = '사용가능한 닉네임입니다.';
+                document
+                    .getElementById('check_n')
+                    .style
+                    .color = 'blue';
             }
         }
     </script>
     <!-- jquery -->
     <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="">
-
-    </script>
+    <script src=""></script>
 </body>
 
 </html>
