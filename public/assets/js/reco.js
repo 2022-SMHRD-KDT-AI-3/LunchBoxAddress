@@ -9,7 +9,7 @@ function cate1(){
             console.log(result); // 콘솔창에 가져온 데이터를 보여줌
             for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
                 $(".portfolio-info h4")[i].innerHTML = (`
-                <a href="">
+                <a href="http://127.0.0.1:3307/resPage/${result[i].rest_id}">
                     식당 이름 : ${result[i].rest_name}<br>
                     식당 ID : ${result[i].rest_id}<br>
                     메뉴 이름 : ${result[i].menu_name}<br>
@@ -39,7 +39,7 @@ function cate2(){
             console.log(result); // 콘솔창에 가져온 데이터를 보여줌
             for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
                 $(".portfolio-info h4")[i].innerHTML = (`
-                <a href="">
+                <a href="http://127.0.0.1:3307/resPage/${result[i].rest_id}">
                     식당 이름 : ${result[i].rest_name}<br>
                     식당 ID : ${result[i].rest_id}<br>
                     메뉴 이름 : ${result[i].menu_name}<br>
@@ -69,7 +69,7 @@ function cate3(){
             console.log(result); // 콘솔창에 가져온 데이터를 보여줌
             for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
                 $(".portfolio-info h4")[i].innerHTML = (`
-                <a href="">
+                <a href="http://127.0.0.1:3307/resPage/${result[i].rest_id}">
                     식당 이름 : ${result[i].rest_name}<br>
                     식당 ID : ${result[i].rest_id}<br>
                     메뉴 이름 : ${result[i].menu_name}<br>
@@ -99,7 +99,7 @@ function cate4(){
             console.log(result); // 콘솔창에 가져온 데이터를 보여줌
             for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
                 $(".portfolio-info h4")[i].innerHTML = (`
-                <a href="">
+                    <a href="http://127.0.0.1:3307/resPage/${result[i].rest_id}">
                     식당 이름 : ${result[i].rest_name}<br>
                     식당 ID : ${result[i].rest_id}<br>
                     메뉴 이름 : ${result[i].menu_name}<br>
@@ -129,7 +129,7 @@ function cate5(){
             console.log(result); // 콘솔창에 가져온 데이터를 보여줌
             for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
                 $(".portfolio-info h4")[i].innerHTML = (`
-                <a href="">
+                    <a href="http://127.0.0.1:3307/resPage/${result[i].rest_id}">
                     식당 이름 : ${result[i].rest_name}<br>
                     식당 ID : ${result[i].rest_id}<br>
                     메뉴 이름 : ${result[i].menu_name}<br>
@@ -159,7 +159,7 @@ function cate6(){
             console.log(result); // 콘솔창에 가져온 데이터를 보여줌
             for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
                 $(".portfolio-info h4")[i].innerHTML = (`
-                <a href="">
+                    <a href="http://127.0.0.1:3307/resPage/${result[i].rest_id}">
                     식당 이름 : ${result[i].rest_name}<br>
                     식당 ID : ${result[i].rest_id}<br>
                     메뉴 이름 : ${result[i].menu_name}<br>
@@ -189,7 +189,7 @@ function cate7(){
             console.log(result); // 콘솔창에 가져온 데이터를 보여줌
             for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
                 $(".portfolio-info h4")[i].innerHTML = (`
-                <a href="">
+                <a href="http://127.0.0.1:3307/resPage/${result[i].rest_id}">
                     식당 이름 : ${result[i].rest_name}<br>
                     식당 ID : ${result[i].rest_id}<br>
                     메뉴 이름 : ${result[i].menu_name}<br>
@@ -219,7 +219,7 @@ function cate8(){
             console.log(result); // 콘솔창에 가져온 데이터를 보여줌
             for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
                 $(".portfolio-info h4")[i].innerHTML = (`
-                <a href="">
+                <a href="http://127.0.0.1:3307/resPage/${result[i].rest_id}">
                     식당 이름 : ${result[i].rest_name}<br>
                     식당 ID : ${result[i].rest_id}<br>
                     메뉴 이름 : ${result[i].menu_name}<br>
@@ -249,7 +249,7 @@ function cate9(){
             console.log(result); // 콘솔창에 가져온 데이터를 보여줌
             for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
                 $(".portfolio-info h4")[i].innerHTML = (`
-                <a href="">
+                <a href="http://127.0.0.1:3307/resPage/${result[i].rest_id}">
                     식당 이름 : ${result[i].rest_name}<br>
                     식당 ID : ${result[i].rest_id}<br>
                     메뉴 이름 : ${result[i].menu_name}<br>
