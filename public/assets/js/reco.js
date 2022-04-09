@@ -1,28 +1,23 @@
-function test1(){
-    let btn = document.querySelector("#test1").value;
+function cate1(){
+    let btn = $("#cate1").attr("value");
     $.ajax({
-        url : "http://127.0.0.1:3307/reco", // 데이터를 요청할 서버의 경로(플라스크 서버)
+        url : "http://127.0.0.1:5000/reco", // 데이터를 요청할 서버의 경로(플라스크 서버)
+        dataType: "json",
         data : {"data" : btn}, // 플라스크 서버에 데이터를 요청할 때 "data" 라는 이름으로 btn 변수의 값을 보냄
         success : (result) => { // 데이터를 성공적으로 가져올 경우에
-            // location.href = "#recoTitle"; // 식당 목록 섹션으로 이동하고(확인차 주석 처리함)
             const entries = Object.entries(result); // 가져온 데이터를 배열 형태로 변환함(CORS 정책 때문에)
             console.log(result); // 콘솔창에 가져온 데이터를 보여줌
-            $("#recoList").empty(); // 식당 목록 섹션에 이전에 불러온 식당 목록이 있을 경우에 그 내용을 지우고
             for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
-                $("#recoList").append(` 
-                <div>
-                    <h2>${i + 1}번째 식당</h2>
-                    <span>식당 이름 : ${result[i].rest_name}</span><br>
-                    <span>메뉴 이름 : ${result[i].menu_name}</span><br>
-                    <span>식당 주소 : ${result[i].rest_address}</span><br>
-                    <span>식당 거리 : ${result[i].rest_distance}m</span><br>
-                    <span>식당 휴무일 : ${result[i].rest_offtime}</span><br>
-                    <span>식당 영업시간 : ${result[i].rest_ontime}</span><br>
-                    <span>식당 연락처 : ${result[i].rest_tel}</span><br>
-                    <span>네이버 별점 : ${result[i].rest_naver}</span>
-                </div>
-                <br>
-                `); // 네모 안에 들어가야할 내용들임(#recoList를 바꿔야 함)
+                $(".portfolio-info h4 a")[i].innerText = (`
+                    식당 이름 : ${result[i].rest_name}
+                    메뉴 이름 : ${result[i].menu_name}
+                    식당 주소 : ${result[i].rest_address}
+                    식당 거리 : ${result[i].rest_distance}
+                    식당 휴무일 : ${result[i].rest_offtime}
+                    식당 영업시간 : ${result[i].rest_ontime}
+                    식당 연락처 : ${result[i].rest_tel}
+                    네이버 별점 : ${result[i].rest_naver}
+                `); // a 태그 요소 안의 텍스트를 변경함
             }
         },
         error:function(){
@@ -30,30 +25,26 @@ function test1(){
     });
 }
 
-function test2(){
-    let btn = document.querySelector("#test2").value;
+function cate2(){
+    let btn = $("#cate2").attr("value");
     $.ajax({
-        url : "http://127.0.0.1:3307/reco",
-        data : {"data" : btn},
-        success : (result) => {
-            const entries = Object.entries(result);
-            console.log(result);
-            $("#recoList").empty();
-            for (let i = 0; i < entries.length; i++) {
-                $("#recoList").append(`
-                <div>
-                    <h2>${i + 1}번째 식당</h2>
-                    <span>식당 이름 : ${result[i].rest_name}</span><br>
-                    <span>메뉴 이름 : ${result[i].menu_name}</span><br>
-                    <span>식당 주소 : ${result[i].rest_address}</span><br>
-                    <span>식당 거리 : ${result[i].rest_distance}m</span><br>
-                    <span>식당 휴무일 : ${result[i].rest_offtime}</span><br>
-                    <span>식당 영업시간 : ${result[i].rest_ontime}</span><br>
-                    <span>식당 연락처 : ${result[i].rest_tel}</span><br>
-                    <span>네이버 별점 : ${result[i].rest_naver}</span>
-                </div>
-                <br>
-                `);
+        url : "http://127.0.0.1:5000/reco", // 데이터를 요청할 서버의 경로(플라스크 서버)
+        dataType: "json",
+        data : {"data" : btn}, // 플라스크 서버에 데이터를 요청할 때 "data" 라는 이름으로 btn 변수의 값을 보냄
+        success : (result) => { // 데이터를 성공적으로 가져올 경우에
+            const entries = Object.entries(result); // 가져온 데이터를 배열 형태로 변환함(CORS 정책 때문에)
+            console.log(result); // 콘솔창에 가져온 데이터를 보여줌
+            for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
+                $(".portfolio-info h4 a")[i].innerText = (`
+                    식당 이름 : ${result[i].rest_name}
+                    메뉴 이름 : ${result[i].menu_name}
+                    식당 주소 : ${result[i].rest_address}
+                    식당 거리 : ${result[i].rest_distance}
+                    식당 휴무일 : ${result[i].rest_offtime}
+                    식당 영업시간 : ${result[i].rest_ontime}
+                    식당 연락처 : ${result[i].rest_tel}
+                    네이버 별점 : ${result[i].rest_naver}
+                `); // a 태그 요소 안의 텍스트를 변경함
             }
         },
         error:function(){
@@ -61,30 +52,26 @@ function test2(){
     });
 }
 
-function test3(){
-    let btn = document.querySelector("#test3").value;
+function cate3(){
+    let btn = $("#cate3").attr("value");
     $.ajax({
-        url : "http://127.0.0.1:3307/reco",
-        data : {"data" : btn},
-        success : (result) => {
-            const entries = Object.entries(result);
-            console.log(result);
-            $("#recoList").empty();
-            for (let i = 0; i < entries.length; i++) {
-                $("#recoList").append(`
-                <div>
-                    <h2>${i + 1}번째 식당</h2>
-                    <span>식당 이름 : ${result[i].rest_name}</span><br>
-                    <span>메뉴 이름 : ${result[i].menu_name}</span><br>
-                    <span>식당 주소 : ${result[i].rest_address}</span><br>
-                    <span>식당 거리 : ${result[i].rest_distance}m</span><br>
-                    <span>식당 휴무일 : ${result[i].rest_offtime}</span><br>
-                    <span>식당 영업시간 : ${result[i].rest_ontime}</span><br>
-                    <span>식당 연락처 : ${result[i].rest_tel}</span><br>
-                    <span>네이버 별점 : ${result[i].rest_naver}</span>
-                </div>
-                <br>
-                `);
+        url : "http://127.0.0.1:5000/reco", // 데이터를 요청할 서버의 경로(플라스크 서버)
+        dataType: "json",
+        data : {"data" : btn}, // 플라스크 서버에 데이터를 요청할 때 "data" 라는 이름으로 btn 변수의 값을 보냄
+        success : (result) => { // 데이터를 성공적으로 가져올 경우에
+            const entries = Object.entries(result); // 가져온 데이터를 배열 형태로 변환함(CORS 정책 때문에)
+            console.log(result); // 콘솔창에 가져온 데이터를 보여줌
+            for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
+                $(".portfolio-info h4 a")[i].innerText = (`
+                    식당 이름 : ${result[i].rest_name}
+                    메뉴 이름 : ${result[i].menu_name}
+                    식당 주소 : ${result[i].rest_address}
+                    식당 거리 : ${result[i].rest_distance}
+                    식당 휴무일 : ${result[i].rest_offtime}
+                    식당 영업시간 : ${result[i].rest_ontime}
+                    식당 연락처 : ${result[i].rest_tel}
+                    네이버 별점 : ${result[i].rest_naver}
+                `); // a 태그 요소 안의 텍스트를 변경함
             }
         },
         error:function(){
@@ -92,30 +79,26 @@ function test3(){
     });
 }
 
-function test4(){
-    let btn = document.querySelector("#test4").value;
+function cate4(){
+    let btn = $("#cate4").attr("value");
     $.ajax({
-        url : "http://127.0.0.1:3307/reco",
-        data : {"data" : btn},
-        success : (result) => {
-            const entries = Object.entries(result);
-            console.log(result);
-            $("#recoList").empty();
-            for (let i = 0; i < entries.length; i++) {
-                $("#recoList").append(`
-                <div>
-                    <h2>${i + 1}번째 식당</h2>
-                    <span>식당 이름 : ${result[i].rest_name}</span><br>
-                    <span>메뉴 이름 : ${result[i].menu_name}</span><br>
-                    <span>식당 주소 : ${result[i].rest_address}</span><br>
-                    <span>식당 거리 : ${result[i].rest_distance}m</span><br>
-                    <span>식당 휴무일 : ${result[i].rest_offtime}</span><br>
-                    <span>식당 영업시간 : ${result[i].rest_ontime}</span><br>
-                    <span>식당 연락처 : ${result[i].rest_tel}</span><br>
-                    <span>네이버 별점 : ${result[i].rest_naver}</span>
-                </div>
-                <br>
-                `);
+        url : "http://127.0.0.1:5000/reco", // 데이터를 요청할 서버의 경로(플라스크 서버)
+        dataType: "json",
+        data : {"data" : btn}, // 플라스크 서버에 데이터를 요청할 때 "data" 라는 이름으로 btn 변수의 값을 보냄
+        success : (result) => { // 데이터를 성공적으로 가져올 경우에
+            const entries = Object.entries(result); // 가져온 데이터를 배열 형태로 변환함(CORS 정책 때문에)
+            console.log(result); // 콘솔창에 가져온 데이터를 보여줌
+            for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
+                $(".portfolio-info h4 a")[i].innerText = (`
+                    식당 이름 : ${result[i].rest_name}
+                    메뉴 이름 : ${result[i].menu_name}
+                    식당 주소 : ${result[i].rest_address}
+                    식당 거리 : ${result[i].rest_distance}
+                    식당 휴무일 : ${result[i].rest_offtime}
+                    식당 영업시간 : ${result[i].rest_ontime}
+                    식당 연락처 : ${result[i].rest_tel}
+                    네이버 별점 : ${result[i].rest_naver}
+                `); // a 태그 요소 안의 텍스트를 변경함
             }
         },
         error:function(){
@@ -123,30 +106,26 @@ function test4(){
     });
 }
 
-function test5(){
-    let btn = document.querySelector("#test5").value;
+function cate5(){
+    let btn = $("#cate5").attr("value");
     $.ajax({
-        url : "http://127.0.0.1:3307/reco",
-        data : {"data" : btn},
-        success : (result) => {
-            const entries = Object.entries(result);
-            console.log(result);
-            $("#recoList").empty();
-            for (let i = 0; i < entries.length; i++) {
-                $("#recoList").append(`
-                <div>
-                    <h2>${i + 1}번째 식당</h2>
-                    <span>식당 이름 : ${result[i].rest_name}</span><br>
-                    <span>메뉴 이름 : ${result[i].menu_name}</span><br>
-                    <span>식당 주소 : ${result[i].rest_address}</span><br>
-                    <span>식당 거리 : ${result[i].rest_distance}m</span><br>
-                    <span>식당 휴무일 : ${result[i].rest_offtime}</span><br>
-                    <span>식당 영업시간 : ${result[i].rest_ontime}</span><br>
-                    <span>식당 연락처 : ${result[i].rest_tel}</span><br>
-                    <span>네이버 별점 : ${result[i].rest_naver}</span>
-                </div>
-                <br>
-                `);
+        url : "http://127.0.0.1:5000/reco", // 데이터를 요청할 서버의 경로(플라스크 서버)
+        dataType: "json",
+        data : {"data" : btn}, // 플라스크 서버에 데이터를 요청할 때 "data" 라는 이름으로 btn 변수의 값을 보냄
+        success : (result) => { // 데이터를 성공적으로 가져올 경우에
+            const entries = Object.entries(result); // 가져온 데이터를 배열 형태로 변환함(CORS 정책 때문에)
+            console.log(result); // 콘솔창에 가져온 데이터를 보여줌
+            for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
+                $(".portfolio-info h4 a")[i].innerText = (`
+                    식당 이름 : ${result[i].rest_name}
+                    메뉴 이름 : ${result[i].menu_name}
+                    식당 주소 : ${result[i].rest_address}
+                    식당 거리 : ${result[i].rest_distance}
+                    식당 휴무일 : ${result[i].rest_offtime}
+                    식당 영업시간 : ${result[i].rest_ontime}
+                    식당 연락처 : ${result[i].rest_tel}
+                    네이버 별점 : ${result[i].rest_naver}
+                `); // a 태그 요소 안의 텍스트를 변경함
             }
         },
         error:function(){
@@ -154,30 +133,26 @@ function test5(){
     });
 }
 
-function test6(){
-    let btn = document.querySelector("#test6").value;
+function cate6(){
+    let btn = $("#cate6").attr("value");
     $.ajax({
-        url : "http://127.0.0.1:3307/reco",
-        data : {"data" : btn},
-        success : (result) => {
-            const entries = Object.entries(result);
-            console.log(result);
-            $("#recoList").empty();
-            for (let i = 0; i < entries.length; i++) {
-                $("#recoList").append(`
-                <div>
-                    <h2>${i + 1}번째 식당</h2>
-                    <span>식당 이름 : ${result[i].rest_name}</span><br>
-                    <span>메뉴 이름 : ${result[i].menu_name}</span><br>
-                    <span>식당 주소 : ${result[i].rest_address}</span><br>
-                    <span>식당 거리 : ${result[i].rest_distance}m</span><br>
-                    <span>식당 휴무일 : ${result[i].rest_offtime}</span><br>
-                    <span>식당 영업시간 : ${result[i].rest_ontime}</span><br>
-                    <span>식당 연락처 : ${result[i].rest_tel}</span><br>
-                    <span>네이버 별점 : ${result[i].rest_naver}</span>
-                </div>
-                <br>
-                `);
+        url : "http://127.0.0.1:5000/reco", // 데이터를 요청할 서버의 경로(플라스크 서버)
+        dataType: "json",
+        data : {"data" : btn}, // 플라스크 서버에 데이터를 요청할 때 "data" 라는 이름으로 btn 변수의 값을 보냄
+        success : (result) => { // 데이터를 성공적으로 가져올 경우에
+            const entries = Object.entries(result); // 가져온 데이터를 배열 형태로 변환함(CORS 정책 때문에)
+            console.log(result); // 콘솔창에 가져온 데이터를 보여줌
+            for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
+                $(".portfolio-info h4 a")[i].innerText = (`
+                    식당 이름 : ${result[i].rest_name}
+                    메뉴 이름 : ${result[i].menu_name}
+                    식당 주소 : ${result[i].rest_address}
+                    식당 거리 : ${result[i].rest_distance}
+                    식당 휴무일 : ${result[i].rest_offtime}
+                    식당 영업시간 : ${result[i].rest_ontime}
+                    식당 연락처 : ${result[i].rest_tel}
+                    네이버 별점 : ${result[i].rest_naver}
+                `); // a 태그 요소 안의 텍스트를 변경함
             }
         },
         error:function(){
@@ -185,30 +160,26 @@ function test6(){
     });
 }
 
-function test7(){
-    let btn = document.querySelector("#test7").value;
+function cate7(){
+    let btn = $("#cate7").attr("value");
     $.ajax({
-        url : "http://127.0.0.1:3307/reco",
-        data : {"data" : btn},
-        success : (result) => {
-            const entries = Object.entries(result);
-            console.log(result);
-            $("#recoList").empty();
-            for (let i = 0; i < entries.length; i++) {
-                $("#recoList").append(`
-                <div>
-                    <h2>${i + 1}번째 식당</h2>
-                    <span>식당 이름 : ${result[i].rest_name}</span><br>
-                    <span>메뉴 이름 : ${result[i].menu_name}</span><br>
-                    <span>식당 주소 : ${result[i].rest_address}</span><br>
-                    <span>식당 거리 : ${result[i].rest_distance}m</span><br>
-                    <span>식당 휴무일 : ${result[i].rest_offtime}</span><br>
-                    <span>식당 영업시간 : ${result[i].rest_ontime}</span><br>
-                    <span>식당 연락처 : ${result[i].rest_tel}</span><br>
-                    <span>네이버 별점 : ${result[i].rest_naver}</span>
-                </div>
-                <br>
-                `);
+        url : "http://127.0.0.1:5000/reco", // 데이터를 요청할 서버의 경로(플라스크 서버)
+        dataType: "json",
+        data : {"data" : btn}, // 플라스크 서버에 데이터를 요청할 때 "data" 라는 이름으로 btn 변수의 값을 보냄
+        success : (result) => { // 데이터를 성공적으로 가져올 경우에
+            const entries = Object.entries(result); // 가져온 데이터를 배열 형태로 변환함(CORS 정책 때문에)
+            console.log(result); // 콘솔창에 가져온 데이터를 보여줌
+            for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
+                $(".portfolio-info h4 a")[i].innerText = (`
+                    식당 이름 : ${result[i].rest_name}
+                    메뉴 이름 : ${result[i].menu_name}
+                    식당 주소 : ${result[i].rest_address}
+                    식당 거리 : ${result[i].rest_distance}
+                    식당 휴무일 : ${result[i].rest_offtime}
+                    식당 영업시간 : ${result[i].rest_ontime}
+                    식당 연락처 : ${result[i].rest_tel}
+                    네이버 별점 : ${result[i].rest_naver}
+                `); // a 태그 요소 안의 텍스트를 변경함
             }
         },
         error:function(){
@@ -216,30 +187,53 @@ function test7(){
     });
 }
 
-function test8(){
-    let btn = document.querySelector("#test8").value;
+function cate8(){
+    let btn = $("#cate8").attr("value");
     $.ajax({
-        url : "http://127.0.0.1:3307/reco",
-        data : {"data" : btn},
-        success : (result) => {
-            const entries = Object.entries(result);
-            console.log(result);
-            $("#recoList").empty();
-            for (let i = 0; i < entries.length; i++) {
-                $("#recoList").append(`
-                <div>
-                    <h2>${i + 1}번째 식당</h2>
-                    <span>식당 이름 : ${result[i].rest_name}</span><br>
-                    <span>메뉴 이름 : ${result[i].menu_name}</span><br>
-                    <span>식당 주소 : ${result[i].rest_address}</span><br>
-                    <span>식당 거리 : ${result[i].rest_distance}m</span><br>
-                    <span>식당 휴무일 : ${result[i].rest_offtime}</span><br>
-                    <span>식당 영업시간 : ${result[i].rest_ontime}</span><br>
-                    <span>식당 연락처 : ${result[i].rest_tel}</span><br>
-                    <span>네이버 별점 : ${result[i].rest_naver}</span>
-                </div>
-                <br>
-                `);
+        url : "http://127.0.0.1:5000/reco", // 데이터를 요청할 서버의 경로(플라스크 서버)
+        dataType: "json",
+        data : {"data" : btn}, // 플라스크 서버에 데이터를 요청할 때 "data" 라는 이름으로 btn 변수의 값을 보냄
+        success : (result) => { // 데이터를 성공적으로 가져올 경우에
+            const entries = Object.entries(result); // 가져온 데이터를 배열 형태로 변환함(CORS 정책 때문에)
+            console.log(result); // 콘솔창에 가져온 데이터를 보여줌
+            for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
+                $(".portfolio-info h4 a")[i].innerText = (`
+                    식당 이름 : ${result[i].rest_name}
+                    메뉴 이름 : ${result[i].menu_name}
+                    식당 주소 : ${result[i].rest_address}
+                    식당 거리 : ${result[i].rest_distance}
+                    식당 휴무일 : ${result[i].rest_offtime}
+                    식당 영업시간 : ${result[i].rest_ontime}
+                    식당 연락처 : ${result[i].rest_tel}
+                    네이버 별점 : ${result[i].rest_naver}
+                `); // a 태그 요소 안의 텍스트를 변경함
+            }
+        },
+        error:function(){
+        }
+    });
+}
+
+function cate9(){
+    let btn = $("#cate9").attr("value");
+    $.ajax({
+        url : "http://127.0.0.1:5000/reco", // 데이터를 요청할 서버의 경로(플라스크 서버)
+        dataType: "json",
+        data : {"data" : btn}, // 플라스크 서버에 데이터를 요청할 때 "data" 라는 이름으로 btn 변수의 값을 보냄
+        success : (result) => { // 데이터를 성공적으로 가져올 경우에
+            const entries = Object.entries(result); // 가져온 데이터를 배열 형태로 변환함(CORS 정책 때문에)
+            console.log(result); // 콘솔창에 가져온 데이터를 보여줌
+            for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
+                $(".portfolio-info h4 a")[i].innerText = (`
+                    식당 이름 : ${result[i].rest_name}
+                    메뉴 이름 : ${result[i].menu_name}
+                    식당 주소 : ${result[i].rest_address}
+                    식당 거리 : ${result[i].rest_distance}
+                    식당 휴무일 : ${result[i].rest_offtime}
+                    식당 영업시간 : ${result[i].rest_ontime}
+                    식당 연락처 : ${result[i].rest_tel}
+                    네이버 별점 : ${result[i].rest_naver}
+                `); // a 태그 요소 안의 텍스트를 변경함
             }
         },
         error:function(){

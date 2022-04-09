@@ -9,7 +9,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Nanum Gothic', sans-serif !important;
   color: #444444;
 }
 
@@ -29,7 +29,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Nanum Gothic', sans-serif !important;
 }
 
 /*--------------------------------------------------------------
@@ -125,7 +125,7 @@ h6 {
   z-index: 997;
   padding: 15px 0;
   border-bottom: 1px solid #e6f2fb;
-  padding-left: 5%;
+  margin: 0 !important;
 }
 #header.header-scrolled {
   border-color: #fff;
@@ -138,7 +138,7 @@ h6 {
   line-height: 1;
   font-weight: 300;
   letter-spacing: 0.5px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Nanum Gothic', sans-serif !important;
 }
 #header .logo a {
   color: #16507b;
@@ -150,6 +150,15 @@ h6 {
   #header .logo {
     font-size: 28px;
   }
+}
+
+#header {
+  text-align: center !important;
+}
+
+div.align-items-center.justify-content-between {
+  display: inline !important;
+  padding: 0px 10%;
 }
 
 /*--------------------------------------------------------------
@@ -378,16 +387,16 @@ h6 {
   left: 0;
   right: 0;
 }
-#hero .container {
-  padding-top: 80px;
-}
+
 #hero h1 {
-  margin: 0;
+  margin-top: 50px;
   font-size: 56px;
+  position: relative;
+  text-align: center;
   font-weight: 700;
   line-height: 72px;
   color: #124265;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Nanum Gothic', sans-serif !important;
 }
 #hero h2 {
   color: #5e5e5e;
@@ -395,7 +404,7 @@ h6 {
   font-size: 22px;
 }
 #hero .btn-get-started {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Nanum Gothic', sans-serif !important;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 0.5px;
@@ -408,58 +417,55 @@ h6 {
   background: #2487ce;
 }
 #hero .btn-get-started:hover {
-  background: #3194db;
+  background: #1e88d3;
 }
-#hero .icon-boxes {
-  margin-top: 100px;
-  
-}
-#hero .icon-box {
 
-  padding: 30px 30px;
-  /* position: relative; */
-  width: 100%;
-  height: 60%;
+
+#hero .icon-boxes_1, #hero .icon-boxes_2 { /* 4개 상자끼리 간격 */
+  margin-top: 20px;
+  padding-right: 60px;
+}
+
+#hero .icon-box { /* 개별 상자 */
+  padding: 0;
+  width: 255px;
+  height: 220px;
+  line-height: 350px; /* 박스 안쪽 글자 위치 조정 */
+  text-align: center;
   overflow: hidden;
-  background: #fff;
-  box-shadow: 0 0 29px 0 rgba(18, 66, 101, 0.08);
+  /* background:rgba(255, 255, 255, 0); */
+  box-shadow: 0 0 29px 0 rgba(10, 25, 40, 0.15);
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
   z-index: 1;
+
 }
-#hero .icon-box .title {
-  font-weight: 700;
-  margin: bottom 30px;
-  font-size: 15px;
-  text-align: center;
+#hero .icon-box span{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 20px;
 }
-#hero .icon-box .title a {
-  color: #124265;
-  transition: 0.3s;
+
+
+#box_1 a , #box_2 a{
+  text-decoration-line: none !important;
 }
-#hero .icon-box .description {
-  font-size: 15px;
-  line-height: 28px;
-  margin-bottom: 0;
-}
+
 #box_1.row.icon-boxes_1 {
- margin-top: 10px;
+ /* margin: 0 !important; */
+ width: 1200px;
+
 }
-/* #hero .icon-box .icon {
-  margin-bottom: 20px;
-  padding-top: 10px;
-  display: inline-block;
-  transition: all 0.3s ease-in-out;
-  font-size: 36px;
-  line-height: 1;
-  color: #2487ce;
-} */
+
+#box_2.row.icon-boxes_2 {
+  /* margin: 0 !important; */
+  width: 1200px;
+ }
+
 #hero .icon-box:hover {
   transform: scale(1.08);
 }
-#hero .icon-box:hover .title a {
-  color: #2487ce;
-}
+
 @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;
@@ -507,12 +513,14 @@ section {
   margin-bottom: 20px;
   padding-bottom: 0;
   color: #3396f3e5;
+  font-family: 'Nanum Gothic', sans-serif !important;
   font-family: "Nanum Pen Script", cursive;
 }
 .section-title p {
   margin-bottom: 0;
   font-size: 30px;
   color: #111010;
+  font-family: 'Nanum Gothic', sans-serif !important;
   font-family: "Nanum Pen Script", cursive;
 }
 
@@ -546,7 +554,7 @@ section {
   margin-bottom: 0;
 }
 .about .content .btn-learn-more {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Nanum Gothic', sans-serif !important;
   font-weight: 600;
   font-size: 14px;
   letter-spacing: 1px;
@@ -588,7 +596,7 @@ section {
 }
 .counts .count-box p {
   padding: 8px 0 0 0;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Nanum Gothic', sans-serif !important;
   font-weight: 600;
   font-size: 14px;
   color: #1e6ca6;
@@ -941,7 +949,7 @@ section {
   color: #fff;
 }
 .cta .cta-btn {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Nanum Gothic', sans-serif !important;
   font-weight: 600;
   font-size: 14px;
   letter-spacing: 1px;
@@ -1247,7 +1255,7 @@ section {
   font-size: 42px;
   color: #2487ce;
   font-weight: 500;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Nanum Gothic', sans-serif !important;
   margin-bottom: 20px;
 }
 .pricing .box h4 sup {
@@ -1287,7 +1295,7 @@ section {
   transition: none;
   font-size: 14px;
   font-weight: 400;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Nanum Gothic', sans-serif !important;
   font-weight: 600;
   transition: 0.3s;
   border: 2px solid #2487ce;
@@ -1341,7 +1349,7 @@ section {
 .faq .faq-list a {
   display: block;
   position: relative;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Nanum Gothic', sans-serif !important;
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
@@ -1594,7 +1602,7 @@ section {
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Nanum Gothic', sans-serif !important;
   color: #777777;
 }
 #footer .footer-top h4 {
@@ -1751,9 +1759,9 @@ section {
 
 
 
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 
 /* body {
   display: flex;
@@ -1761,42 +1769,38 @@ section {
   align-items: center;
 } */
 
-/* weegle 이미지
-header .logo {
+
+/* header .logo {
   padding-top: 150px;
   width: 600px;
 } */
 
 /* search :bar */
+#header {
+  width: 50%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#header.fixed-top {
+  width: 100% !important;
+}
+
 .search input {
-  margin-left: 5%;
-  width: 40%;
+  text-align: center;
+  width: 50%;
   height: 50%;
   border: 2px solid rgb(209, 207, 207);
   border-radius: 15px;
+ 
 }
 
-
-
 h1.logo {
-  /* overflow:hiddlen;
-  white-space:nowrap; */
   display : inline-block;
   margin-left: 500%;
 }
 
-.material-icons-outlined{
-  /* width: 30%;
-  height: 50%;
-  right: -145%;
-   padding-top: -%; 
-  
-  text-align: center;
-  line-height: 0%;
-  position: relative; */
-  vertical-align: middle;
-
-}
-#box_1,#box_2{
-  text-align: center;
+.material-icons-outlined{ /*시간되면 나중에 보기*/
+  position: relative;
+  vertical-align:-23%;
 }
