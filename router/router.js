@@ -2,8 +2,10 @@ const { Router } = require("express");
 const express = require("express");
 const expressMysqlSession = require("express-mysql-session");
 const req = require("express/lib/request");
+const res = require("express/lib/response");
 const router = express.Router();
 const conn = require("../config/DB.js");
+
 
 
 
@@ -83,12 +85,24 @@ router.get("/reco", function(request, response) { // main에서 값을 받는 �
 
 
 router.get("/resPage", function (request, response) {
+    let sql = "select * from rest_info";
+    // let baseName = path.basename(fileName);
+    conn.query(sql, (err, rows) => {
+        if (err) {
+            console.error("query error" + err);
+            response.status(500).send("Internal Server Error😢");
 
-    
-    response.render("resPage", {
-        restaurant: request.session.user
+        } else {
+            
+            // console.log( "파일이름: %s", baseName);
+            response.render("resPage", {
+                user: request.session.user,
+                rows: rows
         
-    }) 
+            });
+        };
+    });
+    
 });
 
 module.exports = router;
