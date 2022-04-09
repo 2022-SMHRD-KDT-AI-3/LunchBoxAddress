@@ -115,10 +115,10 @@ router.get("/reco", function(request, response) { // main에서 값을 받는 �
 //     });
     
 // });
-
-router.get("/resPae", function (request, response) { // main에서 값을 받는 거라 reco가 main.ejs로 가야할 거임
-    console.log(request.query.id);
-    let rest_id = request.query.id;
+let rest_id;
+router.get("/resPage", function (request, response) { // main에서 값을 받는 거라 reco가 main.ejs로 가야할 거임
+    console.log("12313",request.query.id);
+    rest_id = request.query.id;
 
     let sql = "select * from rest_info where rest_id = ?";
     conn.query(sql, [rest_id], function (err, rows) {
@@ -145,7 +145,7 @@ router.get("/resPae", function (request, response) { // main에서 값을 받는
             console.log(request.session.rest.type);
             console.log(request.session.rest.latitude);
 
-            response.redirect("http://127.0.0.1:3307/resPage");
+            response.redirect("http://127.0.0.1:3307/test");
 
         } else {
             console.log("식당못찾음 ㅅㄱ");
@@ -157,12 +157,50 @@ router.get("/resPae", function (request, response) { // main에서 값을 받는
 
 
 
-router.get("/resPage", function (request, response) {
-    
-    response.render("resPage", {
-        info : request.session.rest
-    });
+router.get("/test", function (request, response) {
+    let m_str = "";
+    let m_list = [];
+    rest_id = request.session.rest.id;
+    console.log("라라라",rest_id);
+    console.log(rest_id);
+    let sql = "";
 
+    sql = "select menu_name from menu_info where rest_id = ?";
+    conn.query(sql, [rest_id], function (err, rows) {
+        console.log("===================================== 4차방지선 =====================");
+
+        console.log("메뉴 가져오기 성공!");
+        console.log(rows.length); // 여기까지 문제 없음
+        
+        if (rows.length > 0) {
+            // console.log("===================================== 2차방지선 =====================");
+            console.log("들어감??"); // 여기까지도 들어왔음
+            for (let i = 0; i < rows.length; i++){
+                console.log(rows[i].menu_name);
+                m_list.push(rows[i].menu_name);
+                
+                
+            }
+            for (let i = 0; i < m_list.length; i++){
+
+                m_str = m_str + m_list[i] + " "
+                
+                
+            }
+
+            console.log(m_str);
+        } else {
+            console.log("메뉴못찾음 ㅅㄱ");
+        }
+        console.log(m_list.length);
+        console.log(m_list);
+
+    });
+    response.render("test", {
+        info: request.session.rest
+        // menu:
+        
+        });
 
 }); // 라우터 닫음
 

@@ -29,18 +29,20 @@
 
   <!-- Template Main CSS File -->
   <link href="/assets/css/style.css" rel="stylesheet">
-  <link href="/assets/css/style2.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+
+
+
   <!-- 제이쿼리 스크립트 모음 -->
-
-
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="http://code.jquery.com/qunit/qunit-1.10.0.js"></script>
-  <!--     
-    <script src="/assets/js/reco.js"></script> -->
-
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-1.9.0.min.js"></script> -->
+  <!-- <script src="https://code.jquery.com/jquery-migrate-1.4.1.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-3.3.2.js"></script> -->
+  <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  
   <!-- Vendor JS Files -->
   <script src="/assets/vendor/purecounter/purecounter.js"></script>
   <script src="/assets/vendor/aos/aos.js"></script>
@@ -49,22 +51,14 @@
   <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="/assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="/assets/js/main.js"></script>
-  <script src="/assets/js/reco.js"></script>
-
-  <!-- 제이쿼리 스크립트 모음 -->
-
-
+  
+  <script src="assets/js/main.js"></script>
+  
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="http://code.jquery.com/qunit/qunit-1.10.0.js"></script>
-
+  
   <script src="/assets/js/reco.js"></script>
-
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/assets/js/changeSubTitle.js"></script>
+  <script src="/assets/js/changeMainTitle.js"></script>
 
   <!-- =======================================================
   * Template Name: OnePage - v4.7.0
@@ -165,7 +159,7 @@
               <ul>
                 <li>
                   <p>
-                    <span>rows.menu</span>
+                    <span><%=menu.menu_name%></span>
                   </p>
                 </li>
               </ul>
