@@ -28,7 +28,9 @@ router.post("/Join", function (request, response) {
 
         if (rows) {
             console.log("회원가입성공");
-            response.redirect("http://127.0.0.1:3307/login");
+            // response.redirect("http://127.0.0.1:3307/login");
+            response.redirect("http://127.0.0.1:3307/main");
+
         } else {
             console.log(err);
         }
@@ -50,6 +52,7 @@ router.post("/login", function (request,response) {
                 "nick": rows[0].nick
             }
             response.redirect("http://127.0.0.1:3307/main");
+            
         } else {
             console.log("로그인실패임둥");
         }
