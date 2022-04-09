@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title><%=info.name%></title>
+    <title><%=info.name%>의 세부 페이지</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -26,6 +26,9 @@
     <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- 리뷰페이지 CSS -->
+    <link rel="stylesheet" href="/assets/css/review.css">
 
     <!-- Template Main CSS File -->
     <link href="/assets/css/style.css" rel="stylesheet">
@@ -87,6 +90,11 @@
             </span>
 
         </div>
+        <%if(user==null){%>
+            <a href="/wdw-snippet.html">로그인</a> <!--로그인폼대충새로만들어야할수도있음 -->
+            <%}else{%>
+                <a href="http://127.0.0.1:3307/logout" >로그아웃</a>
+                <%}%>
     </header>
 
     </header><!-- End Header -->
@@ -157,11 +165,27 @@
                             <h2>메뉴정보</h2>
                             <p>
                             <ul>
-                                <li>
+                                
                                     <p>
-                                        <span><%=menu%></span>
+                                        <table width="300">
+
+
+                                            <%for(var i=0;i<menu.length;i=i+2){%>
+                                                <tr>
+                                                    <td>
+                                                        <%=menu[i].menu_name%>
+                                                    </td>
+                                                    <td>
+                                                        <%=menu[i+1].menu_name%>
+                                                    </td>
+                                                </tr>
+                                            <%}%>
+
+
+
+                                        </table>
                                     </p>
-                                </li>
+                                
                             </ul>
                             </p>
                         </div>
@@ -217,7 +241,21 @@
 
             </div>
         </section><!-- End Counts Section -->
+<!-- 리뷰 페이지 -->
+<% if(user != null){ %> 
+<button id="hihi">리뷰 하이</button>
 
+
+
+<div class="box">
+    
+</div>
+
+<% } %> 
+
+
+
+<!-- 리뷰 끝 -->
 
         <!-- ======= Testimonials Section ======= -->
         <section id="testimonials" class="testimonials">
@@ -509,53 +547,10 @@
             class="bi bi-arrow-up-short"></i></a>
 
 
-    <!-- <script>
-    function test1() {
-      let btn = document.querySelector("#test1").value;
-      $.ajax({
-        url: "http://127.0.0.1:5000/reco/", 
-        data: { "data": btn }, 
-        success: (result) => { 
-          // location.href = "#recoTitle"; 
-          const entries = Object.entries(result); 
-          console.log(result); 
-          $(".col-lg-4").empty(); 
-          for (let i = 0; i < entries.length; i++) { 
-            $(".col-lg-4").append(`
-              <div class="portfolio-info">
-              <h3> ${result[i].rest_name}</h3>
-              <ul>
-                <li><strong>식당 업태</strong>: 업태변수 넣기</li>
-                <li><strong>주소 및 현재위치로부터 식당거리</strong>: ${result[i].rest_address} : ${result[i].rest_distance}m</li>
-                <li><strong>연락처</strong>: ${result[i].rest_tel}</li>
-                <li><strong>영업시간</strong>:  ${result[i].rest_ontime}</li>
-                <li><strong> 휴무일 (+브레이크 타임)</strong>:${result[i].rest_offtime}</li>
-                <li><strong> 네이버 별점</strong>:${result[i].rest_naver}</li>
-              </ul>
-            </div>
-            <div class="portfolio-description">
-              <h2>메뉴정보</h2>
-              <p>
-              <ul>
-                <li>
-                  <p>
-                    <span>${result[i].menu_name}</span>
-                  </p>
-                </li>
-              </ul>
-              </p>
-            </div>
-          </div>
-                          `);
-          }
-        },
-        error: function () {
-        }
-      });
-    }
-</script> -->
-
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/assets/vendor/purecounter/purecounter.js"></script>
+<script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="/assets/js/appear.js"></script>
 </body>
 
 </html>

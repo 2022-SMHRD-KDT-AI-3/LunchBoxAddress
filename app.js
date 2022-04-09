@@ -38,4 +38,5 @@ app.use(session({
 
 app.use(bodyparser.urlencoded({extended:false}));
 app.use(router);
+router.use('LunchBoxAddress', express.static('public/assets/img/review_img'));
 app.listen(3307);

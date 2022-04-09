@@ -3,6 +3,9 @@ const express = require("express");
 const expressMysqlSession = require("express-mysql-session");
 const req = require("express/lib/request");
 const res = require("express/lib/response");
+var path = require('path');
+var multer = require('multer');
+var bodyParser = require('body-parser');
 const router = express.Router();
 const conn = require("../config/DB.js");
 
@@ -73,9 +76,55 @@ router.get("/logout", function (request, response) {
 });
 
 router.get("/review_write", function (request, response) { // 리뷰 작성 라우터(수정 중, 지연)
-    response.render("review_write.ejs", {
+    response.render("http://127.0.0.1:3307/test", {
         user: request.session.user
     })
+});
+
+//리뷰사진 업로드 경로 설정
+var storage = multer.diskStorage({
+    destination: function(request, file, cb) {
+        cb(null, './public/assets/img/review_img')
+    },
+    filename: function(request, file, cb) { 
+        const ext = path.extname(file.originalname);
+        cb(null, path.basename(file.originalname,ext) + '-' + Date.now() + ext);
+    }
+})
+var upload = multer({ storage: storage })
+const { log, info } = require('console');
+const { allowedNodeEnvironmentFlags } = require('process');
+const { request } = require('http');
+const { userInfo } = require('os');
+
+router.post("/test", upload.single('userfile'), function(request, response){
+    console.log(request.file);
+
+    let email = request.session.user.email;
+    let eval = parseInt(request.body.eval);
+    let t_score = request.body.t_score;
+    let m_score = request.body.m_score;
+    let c_score = request.body.c_score;
+    let cook_time = request.body.cook_time;
+    let wait_time = request.body.wait_time;
+    let contents = request.body.contents;
+    let pic_url = 'localhost:3307/LunchBoxAddress/'+request.file.filename;
+    let rest_id = parseInt(request.session.rest.id);
+ 
+    let sql = 'insert into review_info(email, eval, t_score, m_score, c_score, cook_time, wait_time, contents, re_date, pic_url, rest_id) values(?,?,?,?,?,?,?,?,now(),?,?)';
+
+    conn.query(sql, [email, eval, t_score, m_score, c_score, cook_time, wait_time,
+        contents, pic_url, rest_id], function(err, rows){
+        if(rows){
+            console.log(rows);
+            
+        }else{
+            console.log(err);
+        }
+    });
+    //alert('리뷰 작성 완료, 이전 페이지로 돌아갑니다');
+    response.redirect("http://127.0.0.1:3307/test/");
+
 });
 
 router.get("/search",function(request, response){
@@ -115,15 +164,13 @@ router.get("/reco", function(request, response) { // main에서 값을 받는 �
 //     });
     
 // });
-let rest_id;
+// let rest_id;
 router.get("/resPage", function (request, response) { // main에서 값을 받는 거라 reco가 main.ejs로 가야할 거임
-    console.log("12313",request.query.id);
-    rest_id = request.query.id;
 
-    let sql = "select * from rest_info where rest_id = ?";
-    conn.query(sql, [rest_id], function (err, rows) {
+    let rest_id = request.query.id;
+    let sql_1 = "select * from rest_info where rest_id = ?";
+    conn.query(sql_1, [rest_id], function (err, rows) {
         console.log("식당 찾기 성공!");
-        // console.log(rows.length);
 
         if (rows.length > 0) {
             request.session.rest = {
@@ -139,68 +186,63 @@ router.get("/resPage", function (request, response) { // main에서 값을 받�
                 "offtime": rows[0].rest_offtime,
                 "naver": rows[0].rest_naver
             }
-            console.log(request.session.rest.id);
-            console.log(request.session.rest.name);
-            console.log(request.session.rest.address);
-            console.log(request.session.rest.type);
-            console.log(request.session.rest.latitude);
-
             response.redirect("http://127.0.0.1:3307/test");
-
         } else {
             console.log("식당못찾음 ㅅㄱ");
         }
     });
 
-    // 디비에서 아이디 매칭해서 정보를 배열변수 담아서 뿌리면
+    // 여기에 넣어야함'
+    // let arr = []
+    // let sql_2 = "select menu_name from menu_info where rest_id = ?";
+    // conn.query(sql_2, [rest_id], function (err, rows) {
+    //     if (rows.length > 0) {
+    //         request.session.menu = {
+    //             "info": rows
+    //         }
+    //     //    for(let i=0;i<rows.length;i++){
+    //     //        arr.push(rows[i]);
+    //       // }
+    //       // console.log(arr);
+    //     } else {
+    //         console.log("메뉴못가져옴 ㅅㄱ");
+    //     }
+    // });
 });
 
 
 
 router.get("/test", function (request, response) {
-    let m_str = "";
-    let m_list = [];
+    
     rest_id = request.session.rest.id;
-    console.log("라라라",rest_id);
-    console.log(rest_id);
-    let sql = "";
 
-    sql = "select menu_name from menu_info where rest_id = ?";
-    conn.query(sql, [rest_id], function (err, rows) {
-        console.log("===================================== 4차방지선 =====================");
+    let m_list = [];
+    
+    console.log("제발빕니다! >> ", m_list);
 
-        console.log("메뉴 가져오기 성공!");
-        console.log(rows.length); // 여기까지 문제 없음
-        
+
+    let sql_2 = "select menu_name from menu_info where rest_id = ?";
+    conn.query(sql_2, [rest_id], function (err, rows) {
         if (rows.length > 0) {
-            // console.log("===================================== 2차방지선 =====================");
-            console.log("들어감??"); // 여기까지도 들어왔음
-            for (let i = 0; i < rows.length; i++){
-                console.log(rows[i].menu_name);
-                m_list.push(rows[i].menu_name);
-                
-                
-            }
-            for (let i = 0; i < m_list.length; i++){
-
-                m_str = m_str + m_list[i] + " "
-                
-                
+            
+            if(rows.length % 2 != 0) {
+                rows.push(" ")
             }
 
-            console.log(m_str);
+
+
+            response.render("test", {
+                user: request.session.user,
+                info: request.session.rest,
+                menu : rows
+            });
+
         } else {
-            console.log("메뉴못찾음 ㅅㄱ");
+            console.log("메뉴못가져옴 ㅅㄱ");
         }
-        console.log(m_list.length);
-        console.log(m_list);
-
     });
-    response.render("test", {
-        info: request.session.rest
-        // menu:
-        
-        });
+
+    
 
 }); // 라우터 닫음
 
