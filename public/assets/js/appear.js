@@ -1,15 +1,14 @@
 $(document).ready(function () {
     $("#hihi").click(function () {
-        $(".box").append(`
+        $(".box").prepend(`
             
         <form action="http://127.0.0.1:3307/test" class="r_f" method="post" enctype="multipart/form-data">
         <div id="shadow">
-         <table class="table" border="0" cellspacing="5">
+        <table class="table" border="0" cellspacing="5">
 
         <tr class=" siv" id="star" height="100px;">
-
             
-                <td class="line" align="center"  ><strong>총평가</strong></td>
+            <td class="line" align="center"><strong>총평가</strong></td>
             
             <td width="400px" >
                 <div class="star-rating space-x-4 mx-auto">

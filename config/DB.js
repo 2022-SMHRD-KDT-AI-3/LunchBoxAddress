@@ -7,7 +7,8 @@ let conn = mysql.createConnection({
     user: 'campus_g_0325_2',
     password: 'smhrd2',
     port: '3307',
-    database: 'campus_g_0325_2'
+    database: 'campus_g_0325_2',
+    multipleStatements: true
 });
 conn.connect();
 

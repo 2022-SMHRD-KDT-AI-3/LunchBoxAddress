@@ -192,57 +192,40 @@ router.get("/resPage", function (request, response) { // main에서 값을 받�
         }
     });
 
-    // 여기에 넣어야함'
-    // let arr = []
-    // let sql_2 = "select menu_name from menu_info where rest_id = ?";
-    // conn.query(sql_2, [rest_id], function (err, rows) {
-    //     if (rows.length > 0) {
-    //         request.session.menu = {
-    //             "info": rows
-    //         }
-    //     //    for(let i=0;i<rows.length;i++){
-    //     //        arr.push(rows[i]);
-    //       // }
-    //       // console.log(arr);
-    //     } else {
-    //         console.log("메뉴못가져옴 ㅅㄱ");
-    //     }
-    // });
+   
 });
-
 
 
 router.get("/test", function (request, response) {
     
     rest_id = request.session.rest.id;
 
-    let m_list = [];
-    
-    console.log("제발빕니다! >> ", m_list);
-
-
-    let sql_2 = "select menu_name from menu_info where rest_id = ?";
-    conn.query(sql_2, [rest_id], function (err, rows) {
-        if (rows.length > 0) {
-            
-            if(rows.length % 2 != 0) {
-                rows.push(" ")
-            }
-
-
-
-            response.render("test", {
-                user: request.session.user,
-                info: request.session.rest,
-                menu : rows
-            });
-
-        } else {
-            console.log("메뉴못가져옴 ㅅㄱ");
+    let sql_2 = "select menu_name from menu_info where rest_id = ?;" + "select * from review_info where rest_id = ?;";
+    conn.query(sql_2, [rest_id, rest_id], function (err, rows) {
+        
+        if(err) {
+            console.log("ㅅㅂ 개망함");
         }
-    });
 
-    
+        if(rows[0].length % 2 != 0) {
+            rows[0].push(" ")
+        }
+
+        console.log("여기까지오나제발리뷰불러오게해주세요");
+        response.render("test", {
+            user: request.session.user,
+            info: request.session.rest,
+            menu : rows[0],
+            review : rows[1]
+        });
+        
+        let res_menu = rows[0];
+        let res_review = rows[1];
+
+        console.log(res_menu);
+        console.log(res_review);
+        
+    });
 
 }); // 라우터 닫음
 

@@ -164,19 +164,16 @@
                         </div>
                         <div class="portfolio-description">
                             <h2>메뉴정보</h2>
-                            <p>
-                            <ul>
-                                
                                     <p>
-                                        <table width="300">
+                                        <table width="300px">
 
 
                                             <%for(var i=0;i<menu.length;i=i+2){%>
                                                 <tr>
-                                                    <td>
+                                                    <td width="150px">
                                                         <%=menu[i].menu_name%>
                                                     </td>
-                                                    <td>
+                                                    <td width="150px">
                                                         <%=menu[i+1].menu_name%>
                                                     </td>
                                                 </tr>
@@ -186,9 +183,6 @@
 
                                         </table>
                                     </p>
-                                
-                            </ul>
-                            </p>
                         </div>
                     </div>
 
@@ -244,12 +238,14 @@
         </section><!-- End Counts Section -->
 <!-- 리뷰 페이지 -->
 <% if(user != null){ %> 
-<button id="hihi">리뷰 하이</button>
+<!-- <button id="hihi">리뷰 하이</button> -->
 
-
+<div style="text-align : center">
+    <a href="#shadow" id="hihi">🔻리뷰 또다시 ㅎㅇㅎㅇ~!🔻</a>
+</div>
 
 <div class="box counts section-bg" id="counts">
-    
+
 </div>
 
 <% } %> 
@@ -257,6 +253,56 @@
 
 
 <!-- 리뷰 끝 -->
+<!-- 리뷰 목록을 보여주는 공간 시작 -->
+
+<table>
+    <tr>
+        <td>이메일</td>
+        <td>별점</td>
+        <td>맛</td>
+        <td>가격</td>
+        <td>서비스</td>
+        <td>회전율</td>
+        <td>대기시간</td>
+        <td>상세내용</td>
+        <td>작성날자ㅋㅋ</td>
+        <td>사진경로</td>
+    </tr>
+
+    <%for (var i = 0; i < review.length; i++) {%>
+    <tr>
+        <td><%=review[i].email%></td>
+        <td><%=review[i].eval%></td>
+        <td><%=review[i].t_score%></td>
+        <td><%=review[i].m_score%></td>
+        <td><%=review[i].c_score%></td>
+        <td><%=review[i].cook_time%></td>
+        <td><%=review[i].wait_time%></td>
+        <td><%=review[i].contents%></td>
+        <td><%=review[i].re_date%></td>
+        <td><img src="\assets\img\review_img<%=review[i].pic_url.substring(30)%>" alt="이미지를 불러올수업다 절대못불러온다 ㅋㅋ"></td>
+
+
+    </tr>
+    <%}%>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <!-- ======= Testimonials Section ======= -->
         <section id="testimonials" class="testimonials">
