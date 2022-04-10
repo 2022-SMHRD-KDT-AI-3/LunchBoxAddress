@@ -200,8 +200,8 @@ router.get("/test", function (request, response) {
     
     rest_id = request.session.rest.id;
 
-    let sql_2 = "select menu_name from menu_info where rest_id = ?;" + "select * from review_info where rest_id = ?;";
-    conn.query(sql_2, [rest_id, rest_id], function (err, rows) {
+    let sql_2 = "select menu_name from menu_info where rest_id = ?;" + "select * from review_info where rest_id = ?;" + "select b_url, ad_nonad from blog_info where rest_id = ?;";
+    conn.query(sql_2, [rest_id, rest_id, rest_id], function (err, rows) {
         
         if(err) {
             console.log("ㅅㅂ 개망함");
@@ -216,14 +216,17 @@ router.get("/test", function (request, response) {
             user: request.session.user,
             info: request.session.rest,
             menu : rows[0],
-            review : rows[1]
+            review : rows[1],
+            blog: rows[2]
         });
         
         let res_menu = rows[0];
         let res_review = rows[1];
+        let res_blog = rows[2];
 
         console.log(res_menu);
         console.log(res_review);
+        console.log(res_blog.length);
         
     });
 

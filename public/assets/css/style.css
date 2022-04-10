@@ -365,6 +365,11 @@ div.align-items-center.justify-content-between {
   right: 0;
 } */
 
+.col-xl-7, .col-lg-9, .text-center {
+  margin-top: 300px;
+  width: 100%;
+}
+
 #hero h1 {
   margin-top: 50px;
   font-size: 56px;
@@ -372,7 +377,7 @@ div.align-items-center.justify-content-between {
   text-align: center;
   font-weight: 700;
   line-height: 72px;
-  color: #124265;
+  color: #ffffff;
   font-family: 'Nanum Gothic', sans-serif !important;
 }
 #hero h2 {
@@ -386,7 +391,7 @@ div.align-items-center.justify-content-between {
   font-size: 14px;
   letter-spacing: 0.5px;
   display: inline-block;
-  padding: 14px 50px;
+  padding: 14px 20px;
   border-radius: 5px;
   transition: 0.5s;
   margin-top: 30px;
@@ -397,24 +402,45 @@ div.align-items-center.justify-content-between {
   background: #1e88d3;
 }
 
-
-#hero .icon-boxes_1 { /* 4개 상자끼리 간격 */
-  margin-top: 20px;
-  padding-left: 20px;
+#category_aline {
+  display: inline;
+  width: 100%;
 }
+#category_aline > span {
+
+}
+#box_1 {
+  width: 100%;
+}
+
+#hero .icon-boxes_1 { /* 상자끼리 간격 */
+
+  margin-top: 250px;
+  padding-right: 100px;
+  display:flex;
+  justify-content: space-around !important;
+  background-color: rgba(247, 242, 242, 0.15);
+  border-radius: 8px;
+  margin-left: -100px  !important;
+  
+}
+
 
 #hero .icon-box { /* 개별 상자 */
   padding: 0;
-  width: 100px;
-  height: 100px;
+  margin: 20px !important;
+  width: 135px;
+  height: 135px;
   line-height: 350px; /* 박스 안쪽 글자 위치 조정 */
   text-align: center;
   overflow: hidden;
   /* background:rgba(255, 255, 255, 0); */
-  box-shadow: 0 0 29px 0 rgba(10, 25, 40, 0.25);
+  /* box-shadow: 0 0 29px 0 rgba(255, 255, 255, 0.25); */
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
+  /* border: solid 3px rgba(255, 255, 255, 0.75);; */
   z-index: 1;
+  
 
 }
 #hero .icon-box span{
@@ -422,15 +448,18 @@ div.align-items-center.justify-content-between {
   font-size: 20px;
   font-weight: 20px;
 }
-
+.col-lg-3, .align-items-stretch, .mb-5, .mb-lg-0 {
+  width: 100px;
+}
 
 #box_1 a {
   /* text-decoration-line: none !important; */
 }
 
 #box_1.row.icon-boxes_1 {
- margin: none !important;
- width: 1200px;
+ margin-left: -150px; 
+ width: 1500px;
+ 
 
 }
 
@@ -1766,13 +1795,19 @@ section {
   border-radius: 15px;
  
 }
+.material-icons-outlined a{
+  color: #000;
+}
 
 h1.logo {
   display : inline-block;
   margin-left: 500%;
 }
+#header a {
+  color: #000 !important;
+}
 
 .material-icons-outlined{ /*시간되면 나중에 보기*/
   position: relative;
   vertical-align:-23%;
-}
+} 
