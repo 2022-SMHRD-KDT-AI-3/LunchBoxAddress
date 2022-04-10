@@ -2,17 +2,16 @@ $(document).ready(function () {
     $("#hihi").click(function () {
         $(".box").append(`
             
-            
-        <form action="http://127.0.0.1:3307/test" method="post" enctype="multipart/form-data">
-         <table border="0" cellspacing="5">
+        <form action="http://127.0.0.1:3307/test" class="r_f" method="post" enctype="multipart/form-data">
+        <div id="shadow">
+         <table class="table" border="0" cellspacing="5">
 
-        <tr>
+        <tr class=" siv" id="star" height="100px;">
 
             
-                <td align="center" width="900">총평가</td>
+                <td class="line" align="center"  ><strong>총평가</strong></td>
             
-
-            <td>
+            <td width="400px" >
                 <div class="star-rating space-x-4 mx-auto">
                     <input type="radio" id="5-stars" name="eval" value="5" v-model="ratings"/>
                     <label for="5-stars" class="star pr-4">★</label>
@@ -26,9 +25,9 @@ $(document).ready(function () {
                     <label for="1-star" class="star">★</label>
                 </div>
             </td>
-
+</tr>
             <tr>
-                <td align="center">사진등록</td>
+                <td align="center" class="line" ><strong>사진등록</strong></td>
                 <td>
                     <div class="upload"><p>
                         <input type="file" name="userfile">
@@ -39,9 +38,9 @@ $(document).ready(function () {
             </tr>
 
             <tr>
-                <td align="center">맛</td>
-                <td>
-                    <p>
+                <td align="center" class="line" ><strong>맛</strong></td>
+                <td width="400px">
+                    <p class="radio">
                         <input type="radio" name="t_score" id="taste1" value="1">불만족
                         <input type="radio" name="t_score" id="taste2" value="2">보통
                         <input type="radio" name="t_score" id="taste3" value="3">만족
@@ -51,9 +50,9 @@ $(document).ready(function () {
             </tr>
             
             <tr>
-                <td align="center">가격</td>
-                <td>
-                    <p>
+                <td align="center" class="line" ><strong>가격</strong></td>
+                <td width="400px">
+                    <p class="radio">
                         <input type="radio" name="m_score" id="price1" value="1">불만족
                         <input type="radio" name="m_score" id="price2" value="2">보통
                         <input type="radio" name="m_score" id="price3" value="3">만족
@@ -63,9 +62,9 @@ $(document).ready(function () {
             </tr>
             
             <tr>
-                <td align="center">서비스</td>
-                <td>
-                    <p>
+                <td  align="center" class="line" ><strong>서비스</strong></td>
+                <td width="400px">
+                    <p class="radio">
                         
                         <input type="radio" name="c_score" id="service1" value="1">불만족
                         <input type="radio" name="c_score" id="service2" value="2">보통
@@ -77,7 +76,7 @@ $(document).ready(function () {
 
             
             <tr>
-                <td align="center">회전율 </td>
+                <td align="center" class="line" ><strong>회전율 </strong></td>
                 <td>
                     <select name="cook_time" id="">
 
@@ -88,11 +87,8 @@ $(document).ready(function () {
 
                     </select>
                 </td>
-                
-            </tr>
-            <!-- <tr bgcolor="White"> -->
-            <tr>
-                <td align="center">대기시간 </td>
+  
+                <td align="center" class="line" ><strong>대기시간</strong> </td>
                 <td>
                     <select name="wait_time" id="">
 
@@ -107,13 +103,13 @@ $(document).ready(function () {
             </tr>
 
             <tr>
-                <td align="center">상세리뷰</td>
+                <td align="center"class="line" ><strong>상세리뷰</strong></td>
                 <td colspan="2">
-                    <textarea name="contents" id="" cols="60" rows="5" style="resize: none;" placeholder="의견을 자유롭게 적어주세요"></textarea>
+                    <textarea name="contents" id="conten" cols="60" rows="5" style="resize: none;" placeholder="의견을 자유롭게 적어주세요"></textarea>
                 </td>
 
             </tr>
-            <tr>
+            <tr id="infom">
                 <td></td>
                 <td>
                 <div class="section">
@@ -123,14 +119,15 @@ $(document).ready(function () {
             
                 </td>
             </tr>
-            <tr>
-                <td colspan="2" align="center">
+            <tr class="btn" >
+                <td colspan="2" >
                     <input type="submit" id="submitbtn" value="작성하기">
                 </td>
 
             </tr>
 
         </table>
+        </div>
     </form>
             
             
