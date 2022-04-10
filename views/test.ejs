@@ -116,17 +116,63 @@
 
             </div>
         </section><!-- End Breadcrumbs -->
-
+    
         <!-- ======= Portfolio Details Section ======= -->
         <section id="portfolio-details" class="portfolio-details">
             <div class="container">
+                <!-- 지도 테스트중 -->
+                <div id="map" style="width:30%;height:330px;"></div>
+              
+                <!-- ejs 세션 변수 가져오기 테스트 -->
+                <script>
+                    const lati = "<%=info.latitude%>";
+                    const long = "<%=info.longitude%>";
+                    const rname = "<%=info.name%>"
 
-                <div class="row gy-4">
+                </script>
 
-                    <div class="col-lg-8">
+                <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6ad58dabb008c1c346a445c887896f6b"></script>
+                <script>
+                    var mapContainer = document.getElementById('map'), // 지도를 표시할 div  
+                        mapOption = { 
+                        center: new kakao.maps.LatLng(35.14979621106867, 126.91987705807563), // 지도의 중심좌표
+                        level: 3 // 지도의 확대 레벨
+                        };
+
+                    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+                    // 마커를 표시할 위치와 title 객체 배열입니다 
+                    var positions = [
+                        {
+                        title: '스마트인재개발원', 
+                        latlng: new kakao.maps.LatLng(35.14979621106867, 126.91987705807563)
+                        },
+                        {
+                        title: rname,
+                        latlng: new kakao.maps.LatLng(lati,long)
+                        // title: `${rest_name}`, 
+                        // latlng: new kakao.maps.LatLng(`${re_latitude}`, `${re_longitude}`)
+                        }
+                     ];
+
+                    for (var i = 0; i < positions.length; i ++) {
+                    // 마커를 생성합니다
+                        var marker = new kakao.maps.Marker({
+                                map: map, // 마커를 표시할 지도
+                                position: positions[i].latlng, // 마커를 표시할 위치
+                                title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+                            });
+                    }
+                </script>
+             
+
+                <!-- <div class="row gy-4"> -->
+
+                    <!-- <div class="col-lg-8">
                         <div class="portfolio-details-slider swiper">
                             <div class="swiper-wrapper align-items-center">
-
+                                
+                                
                                 <div class="swiper-slide">
                                     <img src="/assets/img/portfolio/portfolio-1.jpg" alt="">
                                 </div>
@@ -142,7 +188,7 @@
                             </div>
                             <div class="swiper-pagination"></div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="col-lg-4">
                         <div class="portfolio-info">
@@ -193,7 +239,7 @@
 
             </div>
         </section><!-- End Portfolio Details Section -->
-
+   
         <!-- ======= Counts Section ======= -->
         <section id="counts" class="counts section-bg">
             <div class="container">
