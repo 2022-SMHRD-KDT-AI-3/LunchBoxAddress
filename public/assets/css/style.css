@@ -401,10 +401,14 @@ div.align-items-center.justify-content-between {
 #hero .icon-boxes_1 { /* 4개 상자끼리 간격 */
   margin-top: 20px;
   padding-left: 20px;
+  display:flex;
+  justify-content: flex-start !important;
 }
+
 
 #hero .icon-box { /* 개별 상자 */
   padding: 0;
+  margin: 20px !important;
   width: 100px;
   height: 100px;
   line-height: 350px; /* 박스 안쪽 글자 위치 조정 */
@@ -415,6 +419,7 @@ div.align-items-center.justify-content-between {
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
   z-index: 1;
+  
 
 }
 #hero .icon-box span{
