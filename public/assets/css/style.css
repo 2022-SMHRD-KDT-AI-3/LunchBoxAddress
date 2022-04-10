@@ -398,20 +398,20 @@ div.align-items-center.justify-content-between {
 }
 
 
-#hero .icon-boxes_1, #hero .icon-boxes_2 { /* 4개 상자끼리 간격 */
+#hero .icon-boxes_1 { /* 4개 상자끼리 간격 */
   margin-top: 20px;
-  padding-left: 110px;
+  padding-left: 20px;
 }
 
 #hero .icon-box { /* 개별 상자 */
   padding: 0;
-  width: 255px;
-  height: 220px;
+  width: 100px;
+  height: 100px;
   line-height: 350px; /* 박스 안쪽 글자 위치 조정 */
   text-align: center;
   overflow: hidden;
   /* background:rgba(255, 255, 255, 0); */
-  box-shadow: 0 0 29px 0 rgba(10, 25, 40, 0.15);
+  box-shadow: 0 0 29px 0 rgba(10, 25, 40, 0.25);
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
   z-index: 1;
@@ -424,20 +424,15 @@ div.align-items-center.justify-content-between {
 }
 
 
-#box_1 a , #box_2 a{
-  text-decoration-line: none !important;
+#box_1 a {
+  /* text-decoration-line: none !important; */
 }
 
 #box_1.row.icon-boxes_1 {
- /* margin: 0 !important; */
+ margin: none !important;
  width: 1200px;
 
 }
-
-#box_2.row.icon-boxes_2 {
-  /* margin: 0 !important; */
-  width: 1200px;
- }
 
 #hero .icon-box:hover {
   transform: scale(1.08);

@@ -1,55 +1,78 @@
 #cate1{
     background-image: url("/assets/img/img_cate/1백반.png");
     background-repeat: no-repeat;
-    width: 255px;
-    height: 220px;
+width: 100px;
+height: 100px;
+    background-size: cover;
+    background-position: center;
 }
 
 #cate2{
     background-image: url("/assets/img/img_cate/2중식.png");
     background-repeat: no-repeat;
-    width: 255px;
-    height: 220px;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
 }
 
 #cate3{
     background-image: url("/assets/img/img_cate/3양식.png");
     background-repeat: no-repeat;
-    width: 255px;
-    height: 220px;
+width: 100px;
+height: 100px;
+    background-size: cover;
+    background-position: center;
 }
 
 #cate4{
     background-image: url("/assets/img/img_cate/4돈까스.png");
     background-repeat: no-repeat;
-    width: 255px;
-    height: 220px;
+width: 100px;
+height: 100px;
+    background-size: cover;
+    background-position: center;
 }
 
 #cate5{
     background-image: url("/assets/img/img_cate/5분식.png");
     background-repeat: no-repeat;
-    width: 255px;
-    height: 220px;
+width: 100px;
+height: 100px;
+    background-size: cover;
+    background-position: center;
 }
 
 #cate6{
     background-image: url("/assets/img/img_cate/6패스트푸드.png");
     background-repeat: no-repeat;
-    width: 255px;
-    height: 220px;
+width: 100px;
+height: 100px;
+    background-size: cover;
+    background-position: center;
 }
 
 #cate7{
     background-image: url("/assets/img/img_cate/7찌개.png");
     background-repeat: no-repeat;
-    width: 255px;
-    height: 220px;
+width: 100px;
+height: 100px;
+    background-size: cover;
+    background-position: center;
 }
 
 #cate8{
     background-image: url("/assets/img/img_cate/8고기.png");
     background-repeat: no-repeat;
-    width: 255px;
-    height: 220px;
+width: 100px;
+height: 100px;
+
+    background-size: cover;
+    background-position: center;
 }
+/* img{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    
+} */
