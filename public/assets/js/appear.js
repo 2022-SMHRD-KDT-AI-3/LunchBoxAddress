@@ -40,9 +40,9 @@ $(document).ready(function () {
                 <td align="center" class="line" ><strong>맛</strong></td>
                 <td width="400px">
                     <p class="radio">
-                        <input type="radio" name="t_score" id="taste1" value="1">불만족
-                        <input type="radio" name="t_score" id="taste2" value="2">보통
-                        <input type="radio" name="t_score" id="taste3" value="3">만족
+                        <label><input type="radio" name="t_score" id="taste1" value="1">  불만족</label>
+                        <label><input type="radio" name="t_score" id="taste2" value="2">  보통</label>
+                        <label><input type="radio" name="t_score" id="taste3" value="3">  만족</label>
                     </p>
 
                 </td>
@@ -52,9 +52,9 @@ $(document).ready(function () {
                 <td align="center" class="line" ><strong>가격</strong></td>
                 <td width="400px">
                     <p class="radio">
-                        <input type="radio" name="m_score" id="price1" value="1">불만족
-                        <input type="radio" name="m_score" id="price2" value="2">보통
-                        <input type="radio" name="m_score" id="price3" value="3">만족
+                        <label><input type="radio" name="m_score" id="price1" value="1">  불만족</label>
+                        <label><input type="radio" name="m_score" id="price2" value="2">  보통</label>
+                        <label><input type="radio" name="m_score" id="price3" value="3">  만족</label>
                     </p>
 
                 </td>
@@ -65,9 +65,9 @@ $(document).ready(function () {
                 <td width="400px">
                     <p class="radio">
                         
-                        <input type="radio" name="c_score" id="service1" value="1">불만족
-                        <input type="radio" name="c_score" id="service2" value="2">보통
-                        <input type="radio" name="c_score" id="service3" value="3">만족
+                        <label><input type="radio" name="c_score" id="service1" value="1">  불만족</label>
+                        <label><input type="radio" name="c_score" id="service2" value="2">  보통</label>
+                        <label><input type="radio" name="c_score" id="service3" value="3">  만족</label>
                     </p>
 
                 </td>
