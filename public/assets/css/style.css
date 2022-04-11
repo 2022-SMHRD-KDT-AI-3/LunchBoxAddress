@@ -415,7 +415,7 @@ div.align-items-center.justify-content-between {
 
 #hero .icon-boxes_1 { /* 상자끼리 간격 */
 
-  margin-top: 250px;
+  margin-top: 150px;
   padding-right: 100px;
   display:flex;
   justify-content: space-around !important;
@@ -1829,3 +1829,22 @@ h1.logo {
   position: relative;
   vertical-align:-23%;
 } 
+.portfolio-details-slider{
+  width: 600px;
+  height: auto;
+}
+.col-lg-8 {
+  width: 150px;
+  margin-right: 500px;
+  margin-left: -10px;
+}
+#map {
+  width:65%;
+  height:350px;
+  margin-left: 350px;
+  margin-bottom: 100px;
+}
+/* .counts{
+display: flex;
+justify-content: center;
+} */
