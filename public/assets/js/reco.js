@@ -11,12 +11,12 @@ function cate1() {
                 $(".portfolio-info h4")[i].innerHTML = (`
                 <a href="http://127.0.0.1:3307/resPage?id=${result[i].rest_id}">
                      <ul>
-                        <ol><strong> ${result[i].rest_name}</strong>식당의 추천 메뉴</ol><ol> <strong>✨ ${result[i].menu_name}✨</strong>
+                        <ol><strong> ${result[i].rest_name}</strong>의 추천 메뉴</ol><ol> <strong>✨ ${result[i].menu_name}✨</strong>
                         </ol>
                         <p></p>
                         <ol>스인개와의 거리🏃‍♀️ : <strong>${result[i].rest_distance}m</strong>
                         </ol>
-                        <ol>네이버 별점⭐ : <strong>${result[i].rest_naver}</strong>
+                        <ol>네이버 별점⭐ : <strong>${result[i].rest_naver}점</strong>
                         </ol>
                 </ul>
                 </a>
@@ -43,11 +43,12 @@ function cate2() {
                 $(".portfolio-info h4")[i].innerHTML = (`
                 <a href="http://127.0.0.1:3307/resPage?id=${result[i].rest_id}">
                      <ul>
-                        <ol><strong> ${result[i].rest_name}</strong>식당의 추천 메뉴</ol><ol> <strong>✨ ${result[i].menu_name}✨</strong>
+                        <ol><strong> ${result[i].rest_name}</strong>의 추천 메뉴</ol><ol> <strong>✨ ${result[i].menu_name}✨</strong>
                         </ol>
+                        <p></p>
                         <ol>스인개와의 거리🏃‍♀️ : <strong>${result[i].rest_distance}m</strong>
                         </ol>
-                        <ol>네이버 별점⭐ : <strong>${result[i].rest_naver}</strong>
+                        <ol>네이버 별점⭐ : <strong>${result[i].rest_naver}점</strong>
                         </ol>
                 </ul>
                 </a>
@@ -72,11 +73,12 @@ function cate3() {
                 $(".portfolio-info h4")[i].innerHTML = (`
                 <a href="http://127.0.0.1:3307/resPage?id=${result[i].rest_id}">
                      <ul>
-                        <ol><strong> ${result[i].rest_name}</strong>식당의 추천 메뉴</ol><ol> <strong>✨ ${result[i].menu_name}✨</strong>
+                        <ol><strong> ${result[i].rest_name}</strong>의 추천 메뉴</ol><ol> <strong>✨ ${result[i].menu_name}✨</strong>
                         </ol>
+                        <p></p>
                         <ol>스인개와의 거리🏃‍♀️ : <strong>${result[i].rest_distance}m</strong>
                         </ol>
-                        <ol>네이버 별점⭐ : <strong>${result[i].rest_naver}</strong>
+                        <ol>네이버 별점⭐ : <strong>${result[i].rest_naver}점</strong>
                         </ol>
                 </ul>
                 </a>
@@ -101,11 +103,12 @@ function cate4() {
                 $(".portfolio-info h4")[i].innerHTML = (`
                 <a href="http://127.0.0.1:3307/resPage?id=${result[i].rest_id}">
                      <ul>
-                        <ol><strong> ${result[i].rest_name}</strong>식당의 추천 메뉴</ol><ol> <strong>✨ ${result[i].menu_name}✨</strong>
+                        <ol><strong> ${result[i].rest_name}</strong>의 추천 메뉴</ol><ol> <strong>✨ ${result[i].menu_name}✨</strong>
                         </ol>
+                        <p></p>
                         <ol>스인개와의 거리🏃‍♀️ : <strong>${result[i].rest_distance}m</strong>
                         </ol>
-                        <ol>네이버 별점⭐ : <strong>${result[i].rest_naver}</strong>
+                        <ol>네이버 별점⭐ : <strong>${result[i].rest_naver}점</strong>
                         </ol>
                 </ul>
                 </a>
@@ -130,11 +133,12 @@ function cate5() {
                 $(".portfolio-info h4")[i].innerHTML = (`
                 <a href="http://127.0.0.1:3307/resPage?id=${result[i].rest_id}">
                      <ul>
-                        <ol><strong> ${result[i].rest_name}</strong>식당의 추천 메뉴</ol><ol> <strong>✨ ${result[i].menu_name}✨</strong>
+                        <ol><strong> ${result[i].rest_name}</strong>의 추천 메뉴</ol><ol> <strong>✨ ${result[i].menu_name}✨</strong>
                         </ol>
+                        <p></p>
                         <ol>스인개와의 거리🏃‍♀️ : <strong>${result[i].rest_distance}m</strong>
                         </ol>
-                        <ol>네이버 별점⭐ : <strong>${result[i].rest_naver}</strong>
+                        <ol>네이버 별점⭐ : <strong>${result[i].rest_naver}점</strong>
                         </ol>
                 </ul>
                 </a>
@@ -159,11 +163,12 @@ function cate6() {
                 $(".portfolio-info h4")[i].innerHTML = (`
                 <a href="http://127.0.0.1:3307/resPage?id=${result[i].rest_id}">
                      <ul>
-                        <ol><strong> ${result[i].rest_name}</strong>식당의 추천 메뉴</ol><ol> <strong>✨ ${result[i].menu_name}✨</strong>
+                        <ol><strong> ${result[i].rest_name}</strong>의 추천 메뉴</ol><ol> <strong>✨ ${result[i].menu_name}✨</strong>
                         </ol>
+                        <p></p>
                         <ol>스인개와의 거리🏃‍♀️ : <strong>${result[i].rest_distance}m</strong>
                         </ol>
-                        <ol>네이버 별점⭐ : <strong>${result[i].rest_naver}</strong>
+                        <ol>네이버 별점⭐ : <strong>${result[i].rest_naver}점</strong>
                         </ol>
                 </ul>
                 </a>
@@ -186,13 +191,14 @@ function cate7() {
             console.log(result); // 콘솔창에 가져온 데이터를 보여줌
             for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
                 $(".portfolio-info h4")[i].innerHTML = (`
-                 <a href="http://127.0.0.1:3307/resPage?id=${result[i].rest_id}">
+                <a href="http://127.0.0.1:3307/resPage?id=${result[i].rest_id}">
                      <ul>
-                        <ol><strong> ${result[i].rest_name}</strong>식당의 추천 메뉴</ol><ol> <strong>✨ ${result[i].menu_name}✨</strong>
+                        <ol><strong> ${result[i].rest_name}</strong>의 추천 메뉴</ol><ol> <strong>✨ ${result[i].menu_name}✨</strong>
                         </ol>
+                        <p></p>
                         <ol>스인개와의 거리🏃‍♀️ : <strong>${result[i].rest_distance}m</strong>
                         </ol>
-                        <ol>네이버 별점⭐ : <strong>${result[i].rest_naver}</strong>
+                        <ol>네이버 별점⭐ : <strong>${result[i].rest_naver}점</strong>
                         </ol>
                 </ul>
                 </a>
@@ -217,11 +223,12 @@ function cate8() {
                 $(".portfolio-info h4")[i].innerHTML = (`
                 <a href="http://127.0.0.1:3307/resPage?id=${result[i].rest_id}">
                      <ul>
-                        <ol><strong> ${result[i].rest_name}</strong>식당의 추천 메뉴</ol><ol> <strong>✨ ${result[i].menu_name}✨</strong>
+                        <ol><strong> ${result[i].rest_name}</strong>의 추천 메뉴</ol><ol> <strong>✨ ${result[i].menu_name}✨</strong>
                         </ol>
+                        <p></p>
                         <ol>스인개와의 거리🏃‍♀️ : <strong>${result[i].rest_distance}m</strong>
                         </ol>
-                        <ol>네이버 별점⭐ : <strong>${result[i].rest_naver}</strong>
+                        <ol>네이버 별점⭐ : <strong>${result[i].rest_naver}점</strong>
                         </ol>
                 </ul>
                 </a>
@@ -246,11 +253,12 @@ function cate9() {
                 $(".portfolio-info h4")[i].innerHTML = (`
                 <a href="http://127.0.0.1:3307/resPage?id=${result[i].rest_id}">
                      <ul>
-                        <ol><strong> ${result[i].rest_name}</strong>식당의 추천 메뉴</ol><ol> <strong>✨ ${result[i].menu_name}✨</strong>
+                        <ol><strong> ${result[i].rest_name}</strong>의 추천 메뉴</ol><ol> <strong>✨ ${result[i].menu_name}✨</strong>
                         </ol>
+                        <p></p>
                         <ol>스인개와의 거리🏃‍♀️ : <strong>${result[i].rest_distance}m</strong>
                         </ol>
-                        <ol>네이버 별점⭐ : <strong>${result[i].rest_naver}</strong>
+                        <ol>네이버 별점⭐ : <strong>${result[i].rest_naver}점</strong>
                         </ol>
                 </ul>
                 </a>
