@@ -70,6 +70,30 @@ router.post("/login", function (request,response) {
     });
 });
 
+// router.post("/login", function (request, response) {
+//     let email = request.body.email;
+//     let pw = request.body.pw;
+
+//     let sql = "select * from user_info where email = ? and pw = ?";
+//     conn.query(sql, [email, pw], function (err, rows) {
+//         console.log("로그인 성공");
+//         console.log(rows.length);
+//         if (rows.length > 0) {
+//             request.session.user = {
+//                 "email": rows[0].email,
+//                 "gender": rows[0].gender,
+//                 "nick": rows[0].nick
+//             }
+//             response.redirect("http://127.0.0.1:3307/main");
+
+//         } else {
+//             console.log("로그인실패임둥");
+//         }
+//     });
+// });
+
+
+
 router.get("/logout", function (request, response) {
     delete request.session.user;
     response.redirect("http://127.0.0.1:3307/main");
@@ -176,19 +200,24 @@ router.get("/resPage", function (request, response) { // main에서 값을 받�
         console.log("식당 찾기 성공!");
 
         if (rows.length > 0) {
+
+
             request.session.rest = {
                 "id": rows[0].rest_id,
                 "name": rows[0].rest_name,
                 "address": rows[0].rest_address,
                 "type": rows[0].rest_type,
                 "latitude": rows[0].rest_latitude,
-                "longitude": rows[0].rest_logitude,
+                "longitude": rows[0].rest_longitude,
                 "distance": rows[0].rest_distance,
                 "tel": rows[0].rest_tel,
                 "ontime": rows[0].rest_ontime,
                 "offtime": rows[0].rest_offtime,
                 "naver": rows[0].rest_naver
             }
+
+            console.log("세션 키값 테스트 중입니다! 어떤 키들이 있나 보여주세요! >> ", request.session.rest);
+
             response.redirect("http://127.0.0.1:3307/test");
         } else {
             console.log("식당못찾음 ㅅㄱ");
@@ -227,10 +256,10 @@ router.get("/test", function (request, response) {
         let res_review = rows[1];
         let res_blog = rows[2];
 
-        console.log(res_menu);
-        console.log(res_review);
-        console.log(res_blog.length);
-        
+        // console.log(res_menu);
+        // console.log(res_review);
+        // console.log(res_blog.length);
+        console.log("test 라우터에서 세션 키값 테스트 중입니다! 어떤 키들이 있나 보여주세요! >> ", request.session.rest);
     });
 
 }); // 라우터 닫음
@@ -269,7 +298,7 @@ router.get("/please", function (request, response) {
                     "address": res[0].rest_address,
                     "type": res[0].rest_type,
                     "latitude": res[0].rest_latitude,
-                    "longitude": res[0].rest_logitude,
+                    "longitude": res[0].rest_longitude,
                     "distance": res[0].rest_distance,
                     "tel": res[0].rest_tel,
                     "ontime": res[0].rest_ontime,
@@ -278,6 +307,7 @@ router.get("/please", function (request, response) {
                 }
                 response.redirect("http://127.0.0.1:3307/test");
 
+                console.log("검색해서 넘어갈때 세션 키값 테스트 중입니다! 어떤 키들이 있나 보여주세요! >> ", request.session.rest);
 
                 // rows[0].rest_id
             }
@@ -290,26 +320,5 @@ router.get("/please", function (request, response) {
 
 
 
-router.post("/login", function (request, response) {
-    let email = request.body.email;
-    let pw = request.body.pw;
-
-    let sql = "select * from user_info where email = ? and pw = ?";
-    conn.query(sql, [email, pw], function (err, rows) {
-        console.log("로그인 성공");
-        console.log(rows.length);
-        if (rows.length > 0) {
-            request.session.user = {
-                "email": rows[0].email,
-                "gender": rows[0].gender,
-                "nick": rows[0].nick
-            }
-            response.redirect("http://127.0.0.1:3307/main");
-
-        } else {
-            console.log("로그인실패임둥");
-        }
-    });
-});
 
 module.exports = router;
