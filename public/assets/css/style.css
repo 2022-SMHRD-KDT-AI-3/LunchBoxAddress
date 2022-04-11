@@ -1078,6 +1078,15 @@ section {
   font-size: 20px;
   color: #fff;
   font-weight: 600;
+  margin-top: 15px;
+}
+.portfolio-info ol {
+ 
+  margin-left: -40px;
+  padding: 5px;
+}
+.portfolio-info ol:nth-of-type(2){
+padding: 10px;
 }
 .portfolio .portfolio-wrap .portfolio-info p {
   color: #ffffff;

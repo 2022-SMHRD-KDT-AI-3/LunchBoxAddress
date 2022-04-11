@@ -10,11 +10,18 @@ function cate1() {
             for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
                 $(".portfolio-info h4")[i].innerHTML = (`
                 <a href="http://127.0.0.1:3307/resPage?id=${result[i].rest_id}">
-                    ${result[i].rest_name}<br>
-                    ${result[i].menu_name}<br>
-                    ${result[i].rest_distance}m 떨어져있어요!<br>
-                    네이버 별점은 ${result[i].rest_naver}점이에요!
+                     <ul>
+                        <ol><strong> ${result[i].rest_name}</strong>식당의 추천 메뉴</ol><ol> <strong>✨ ${result[i].menu_name}✨</strong>
+                        </ol>
+                        <p></p>
+                        <ol>스인개와의 거리🏃‍♀️ : <strong>${result[i].rest_distance}m</strong>
+                        </ol>
+                        <ol>네이버 별점⭐ : <strong>${result[i].rest_naver}</strong>
+                        </ol>
+                </ul>
                 </a>
+
+              
                 `); // a 태그 요소 안의 텍스트를 변경함
             }
         },
@@ -35,10 +42,14 @@ function cate2() {
             for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
                 $(".portfolio-info h4")[i].innerHTML = (`
                 <a href="http://127.0.0.1:3307/resPage?id=${result[i].rest_id}">
-                    ${result[i].rest_name}<br>
-                    ${result[i].menu_name}<br>
-                    ${result[i].rest_distance}m 떨어져있어요!<br>
-                    ⭐<strong>별점 : </strong> ${result[i].rest_naver}점이에요!
+                     <ul>
+                        <ol><strong> ${result[i].rest_name}</strong>식당의 추천 메뉴</ol><ol> <strong>✨ ${result[i].menu_name}✨</strong>
+                        </ol>
+                        <ol>스인개와의 거리🏃‍♀️ : <strong>${result[i].rest_distance}m</strong>
+                        </ol>
+                        <ol>네이버 별점⭐ : <strong>${result[i].rest_naver}</strong>
+                        </ol>
+                </ul>
                 </a>
                 `); // a 태그 요소 안의 텍스트를 변경함
             }
@@ -60,10 +71,14 @@ function cate3() {
             for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
                 $(".portfolio-info h4")[i].innerHTML = (`
                 <a href="http://127.0.0.1:3307/resPage?id=${result[i].rest_id}">
-                    ${result[i].rest_name}<br>
-                    ${result[i].menu_name}<br>
-                    ${result[i].rest_distance}m 떨어져있어요!<br>
-                    네이버 별점은 ${result[i].rest_naver}점이에요!
+                     <ul>
+                        <ol><strong> ${result[i].rest_name}</strong>식당의 추천 메뉴</ol><ol> <strong>✨ ${result[i].menu_name}✨</strong>
+                        </ol>
+                        <ol>스인개와의 거리🏃‍♀️ : <strong>${result[i].rest_distance}m</strong>
+                        </ol>
+                        <ol>네이버 별점⭐ : <strong>${result[i].rest_naver}</strong>
+                        </ol>
+                </ul>
                 </a>
                 `); // a 태그 요소 안의 텍스트를 변경함
             }
@@ -85,10 +100,14 @@ function cate4() {
             for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
                 $(".portfolio-info h4")[i].innerHTML = (`
                 <a href="http://127.0.0.1:3307/resPage?id=${result[i].rest_id}">
-                    ${result[i].rest_name}<br>
-                    ${result[i].menu_name}<br>
-                    ${result[i].rest_distance}m 떨어져있어요!<br>
-                    네이버 별점은 ${result[i].rest_naver}점이에요!
+                     <ul>
+                        <ol><strong> ${result[i].rest_name}</strong>식당의 추천 메뉴</ol><ol> <strong>✨ ${result[i].menu_name}✨</strong>
+                        </ol>
+                        <ol>스인개와의 거리🏃‍♀️ : <strong>${result[i].rest_distance}m</strong>
+                        </ol>
+                        <ol>네이버 별점⭐ : <strong>${result[i].rest_naver}</strong>
+                        </ol>
+                </ul>
                 </a>
                 `); // a 태그 요소 안의 텍스트를 변경함
             }
@@ -110,10 +129,14 @@ function cate5() {
             for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
                 $(".portfolio-info h4")[i].innerHTML = (`
                 <a href="http://127.0.0.1:3307/resPage?id=${result[i].rest_id}">
-                    ${result[i].rest_name}<br>
-                    ${result[i].menu_name}<br>
-                    ${result[i].rest_distance}m 떨어져있어요!<br>
-                    네이버 별점은 ${result[i].rest_naver}점이에요!
+                     <ul>
+                        <ol><strong> ${result[i].rest_name}</strong>식당의 추천 메뉴</ol><ol> <strong>✨ ${result[i].menu_name}✨</strong>
+                        </ol>
+                        <ol>스인개와의 거리🏃‍♀️ : <strong>${result[i].rest_distance}m</strong>
+                        </ol>
+                        <ol>네이버 별점⭐ : <strong>${result[i].rest_naver}</strong>
+                        </ol>
+                </ul>
                 </a>
                 `); // a 태그 요소 안의 텍스트를 변경함
             }
@@ -135,10 +158,14 @@ function cate6() {
             for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
                 $(".portfolio-info h4")[i].innerHTML = (`
                 <a href="http://127.0.0.1:3307/resPage?id=${result[i].rest_id}">
-                    ${result[i].rest_name}<br>
-                    ${result[i].menu_name}<br>
-                    ${result[i].rest_distance}m 떨어져있어요!<br>
-                    네이버 별점은 ${result[i].rest_naver}점이에요!
+                     <ul>
+                        <ol><strong> ${result[i].rest_name}</strong>식당의 추천 메뉴</ol><ol> <strong>✨ ${result[i].menu_name}✨</strong>
+                        </ol>
+                        <ol>스인개와의 거리🏃‍♀️ : <strong>${result[i].rest_distance}m</strong>
+                        </ol>
+                        <ol>네이버 별점⭐ : <strong>${result[i].rest_naver}</strong>
+                        </ol>
+                </ul>
                 </a>
                 `); // a 태그 요소 안의 텍스트를 변경함
             }
@@ -159,11 +186,15 @@ function cate7() {
             console.log(result); // 콘솔창에 가져온 데이터를 보여줌
             for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
                 $(".portfolio-info h4")[i].innerHTML = (`
-                <a href="http://127.0.0.1:3307/resPage?id=${result[i].rest_id}">
-                    ${result[i].rest_name}<br>
-                    ${result[i].menu_name}<br>
-                    ${result[i].rest_distance}m 떨어져있어요!<br>
-                    네이버 별점은 ${result[i].rest_naver}점이에요!
+                 <a href="http://127.0.0.1:3307/resPage?id=${result[i].rest_id}">
+                     <ul>
+                        <ol><strong> ${result[i].rest_name}</strong>식당의 추천 메뉴</ol><ol> <strong>✨ ${result[i].menu_name}✨</strong>
+                        </ol>
+                        <ol>스인개와의 거리🏃‍♀️ : <strong>${result[i].rest_distance}m</strong>
+                        </ol>
+                        <ol>네이버 별점⭐ : <strong>${result[i].rest_naver}</strong>
+                        </ol>
+                </ul>
                 </a>
                 `); // a 태그 요소 안의 텍스트를 변경함
             }
@@ -185,10 +216,14 @@ function cate8() {
             for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
                 $(".portfolio-info h4")[i].innerHTML = (`
                 <a href="http://127.0.0.1:3307/resPage?id=${result[i].rest_id}">
-                    ${result[i].rest_name}<br>
-                    ${result[i].menu_name}<br>
-                    ${result[i].rest_distance}m 떨어져있어요!<br>
-                    네이버 별점은 ${result[i].rest_naver}점이에요!
+                     <ul>
+                        <ol><strong> ${result[i].rest_name}</strong>식당의 추천 메뉴</ol><ol> <strong>✨ ${result[i].menu_name}✨</strong>
+                        </ol>
+                        <ol>스인개와의 거리🏃‍♀️ : <strong>${result[i].rest_distance}m</strong>
+                        </ol>
+                        <ol>네이버 별점⭐ : <strong>${result[i].rest_naver}</strong>
+                        </ol>
+                </ul>
                 </a>
                 `); // a 태그 요소 안의 텍스트를 변경함
             }
@@ -210,10 +245,14 @@ function cate9() {
             for (let i = 0; i < entries.length; i++) { // 식당 목록을 출력함
                 $(".portfolio-info h4")[i].innerHTML = (`
                 <a href="http://127.0.0.1:3307/resPage?id=${result[i].rest_id}">
-                    ${result[i].rest_name}<br>
-                    ${result[i].menu_name}<br>
-                    ${result[i].rest_distance}m 떨어져있어요!<br>
-                    네이버 별점은 ${result[i].rest_naver}점이에요!
+                     <ul>
+                        <ol><strong> ${result[i].rest_name}</strong>식당의 추천 메뉴</ol><ol> <strong>✨ ${result[i].menu_name}✨</strong>
+                        </ol>
+                        <ol>스인개와의 거리🏃‍♀️ : <strong>${result[i].rest_distance}m</strong>
+                        </ol>
+                        <ol>네이버 별점⭐ : <strong>${result[i].rest_naver}</strong>
+                        </ol>
+                </ul>
                 </a>
                 `); // a 태그 요소 안의 텍스트를 변경함
             }
