@@ -63,6 +63,10 @@
     <script src="/assets/js/changeSubTitle.js"></script>
     <script src="/assets/js/changeMainTitle.js"></script>
 
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
+
     <!-- =======================================================
   * Template Name: OnePage - v4.7.0
   * Template URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
@@ -83,12 +87,15 @@
                 </h1>
             </span>
 
-            <span class="search">
-                <input type="text" name="search_k" id="" placeholder="search">
+        <span class="search">
+            <form action="http://127.0.0.1:3307/please" method="get" id="searchform">
+                <input type="text" name="res_search" id="" placeholder="">
                 <span class="material-icons-outlined">
-                    <a href="http://127.0.0.1:3307/search">search</a>
+                    <button type="submit" id="searchcon"
+                        style="background-color:transparent; border:0px transparent solid;">search</button>
                 </span>
-            </span>
+            </form>
+        </span>
 
         </div>
         <%if(user==null){%>
