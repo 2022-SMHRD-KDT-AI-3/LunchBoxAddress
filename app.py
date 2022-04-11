@@ -134,18 +134,18 @@ def reco(): # 데코레이터 url과 함수를 연결함
                 keywords_temp.append(temp[j])        
         
         # 중복 키워드 제거하기
-        keywords = []
-        for k in keywords_temp:
-            if k not in keywords :
-                keywords.append(k)
+        # keywords = []
+        # for k in keywords_temp:
+        #     if k not in keywords :
+        #         keywords.append(k)
 
         # 쉼표 제거하고 공백으로 키워드 구분하기
         keywords_str = ""
-        for l in range(len(keywords)) :
-            if l == (len(keywords) - 1) :
-                keywords_str = keywords_str + keywords[l]
+        for l in range(len(keywords_temp)) :
+            if l == (len(keywords_temp) - 1) :
+                keywords_str = keywords_str + keywords_temp[l]
             else :
-                keywords_str = keywords_str + keywords[l] + " "
+                keywords_str = keywords_str + keywords_temp[l] + " "
         메뉴정보.iloc[i, 8] = keywords_str
 
     # 입력 받은 음식 분류로 데이터프레임 필터링하고 섞기
