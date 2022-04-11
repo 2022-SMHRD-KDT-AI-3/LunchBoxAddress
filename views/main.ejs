@@ -50,32 +50,35 @@
 </head>
 
 <body>
-    <div style="position: relative;">
-        <!-- ======= Header ======= -->
-        <header id="header" class="fixed-top">
-            <div class="align-items-center justify-content-between">
-                <span class="logo">
-                    <a href="http://127.0.0.1:3307/main" id="logo"><img class="img-concert" src="/assets/img/lunchbox.png" /></a>
-                    
-                </span>
-
-                <span class="search" >
-                    <form action="http://127.0.0.1:3307/please" method="get" id="searchform">
-                        <input type="text" name="res_search" id="search" placeholder="">
-                        <span class="material-icons-outlined">
-                            <button type="submit" id="searchcon" style="background-color:transparent; border:0px transparent solid;">search</button>
-                        </span>
-                    </form>
-                </span>
-
-                <%if(user==null){%>
-                    <a href="/wdw-snippet.html" id="login">로그인</a> <!--로그인폼대충새로만들어야할수도있음 -->
-                    <%}else{%>
-                        <a href="http://127.0.0.1:3307/logout" id="logout">로그아웃</a>
-                        <%}%>
-            </div>
-        </header>
-        <!-- End Header -->
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center justify-content-between">
+            <span>
+                <h1 class="logo">
+                    <a href="http://127.0.0.1:3307/main" id="logo"><img class="img-concert"
+                            src="/assets/img/lunchbox.png" /></a>
+    
+                </h1>
+            </span>
+    
+            <span class="search">
+                <form action="http://127.0.0.1:3307/please" method="get" id="searchform">
+                    <input type="text" name="res_search" id="search" placeholder="">
+                    <span class="material-icons-outlined">
+                        <button type="submit" id="searchcon"
+                            style="background-color:transparent; border:0px transparent solid;">search</button>
+                    </span>
+                </form>
+            </span>
+    
+        </div>
+        <%if(user==null){%>
+            <a href="/wdw-snippet.html">LOGIN</a>
+            <!--로그인폼대충새로만들어야할수도있음 -->
+            <%}else{%>
+                <a href="http://127.0.0.1:3307/logout">LOGOUT</a>
+                <%}%>
+    </header>
 
                 <!-- ======= Hero Section ======= -->
 <section id="hero" class=" align-items-center">
@@ -188,7 +191,7 @@
                                     <img src="/assets/img/resimg/6.jpg" class="img-fluid" alt="">
                                     <div class="portfolio-info">
                                         <h4>
-                                            <!-- <a href="http://127.0.0.1:3307/resPage">App 1 확인</a> -->
+                                            <a href="http://127.0.0.1:3307/resPage">카테고리를 선택해주세요</a>
                                         </h4>
                                     </div>
                                 </div>

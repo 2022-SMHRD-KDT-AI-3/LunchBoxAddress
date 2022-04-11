@@ -7,11 +7,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <style>
         .dfp_ad_front_popup {
-            background-color: rgba(0, 0, 0, 0.7);
+
+            /*background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("./assets/img/login_bg.jpg");*/
+            background: url("./assets/img/login_bg.jpg");
         }
 
         .register {
-            background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+            border-radius: 40px;
+            margin-top: 150px;
+            background: -webkit-linear-gradient(left, #ffffff, #ffffff);
+            background: rgba(0, 0, 0, 0.6);
             /* margin-top: 10%; */
             padding: 5%;
         }
@@ -44,10 +49,12 @@
         .register-left img {
             margin-top: 15%;
             margin-bottom: 5%;
-            width: 25%;
+            width: 50%;
             -webkit-animation: mover 2s infinite alternate;
             animation: mover 1s infinite alternate;
-        }
+            filter: brightness(0) invert(1);
+}
+
 
         @-webkit-keyframes mover {
             0% {
@@ -86,7 +93,7 @@
             border: none;
             border-radius: 1.5rem;
             padding: 2%;
-            background: #0062cc;
+            background: #361a00;
             color: #fff;
             font-weight: 600;
             width: 50%;
@@ -96,7 +103,7 @@
         .register .nav-tabs {
             margin-top: 3%;
             border: none;
-            background: #0062cc;
+            background: #361a00;
             border-radius: 1.5rem;
             width: 28%;
             float: right;
@@ -117,8 +124,8 @@
 
         .register .nav-tabs .nav-link.active {
             width: 100px;
-            color: #0062cc;
-            border: 2px solid #0062cc;
+            color: #361a00;
+            border: 2px solid #361a00;
             border-top-left-radius: 1.5rem;
             border-bottom-left-radius: 1.5rem;
         }
@@ -136,7 +143,7 @@
     <div class="container register " id="div_wall">
         <div class="row dfp_ad_front_banner_wrap">
             <div class="col-md-3 register-left">
-                <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="">
+                <img src="./assets/img/lunchbox.png" alt="">
                 <h3>Welcome</h3>
                 <p>당신이 기대하는 가장 정확하고 신뢰하는 맛집을 지금 Lunch Box 에서 확인하세요.</p>
 
