@@ -524,7 +524,11 @@ section {
   font-family: 'Nanum Gothic', sans-serif !important;
   font-family: "Nanum Pen Script", cursive;
 }
-
+#searchform {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: inline !important;
+}
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/

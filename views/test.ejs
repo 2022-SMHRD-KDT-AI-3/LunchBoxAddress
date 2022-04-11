@@ -288,43 +288,6 @@
 
 <!-- 리뷰 끝 -->
 
-<%if(review.length == 0) {%>
-    등록된 리뷰가 없어요~!~!
-<%} else {%>
-<!-- 리뷰 목록을 보여주는 공간 시작 -->
-
-<table>
-    <tr>
-        <td>닉네임</td>
-        <td>별점</td>
-        <td>맛</td>
-        <td>가격</td>
-        <td>서비스</td>
-        <td>회전율</td>
-        <td>대기시간</td>
-        <td>상세내용</td>
-        <td>작성날자ㅋㅋ</td>
-        <td>사진경로</td>
-    </tr>
-
-    <%for (var i = 0; i < review.length; i++) {%>
-    <tr>
-        <td><%=review[i].nick%></td>
-        <td><%=review[i].eval%></td>
-        <td><%=review[i].t_score%></td>
-        <td><%=review[i].m_score%></td>
-        <td><%=review[i].c_score%></td>
-        <td><%=review[i].cook_time%></td>
-        <td><%=review[i].wait_time%></td>
-        <td><%=review[i].contents%></td>
-        <td><%=review[i].re_date%></td>
-        <td><img src="\assets\img\review_img<%=review[i].pic_url.substring(30)%>" alt="이미지를 불러올수업다 절대못불러온다 ㅋㅋ"></td>
-
-
-    </tr>
-    <%}%>
-</table>
-<%}%>
 <br>=======================================================<br>
 
 
@@ -382,12 +345,12 @@
                             <a href="#shadow" id="hihi">🔻리뷰 또다시 ㅎㅇㅎㅇ~!🔻</a>
                         </div>
                     
-                        <div class="box counts section-bg" id="counts">
+                    <% } %>
+                        <div id="reviewhi">
                     
                         </div>
-                    
-                        <% } %>
                 </div>
+<!-- 리뷰 페이지 -->
 
                 <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                         <div class="swiper-slide">
@@ -398,7 +361,7 @@
                             <div class="testimonial-item">
                                 <p>
                                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    <ul>
+                                    <ul style="display: flex; justify-content: center;">
                                         <li>
                                         <ol><strong>총 평가 점수</strong>:<%=review[i].eval%>/5점
                                         </ol>
@@ -413,16 +376,18 @@
                                         <ol><strong>대기시간 평가</strong> :<%=review[i].wait_time%>분
                                         </ol>
                                     
-                                    <p><%=review[i].contents%></p>
+                                        <p><%=review[i].contents%></p>
                                     </li>
                                     
-                                <li>
-                                <img src="\assets\img\review_img<%=review[i].pic_url.substring(30)%>" class="testimonial-img" alt=" ">
-                              </ul></p>
-                            </li><i class="bx bxs-quote-alt-right quote-icon-right">
-                            </i>
+                                        <li>
+                                        <img src="\assets\img\review_img<%=review[i].pic_url.substring(30)%>" class="testimonial-img" alt=" ">
+                                    
+                                </ul>
                                 <h3><%=review[i].nick%></h3>
                                 <h4><%=review[i].re_date%></h4>
+                                </li>
+                                </p><i class="bx bxs-quote-alt-right quote-icon-right">
+                                </i>
                             </div>
                             <%}%>
                             <%}%>
