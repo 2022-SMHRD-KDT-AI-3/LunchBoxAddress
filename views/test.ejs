@@ -282,32 +282,20 @@
 
             </div>
         </section><!-- End Counts Section -->
-<!-- 리뷰 페이지 -->
-<% if(user != null){ %> 
-<!-- <button id="hihi">리뷰 하이</button> -->
 
-<div style="text-align : center">
-    <a href="#shadow" id="hihi">🔻리뷰 또다시 ㅎㅇㅎㅇ~!🔻</a>
-</div>
-
-<div class="box counts section-bg" id="counts">
-
-</div>
-
-<% } %> 
 
 
 
 <!-- 리뷰 끝 -->
 
-<%if(blog.length == 0) {%>
+<%if(review.length == 0) {%>
     등록된 리뷰가 없어요~!~!
 <%} else {%>
 <!-- 리뷰 목록을 보여주는 공간 시작 -->
 
 <table>
     <tr>
-        <td>이메일</td>
+        <td>닉네임</td>
         <td>별점</td>
         <td>맛</td>
         <td>가격</td>
@@ -321,7 +309,7 @@
 
     <%for (var i = 0; i < review.length; i++) {%>
     <tr>
-        <td><%=review[i].email%></td>
+        <td><%=review[i].nick%></td>
         <td><%=review[i].eval%></td>
         <td><%=review[i].t_score%></td>
         <td><%=review[i].m_score%></td>
@@ -380,105 +368,64 @@
 </table>
 
 <%}%>
-
-
-
-
-
-
-
-
-
-
-
-
         <!-- ======= Testimonials Section ======= -->
         <section id="testimonials" class="testimonials">
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
                     <h2>사용자 리뷰</h2>
-                    <p>설명글 넣기</p>
+                    <!-- 리뷰 페이지 -->
+                    <% if(user !=null){ %>
+                        <!-- <button id="hihi">리뷰 하이</button> -->
+                    
+                        <div style="text-align : center">
+                            <a href="#shadow" id="hihi">🔻리뷰 또다시 ㅎㅇㅎㅇ~!🔻</a>
+                        </div>
+                    
+                        <div class="box counts section-bg" id="counts">
+                    
+                        </div>
+                    
+                        <% } %>
                 </div>
 
                 <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                    <div class="swiper-wrapper">
-
                         <div class="swiper-slide">
+                            <%if(review.length==0) {%>
+                                등록된 리뷰가 없어요~!~!
+                                <%} else {%>
+                            <%for (var i=0; i < review.length; i++) {%>
                             <div class="testimonial-item">
                                 <p>
                                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
-                                    rhoncus. Accusantium
-                                    quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                                <img src="/assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                                <h3>찬둘루</h3>
-                                <h4>Ceo &amp; Founder</h4>
+                                    <ul>
+                                        <li>
+                                        <ol><strong>총 평가 점수</strong>:<%=review[i].eval%>/5점
+                                        </ol>
+                                        <ol><strong>맛 평가</strong>: <%=review[i].t_score%>/3점
+                                        </ol>
+                                        <ol><strong>가격 평가</strong>: <%=review[i].m_score%>/3점
+                                        </ol>
+                                        <ol><strong>서비스 평가</strong>:<%=review[i].c_score%>/3점
+                                        </ol>
+                                        <ol><strong>회전율 평가 </strong>:<%=review[i].cook_time%>
+                                        </ol>
+                                        <ol><strong>대기시간 평가</strong> :<%=review[i].wait_time%>분
+                                        </ol>
+                                    
+                                    <p><%=review[i].contents%></p>
+                                    </li>
+                                    
+                                <li>
+                                <img src="\assets\img\review_img<%=review[i].pic_url.substring(30)%>" class="testimonial-img" alt=" ">
+                              </ul></p>
+                            </li><i class="bx bxs-quote-alt-right quote-icon-right">
+                            </i>
+                                <h3><%=review[i].nick%></h3>
+                                <h4><%=review[i].re_date%></h4>
                             </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid
-                                    cillum eram malis
-                                    quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                                <img src="/assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                                <h3>김준용</h3>
-                                <h4>Designer</h4>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem
-                                    veniam duis minim
-                                    tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                                <img src="/assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                                <h3>공지연</h3>
-                                <h4>Store Owner</h4>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim
-                                    fugiat minim velit
-                                    minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore
-                                    illum veniam.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                                <img src="/assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                                <h3>이상원</h3>
-                                <h4>Freelancer</h4>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster
-                                    veniam enim culpa
-                                    labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi
-                                    cillum quid.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                                <img src="/assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                                <h3>안영균</h3>
-                                <h4>Entrepreneur</h4>
-                            </div>
+                            <%}%>
+                            <%}%>
                         </div><!-- End testimonial item -->
 
                     </div>

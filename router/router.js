@@ -100,7 +100,8 @@ const { userInfo } = require('os');
 router.post("/test", upload.single('userfile'), function(request, response){
     console.log(request.file);
 
-    let email = request.session.user.email;
+
+    let nick = request.session.user.nick;
     let eval = parseInt(request.body.eval);
     let t_score = request.body.t_score;
     let m_score = request.body.m_score;
@@ -111,9 +112,9 @@ router.post("/test", upload.single('userfile'), function(request, response){
     let pic_url = 'localhost:3307/LunchBoxAddress/'+request.file.filename;
     let rest_id = parseInt(request.session.rest.id);
  
-    let sql = 'insert into review_info(email, eval, t_score, m_score, c_score, cook_time, wait_time, contents, re_date, pic_url, rest_id) values(?,?,?,?,?,?,?,?,now(),?,?)';
+    let sql = 'insert into review_info( nick, eval, t_score, m_score, c_score, cook_time, wait_time, contents, re_date, pic_url, rest_id) values(?,?,?,?,?,?,?,?,now(),?,?)';
 
-    conn.query(sql, [email, eval, t_score, m_score, c_score, cook_time, wait_time,
+    conn.query(sql, [nick, eval, t_score, m_score, c_score, cook_time, wait_time,
         contents, pic_url, rest_id], function(err, rows){
         if(rows){
             console.log(rows);

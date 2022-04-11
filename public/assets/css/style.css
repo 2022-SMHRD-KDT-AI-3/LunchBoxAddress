@@ -754,14 +754,21 @@ section {
 .testimonials .testimonials-slider {
   overflow: hidden;
 }
+.testimonial-item li {
+  display: inline-block;
+  margin-right: 100px;
+}
 .testimonials .testimonial-item {
+  border-radius: 20px;
+  background: #f3f9fd;
   box-sizing: content-box;
   text-align: center;
   min-height: 320px;
+  padding-bottom: 30px;
 }
 .testimonials .testimonial-item .testimonial-img {
-  width: 90px;
-  border-radius: 50%;
+  width: 250px;
+  border-radius: 20px;
   margin: 0 auto;
 }
 .testimonials .testimonial-item h3 {
@@ -800,7 +807,7 @@ section {
   margin-bottom: 35px;
   border-radius: 6px;
 }
-.testimonials .testimonial-item p::after {
+/* .testimonials .testimonial-item p::after {
   content: "";
   width: 0;
   height: 0;
@@ -810,7 +817,7 @@ section {
   position: absolute;
   bottom: -20px;
   left: calc(50% - 20px);
-}
+} */
 .testimonials .swiper-pagination {
   margin-top: 20px;
   position: relative;
