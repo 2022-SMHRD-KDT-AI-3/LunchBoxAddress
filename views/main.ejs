@@ -40,6 +40,9 @@
     <link
         href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
         rel="stylesheet">
+
+        <!-- 검색어 자동완성 -->
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 
 <body>
@@ -52,9 +55,9 @@
                     
                 </span>
 
-                <span class="search">
+                <span class="search" >
                     <form action="http://127.0.0.1:3307/please" method="get" id="searchform">
-                        <input type="text" name="res_search" id="" placeholder="">
+                        <input type="text" name="res_search" id="search" placeholder="">
                         <span class="material-icons-outlined">
                             <button type="submit" id="searchcon" style="background-color:transparent; border:0px transparent solid;">search</button>
                         </span>
@@ -180,10 +183,10 @@
                         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="300">
                             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                                 <div class="portfolio-wrap">
-                                    <img src="/assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+                                    <img src="/assets/img/resimg/1왕자관.jpg" class="img-fluid" alt="">
                                     <div class="portfolio-info">
                                         <h4>
-                                            <a href="http://127.0.0.1:3307/resPage">App 1 확인</a>
+                                            <!-- <a href="http://127.0.0.1:3307/resPage">App 1 확인</a> -->
                                         </h4>
                                     </div>
                                 </div>
@@ -316,6 +319,97 @@
 <script src="/assets/js/changeSubTitle.js"></script>
 <script src="/assets/js/changeMainTitle.js"></script>
 <script src="/assets/js/background.js"></script>
+<!-- 자동완성 jquery script -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    $(function () {   //화면 로딩후~
+        $("#search").autocomplete({
+            source: ['왕자관'
+                , '신성식당'
+                , '900달러'
+                , '미미당'
+                , '등촌칼국수'
+                , '낙지한마당'
+                , '종가집'
+                , '월계수식당'
+                , '해뜨는집'
+                , '풍남옥'
+                , '홍능갈비'
+                , '민속촌'
+                , '두레식당'
+                , '1515짜장면'
+                , '오대양횟집'
+                , '3.6식당'
+                , '고려조삼계탕'
+                , '해안식당'
+                , '홍도'
+                , '본전소머리국밥'
+                , '맛집한겨레'
+                , '열도지'
+                , '동부식당'
+                , '청진동해장국'
+                , '잘먹었습니다'
+                , '굴마을'
+                , '구수향'
+                , '춘자생태탕'
+                , '참뫼'
+                , '고봉민김밥인'
+                , '이삭토스트'
+                , '수라상'
+                , '삼진식육식당'
+                , '엄마주방'
+                , '일흥식당'
+                , '영성원'
+                , '마한지'
+                , '말리화반점'
+                , '양촌추어탕'
+                , '화랑궁회관'
+                , '산수모밀'
+                , '신신식당'
+                , '인천닭곰탕'
+                , '임실댁 가마솥 추어탕'
+                , '진진설곰탕'
+                , '박순자 녹두집'
+                , '강황울금국밥'
+                , '좋은국밥'
+                , '시안'
+                , '고기집중'
+                , '역전우동0410'
+                , '대접'
+                , '별채'
+                , '고피자'
+                , '시바카레'
+                , '1966생면파스타'
+                , '청춘덮밥'
+                , '호시마츠라멘'
+                , '밥도둑'
+                , '신묘한 곱도리식당'
+                , '돈부리바쇼 유메노덴'
+                , '손수김밥'
+                , '시골집'
+                , '서울깍두기'
+                , '통큰경양식'
+                , '칠우불고기'
+                , '롯데리아'
+                , '전부'
+                , '고향청국장'
+                , '궁동시골밥상'
+                , '마네키'
+                , '하동정'
+                , '소복'
+                , '솔밭솥밥'
+                , '뼈대있는집 감자탕'
+                , '피자헛'],   // data.js파일 안의 List
+            focus: function (event, ui) { // 방향키로 자동완성단어 선택 가능하게 만들기   
+                return false;
+            },
+            minLength: 1,// 최소 글자
+            delay: 100,   //autocomplete 딜레이 시간(ms)
+            //disabled: true, //자동완성 기능 끄기
+        });
+    });
+</script>
 
 </body>
 </html>

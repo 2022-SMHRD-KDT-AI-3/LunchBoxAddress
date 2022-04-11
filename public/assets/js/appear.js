@@ -13,15 +13,15 @@ $(document).ready(function () {
             
             <td width="400px" >
                 <div class="star-rating space-x-4 mx-auto">
-                    <input type="radio" id="5-stars" name="eval" value="5" v-model="ratings"/>
+                    <input type="radio" id="5-stars" name="eval" value="100" v-model="ratings"/>
                     <label for="5-stars" class="star pr-4">★</label>
-                    <input type="radio" id="4-stars" name="eval" value="4" v-model="ratings"/>
+                    <input type="radio" id="4-stars" name="eval" value="80" v-model="ratings"/>
                     <label for="4-stars" class="star">★</label>
-                    <input type="radio" id="3-stars" name="eval" value="3" v-model="ratings"/>
+                    <input type="radio" id="3-stars" name="eval" value="60" v-model="ratings"/>
                     <label for="3-stars" class="star">★</label>
-                    <input type="radio" id="2-stars" name="eval" value="2" v-model="ratings"/>
+                    <input type="radio" id="2-stars" name="eval" value="40" v-model="ratings"/>
                     <label for="2-stars" class="star">★</label>
-                    <input type="radio" id="1-star" name="eval" value="1" v-model="ratings"/>
+                    <input type="radio" id="1-star" name="eval" value="20" v-model="ratings"/>
                     <label for="1-star" class="star">★</label>
                 </div>
             </td>
@@ -41,9 +41,9 @@ $(document).ready(function () {
                 <td align="center" class="line" ><strong>맛</strong></td>
                 <td width="400px">
                     <p class="radio">
-                        <label><input type="radio" name="t_score" id="taste1" value="1">  불만족</label>
-                        <label><input type="radio" name="t_score" id="taste2" value="2">  보통</label>
-                        <label><input type="radio" name="t_score" id="taste3" value="3">  만족</label>
+                        <label><input type="radio" name="t_score" id="taste1" value="35">  불만족</label>
+                        <label><input type="radio" name="t_score" id="taste2" value="65">  보통</label>
+                        <label><input type="radio" name="t_score" id="taste3" value="100">  만족</label>
                     </p>
 
                 </td>
@@ -53,9 +53,9 @@ $(document).ready(function () {
                 <td align="center" class="line" ><strong>가격</strong></td>
                 <td width="400px">
                     <p class="radio">
-                        <label><input type="radio" name="m_score" id="price1" value="1">  불만족</label>
-                        <label><input type="radio" name="m_score" id="price2" value="2">  보통</label>
-                        <label><input type="radio" name="m_score" id="price3" value="3">  만족</label>
+                        <label><input type="radio" name="m_score" id="price1" value="35">  불만족</label>
+                        <label><input type="radio" name="m_score" id="price2" value="65">  보통</label>
+                        <label><input type="radio" name="m_score" id="price3" value="100">  만족</label>
                     </p>
 
                 </td>
@@ -66,9 +66,9 @@ $(document).ready(function () {
                 <td width="400px">
                     <p class="radio">
                         
-                        <label><input type="radio" name="c_score" id="service1" value="1">  불만족</label>
-                        <label><input type="radio" name="c_score" id="service2" value="2">  보통</label>
-                        <label><input type="radio" name="c_score" id="service3" value="3">  만족</label>
+                        <label><input type="radio" name="c_score" id="service1" value="35">  불만족</label>
+                        <label><input type="radio" name="c_score" id="service2" value="65">  보통</label>
+                        <label><input type="radio" name="c_score" id="service3" value="100">  만족</label>
                     </p>
 
                 </td>

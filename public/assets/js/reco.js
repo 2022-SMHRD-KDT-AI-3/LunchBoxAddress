@@ -38,7 +38,7 @@ function cate2() {
                     ${result[i].rest_name}<br>
                     ${result[i].menu_name}<br>
                     ${result[i].rest_distance}m 떨어져있어요!<br>
-                    네이버 별점은 ${result[i].rest_naver}점이에요!
+                    ⭐<strong>별점 : </strong> ${result[i].rest_naver}점이에요!
                 </a>
                 `); // a 태그 요소 안의 텍스트를 변경함
             }
