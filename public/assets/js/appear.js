@@ -1,7 +1,8 @@
 $(document).ready(function () {
     $("#hihi").click(function () {
-        $(".box").prepend(`
-            
+        $("#reviewhi").empty();
+        $("#reviewhi").prepend(`
+    <div class="box counts section-bg" id="counts">    
         <form action="http://127.0.0.1:3307/test" class="r_f" method="post" enctype="multipart/form-data">
         <div id="shadow">
         <table class="table" border="0" cellspacing="5">
@@ -129,7 +130,7 @@ $(document).ready(function () {
         </div>
     </form>
             
-            
+</div>          
             
     `);
     });

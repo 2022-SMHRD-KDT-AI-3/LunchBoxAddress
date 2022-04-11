@@ -53,10 +53,12 @@
                 </span>
 
                 <span class="search">
-                    <input type="text" name="search_k" id="" placeholder="">
-                    <span class="material-icons-outlined">
-                        <a href="http://127.0.0.1:3307/search" id="searchcon">search</a>
-                    </span>
+                    <form action="http://127.0.0.1:3307/please" method="get" id="searchform">
+                        <input type="text" name="res_search" id="" placeholder="">
+                        <span class="material-icons-outlined">
+                            <button type="submit" id="searchcon" style="background-color:transparent; border:0px transparent solid;">search</button>
+                        </span>
+                    </form>
                 </span>
 
                 <%if(user==null){%>
