@@ -167,9 +167,11 @@ router.get("/reco", function(request, response) { // main에서 값을 받는 �
 // let rest_id;
 router.get("/resPage", function (request, response) { // main에서 값을 받는 거라 reco가 main.ejs로 가야할 거임
 
+    // console.log("다시받은아이디",searchid);
+
     let rest_id = request.query.id;
-    let sql_1 = "select * from rest_info where rest_id = ?";
-    conn.query(sql_1, [rest_id], function (err, rows) {
+    let sql = "select * from rest_info where rest_id = ?";
+    conn.query(sql, [rest_id], function (err, rows) {
         console.log("식당 찾기 성공!");
 
         if (rows.length > 0) {
@@ -231,6 +233,59 @@ router.get("/test", function (request, response) {
     });
 
 }); // 라우터 닫음
+
+//  검색
+router.get("/please", function (request, response) {
+    console.log(request.query.res_search);
+    
+    let res_search = request.query.res_search;
+    let sql = "select * from rest_info where rest_name = ?";
+    // let sql = "select rest_id from rest_info where rest_name = ?";
+
+    conn.query(sql, [res_search], function (err, rows) {
+        
+        if(err) {
+            console.log("ㅅㅂ 개망함 시즌 2");
+        } else {
+        
+            console.log("검색 테스트");
+        
+            if(rows){
+                // let res = JSON.parse(JSON.stringify(rows[0])) // RowDataPacket에 접근할때는 json 형식으로 바꿔줘야 함
+                //console.log(rows[0].rest_id);
+                // console.log("하이하이하이하이");
+                console.log(rows);
+
+                let res = JSON.parse(JSON.stringify(rows)) // RowDataPacket에 접근할때는 json 형식으로 바꿔줘야 함
+                // console.log("새로운 정보", res[0].rest_id);
+                // console.log(rows[1]);
+
+                // console.log(rows);
+
+                request.session.rest = {
+                    "id": res[0].rest_id,
+                    "name": res[0].rest_name,
+                    "address": res[0].rest_address,
+                    "type": res[0].rest_type,
+                    "latitude": res[0].rest_latitude,
+                    "longitude": res[0].rest_logitude,
+                    "distance": res[0].rest_distance,
+                    "tel": res[0].rest_tel,
+                    "ontime": res[0].rest_ontime,
+                    "offtime": res[0].rest_offtime,
+                    "naver": res[0].rest_naver
+                }
+                response.redirect("http://127.0.0.1:3307/test");
+
+
+                // rows[0].rest_id
+            }
+         }  
+
+    });
+
+}); // 라우터 닫음
+
 
 
 
