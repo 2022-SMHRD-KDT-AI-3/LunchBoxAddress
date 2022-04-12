@@ -163,15 +163,16 @@
                                 <%=info.name%>
                             </h3>
                             <ul>
-                                <li><strong>식당 업태</strong>:<%=info.type%></li>
-                                <li><strong>주소 및 현재위치로부터 식당거리</strong>: <%=info.address%> : <%=info.distance%>m</li>
-                                <li><strong>연락처</strong>: <%=info.tel%>
+                                <li><strong>식당 분류</strong> <%=info.type%></li>
+                                <li><strong>주소</strong> <%=info.address%></li>
+                                <li><strong>개발원에서의 거리</strong> <%=info.distance%>m</li>
+                                <li><strong>연락처</strong> <%=info.tel%>
                                 </li>
-                                <li><strong>영업시간</strong>: <%=info.ontime%>
+                                <li><strong>영업시간</strong> <%=info.ontime%>
                                 </li>
-                                <li><strong> 휴무일 </strong>:<%=info.offtime%>
+                                <li><strong>휴무일</strong> <%=info.offtime%>
                                 </li>
-                                <li><strong> 네이버 별점</strong> : <%=info.naver%>
+                                <li><strong>네이버 별점</strong> <%=info.naver%>점
                                 </li>
                             </ul>
                         </div>
@@ -282,7 +283,7 @@
                         <!-- <button id="hihi">리뷰 하이</button> -->
                     
                         <div style="text-align : center">
-                            <a href="#shadow" id="hihi">🔻소중한 방문기록을 작성해주세요🔻</a>
+                            <a href="#shadow" id="hihi">이 곳을 클릭해서 소중한 방문 기록을 작성해주세요😊</a>
                         </div>
                     
                     <% } %>
@@ -295,26 +296,26 @@
                 <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                         <div class="swiper-slide">
                             
-                            <%if(review.length==0) {%>
-                                등록된 리뷰가 없습니다.
+                        <%if(review.length==0) {%>
+                                
                                 <%} else {%>
-                            <%for (var i=0; i < review.length; i++) {%>
+                            <%for(var i=0; i < review.length; i++){%>
                             <div class="testimonial-item">
                                 <p>
                                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                                     <ul style="display: flex; justify-content: center;">
                                         <li>
-                                        <ol><strong>총 평가 점수</strong>:<%=review[i].eval%>/5점
+                                        <ol><strong>총 평가 점수</strong> : <%=review[i].eval%>점 / 5점
                                         </ol>
-                                        <ol><strong>맛 평가</strong>: <%=review[i].t_score%>/3점
+                                        <ol><strong>맛 평가</strong> : <%=review[i].t_score%>
                                         </ol>
-                                        <ol><strong>가격 평가</strong>: <%=review[i].m_score%>/3점
+                                        <ol><strong>가격 평가</strong> : <%=review[i].m_score%>
                                         </ol>
-                                        <ol><strong>서비스 평가</strong>:<%=review[i].c_score%>/3점
+                                        <ol><strong>서비스 평가</strong> : <%=review[i].c_score%>
                                         </ol>
-                                        <ol><strong>회전율 평가 </strong>:<%=review[i].cook_time%>
+                                        <ol><strong>회전율 평가 </strong> : <%=review[i].cook_time%>
                                         </ol>
-                                        <ol><strong>대기시간 평가</strong> :<%=review[i].wait_time%>분
+                                        <ol><strong>대기시간 평가</strong> : <%=review[i].wait_time%>
                                         </ol>
                                     
                                         <p><%=review[i].contents%></p>
@@ -330,16 +331,9 @@
                                 </p><i class="bx bxs-quote-alt-right quote-icon-right">
                                 </i>
                             </div>
-                            <% sumT += review[i].eval;
-                            avgT = sumT/review.length;
-                            sum1 += review[i].t_score;
-                            avg1 = sum1/review.length;
-                            sum2 += review[i].m_score;
-                            avg2 = sum2/review.length;
-                            sum3 += review[i].c_score;
-                            avg4 = sum3/review.length;
-                        }%>
-                            <%}%>
+                            
+                        <%}%>
+                    <%}%>
                         </div><!-- End testimonial item -->
 
                     </div>
@@ -348,56 +342,15 @@
 
             </div>
         </section><!-- End Testimonials Section -->
-        <% let sumT=0,sum1=0,sum2=0,sum3=0, avgT=0,avg1=0,avg2=0,avg3=0; %>
-            <!-- ======= Counts Section ======= -->
-            <section id="counts" class="counts section-bg">
-                <div class="container">
-        
-                    <div class="row justify-content-end" style="display: flex; justify-content:center !important;">
-        
-                        <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
-                            <div class="count-box">
-                                <span data-purecounter-start="0" data-purecounter-end="<%=avgT%>" data-purecounter-duration="2"
-                                    class="purecounter"></span>
-                                <p>총 평가점수</p>
-                            </div>
-                        </div>
-        
-                        <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
-                            <div class="count-box">
-                                <span data-purecounter-start="0" data-purecounter-end="<%=avg1%>" data-purecounter-duration="2"
-                                    class="purecounter"></span>
-                                <p>맛 점수</p>
-                            </div>
-                        </div>
-        
-                        <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
-                            <div class="count-box">
-                                <span data-purecounter-start="0" data-purecounter-end="<%=avg2%>" data-purecounter-duration="2"
-                                    class="purecounter"></span>
-                                <p>가격 점수 </p>
-                            </div>
-                        </div>
-        
-                        <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
-                            <div class="count-box">
-                                <span data-purecounter-start="0" data-purecounter-end="<%=avg3%>" data-purecounter-duration="2"
-                                    class="purecounter"></span>
-                                <p>서비스 점수</p>
-                            </div>
-                        </div>
-        
-                    </div>
-        
-                </div>
-            </section><!-- End Counts Section -->
+
+           
 
 
         <section id="services" class="services section-bg">
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
-                    <h2>블로그리뷰</h2>
+                    <h2>블로그 리뷰</h2>
                     <p>  </p>
                 </div>
 

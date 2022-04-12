@@ -142,13 +142,14 @@ router.post("/test", upload.single('userfile'), function(request, response){
         contents, pic_url, rest_id], function(err, rows){
         if(rows){
             console.log(rows);
+            console.log("사진테스트", pic_url);
             
         }else{
             console.log(err);
         }
     });
     //alert('리뷰 작성 완료, 이전 페이지로 돌아갑니다');
-    response.redirect("http://127.0.0.1:3307/test/");
+    response.redirect("http://127.0.0.1:3307/test");
 
 });
 
