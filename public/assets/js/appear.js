@@ -26,11 +26,12 @@ $(document).ready(function () {
                 </div>
             </td>
 </tr>
-            <tr>
+            <tr id="nonon">
                 <td align="center" class="line" ><strong>사진등록</strong></td>
                 <td>
                     <div class="upload"><p>
-                        <input type="file" name="userfile">
+                        <label for="ex_file">업로드</label>
+                        <input type="file" name="userfile" id="ex_file">
                        
                     </p></div>
 
@@ -120,8 +121,9 @@ $(document).ready(function () {
                 </td>
             </tr>
             <tr class="btn" >
-                <td colspan="2" >
+                <td colspan="2"  >
                     <input type="submit" id="submitbtn" value="작성하기">
+                     <label for="ex_file">작성하기</label>
                 </td>
 
             </tr>

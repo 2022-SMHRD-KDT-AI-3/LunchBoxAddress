@@ -48,7 +48,8 @@ cursor: pointer;
 
 
 .upload{
-    margin-left: 8px;
+    margin-left: 25px;
+    padding-bottom: 15px;
 }
 .r_f,#infom, .btn,.siv{
     display: flex;
@@ -56,6 +57,11 @@ cursor: pointer;
     align-items: center;
 
     
+}
+#nonon {
+    height: 50px;
+    margin-bottom: 10px;
+    align-items: center;
 }
 .table>:not(caption)>*>*{
     border-bottom-width: 0px;
@@ -65,11 +71,18 @@ cursor: pointer;
     width: 600px;
 
 }
+.table label, input {
+    font-size: 17px;
+}
+
 tr ,#star {
     display: flex;
     flex-wrap: wrap;
     justify-content:start;
     padding: auto;
+}
+.table .star {
+    font-size: 34px;
 }
 
 .line{
@@ -78,7 +91,7 @@ tr ,#star {
 .siv {
     padding-top: 10px;
     height: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
    
 }
 .radio {
@@ -89,4 +102,56 @@ tr ,#star {
 }
 #conten {
     width: 430px;
+}
+
+.upload label {
+    display: inline-block;
+    padding: 8px;
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    line-height: normal;
+    vertical-align: middle;
+    background-color: #000000;
+    cursor: pointer;
+    border: 1px solid #ebebeb;
+    border-bottom-color: #e2e2e2;
+    border-radius: .25em;
+}
+
+.upload input[type="file"] {
+    /* 파일 필드 숨기기 */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+
+.btn label {
+    display: inline-block;
+    padding: 12px;
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    line-height: normal;
+    vertical-align: middle;
+    background-color: #000000;
+    cursor: pointer;
+    border: 1px solid #ebebeb;
+    border-bottom-color: #e2e2e2;
+    border-radius: .25em;
+}
+.btn input[type="submit"] {
+    /* 파일 필드 숨기기 */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
