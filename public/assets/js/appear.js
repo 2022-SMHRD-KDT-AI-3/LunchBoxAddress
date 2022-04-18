@@ -6,12 +6,9 @@ $(document).ready(function () {
         <form action="http://127.0.0.1:3307/test" class="r_f" method="post" enctype="multipart/form-data">
         <div id="shadow">
         <table class="table" border="0" cellspacing="5">
-
-        <tr class=" siv" id="star" height="100px;">
-            
+        <tr class=" siv" id="star" height="100px;"> 
             <td class="line" align="center"><strong>총평가</strong></td>
-            
-            <td width="400px" >
+            <td width="400px">
                 <div class="star-rating space-x-4 mx-auto">
                     <input type="radio" id="5-stars" name="eval" value="100" v-model="ratings"/>
                     <label for="5-stars" class="star pr-4">★</label>
@@ -25,19 +22,16 @@ $(document).ready(function () {
                     <label for="1-star" class="star">★</label>
                 </div>
             </td>
-</tr>
+        </tr>
             <tr id="nonon">
                 <td align="center" class="line" ><strong>사진등록</strong></td>
                 <td>
                     <div class="upload"><p>
                         <label for="ex_file">업로드</label>
                         <input type="file" name="userfile" id="ex_file">
-                       
                     </p></div>
-
                 </td>
             </tr>
-
             <tr>
                 <td align="center" class="line" ><strong>맛</strong></td>
                 <td width="400px">
