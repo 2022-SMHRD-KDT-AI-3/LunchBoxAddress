@@ -10,15 +10,15 @@ $(document).ready(function () {
             <td class="line" align="center"><strong>총평가</strong></td>
             <td width="400px">
                 <div class="star-rating space-x-4 mx-auto">
-                    <input type="radio" id="5-stars" name="eval" value="100" v-model="ratings"/>
+                    <input type="radio" id="5-stars" name="eval" value="5" v-model="ratings"/>
                     <label for="5-stars" class="star pr-4">★</label>
-                    <input type="radio" id="4-stars" name="eval" value="80" v-model="ratings"/>
+                    <input type="radio" id="4-stars" name="eval" value="4" v-model="ratings"/>
                     <label for="4-stars" class="star">★</label>
-                    <input type="radio" id="3-stars" name="eval" value="60" v-model="ratings"/>
+                    <input type="radio" id="3-stars" name="eval" value="3" v-model="ratings"/>
                     <label for="3-stars" class="star">★</label>
-                    <input type="radio" id="2-stars" name="eval" value="40" v-model="ratings"/>
+                    <input type="radio" id="2-stars" name="eval" value="2" v-model="ratings"/>
                     <label for="2-stars" class="star">★</label>
-                    <input type="radio" id="1-star" name="eval" value="20" v-model="ratings"/>
+                    <input type="radio" id="1-star" name="eval" value="1" v-model="ratings"/>
                     <label for="1-star" class="star">★</label>
                 </div>
             </td>
@@ -36,9 +36,9 @@ $(document).ready(function () {
                 <td align="center" class="line" ><strong>맛</strong></td>
                 <td width="400px">
                     <p class="radio">
-                        <label><input type="radio" name="t_score" id="taste1" value="35">  불만족</label>
-                        <label><input type="radio" name="t_score" id="taste2" value="65">  보통</label>
-                        <label><input type="radio" name="t_score" id="taste3" value="100">  만족</label>
+                        <label><input type="radio" name="t_score" id="taste1" value="맛이 별로에요">  맛이 별로에요</label>
+                        <label><input type="radio" name="t_score" id="taste2" value="괜찮았어요">  괜찮았어요</label>
+                        <label><input type="radio" name="t_score" id="taste3" value="또 오고 싶어요">  또 오고 싶어요</label>
                     </p>
 
                 </td>
@@ -48,9 +48,9 @@ $(document).ready(function () {
                 <td align="center" class="line" ><strong>가격</strong></td>
                 <td width="400px">
                     <p class="radio">
-                        <label><input type="radio" name="m_score" id="price1" value="35">  불만족</label>
-                        <label><input type="radio" name="m_score" id="price2" value="65">  보통</label>
-                        <label><input type="radio" name="m_score" id="price3" value="100">  만족</label>
+                        <label><input type="radio" name="m_score" id="price1" value="돈이 아까워요">  돈이 아까워요</label>
+                        <label><input type="radio" name="m_score" id="price2" value="부담 없이 먹었어요">  부담 없이 먹었어요</label>
+                        <label><input type="radio" name="m_score" id="price3" value="완전 가성비 최고에요">  완전 가성비 최고에요</label>
                     </p>
 
                 </td>
@@ -61,9 +61,9 @@ $(document).ready(function () {
                 <td width="400px">
                     <p class="radio">
                         
-                        <label><input type="radio" name="c_score" id="service1" value="35">  불만족</label>
-                        <label><input type="radio" name="c_score" id="service2" value="65">  보통</label>
-                        <label><input type="radio" name="c_score" id="service3" value="100">  만족</label>
+                        <label><input type="radio" name="c_score" id="service1" value="불친절해요">  불친절해요</label>
+                        <label><input type="radio" name="c_score" id="service2" value="괜찮았어요">  괜찮았어요</label>
+                        <label><input type="radio" name="c_score" id="service3" value="친절하고 좋아요">  친절하고 좋아요</label>
                     </p>
 
                 </td>
@@ -71,31 +71,46 @@ $(document).ready(function () {
 
             
             <tr>
-                <td align="center" class="line" ><strong>회전율 </strong></td>
+                <td align="center" class="line" ><strong>회전율</strong></td>
                 <td>
                     <select name="cook_time" id="">
 
-                        <option value="empty">선택하세요</option>
-                        <option value="느림">느림</option>
-                        <option value="보통">보통</option>
-                        <option value="빠름">빠름</option>
+                        <option value="">선택하세요</option>
+                        <option value="음식이 늦게 나와요">음식이 늦게 나와요</option>
+                        <option value="시간 맞춰 잘 나왔어요">시간 맞춰 잘 나왔어요</option>
+                        <option value="자리에 앉자마자 나왔어요">자리에 앉자마자 나왔어요</option>
 
                     </select>
                 </td>
   
-                <td align="center" class="line" ><strong>대기시간</strong> </td>
+                <td align="center" class="line" ><strong></strong> </td>
                 <td>
-                    <select name="wait_time" id="">
-
-                        <option value="empty">선택하세요</option>
-                        <option value="없음">없음</option>
-                        <option value="0m">~15분</option>
-                        <option value="15m">15분~30분</option>
-                        <option value="30m">30분이상</option>
-
-                    </select>
+                   
                 </td>
             </tr>
+
+            <tr>
+            <td align="center" class="line" ><strong>대기시간</strong> </td>
+            <td>
+                <select name="wait_time" id="">
+
+                    <option value="">선택하세요</option>
+                    <option value="없음">바로 자리에 앉았어요</option>
+                    <option value="15분 미만">15분 정도 기다렸어요</option>
+                    <option value="30분 가까이 기다렸어요">30분 가까이 기다렸어요</option>
+                    <option value="30분 이상 기다렸어요">30분 이상 기다렸어요</option>
+
+                </select>
+            </td>
+
+            <td align="center" class="line" ><strong></strong></td>
+            <td>
+                
+            </td>
+
+            
+        </tr>
+
 
             <tr>
                 <td align="center"class="line" ><strong>상세리뷰</strong></td>
@@ -116,8 +131,8 @@ $(document).ready(function () {
             </tr>
             <tr class="btn" >
                 <td colspan="2"  >
-                    <input type="submit" id="submitbtn" value="작성하기">
-                     <label for="ex_file">작성하기</label>
+                    <input type="submit" id="submitbtn" onClick="history.go(0)" value="작성하기">
+                     <label for="submitbtn">작성하기</label>
                 </td>
 
             </tr>
