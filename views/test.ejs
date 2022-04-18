@@ -5,7 +5,9 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title><%=info.name%>의 세부 페이지</title>
+    <title>
+        <%=info.name%>의 세부 페이지
+    </title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -66,7 +68,7 @@
     <link
         href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
         rel="stylesheet">
-        
+
 
     <!-- =======================================================
   * Template Name: OnePage - v4.7.0
@@ -74,8 +76,8 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-<!-- 검색어 자동완성 -->
-<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- 검색어 자동완성 -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 
 <body>
@@ -85,26 +87,28 @@
         <div class="container d-flex align-items-center justify-content-between">
             <span>
                 <h1 class="logo">
-                <a href="http://127.0.0.1:3307/main" id="logo"><img class="img-concert" src="/assets/img/lunchbox.png" /></a>
+                    <a href="http://127.0.0.1:3307/main" id="logo"><img class="img-concert"
+                            src="/assets/img/lunchbox.png" /></a>
 
                 </h1>
             </span>
 
-        <span class="search">
-            <form action="http://127.0.0.1:3307/please" method="get" id="searchform">
-                <input type="text" name="res_search" id="search" placeholder="">
-                <span class="material-icons-outlined">
-                    <button type="submit" id="searchcon"
-                        style="background-color:transparent; border:0px transparent solid;">search</button>
-                </span>
-            </form>
-        </span>
+            <span class="search">
+                <form action="http://127.0.0.1:3307/please" method="get" id="searchform">
+                    <input type="text" name="res_search" id="search" placeholder="">
+                    <span class="material-icons-outlined">
+                        <button type="submit" id="searchcon"
+                            style="background-color:transparent; border:0px transparent solid;">search</button>
+                    </span>
+                </form>
+            </span>
 
         </div>
         <%if(user==null){%>
-            <a href="/wdw-snippet.html">LOGIN</a> <!--로그인폼대충새로만들어야할수도있음 -->
+            <a href="/wdw-snippet.html">LOGIN</a>
+            <!--로그인폼대충새로만들어야할수도있음 -->
             <%}else{%>
-                <a href="http://127.0.0.1:3307/logout" >LOGOUT</a>
+                <a href="http://127.0.0.1:3307/logout">LOGOUT</a>
                 <%}%>
     </header>
 
@@ -117,20 +121,24 @@
             <div class="container">
 
                 <div class="d-flex justify-content-between align-items-center">
-                    <h2><%=info.name%></h2>
+                    <h2>
+                        <%=info.name%>
+                    </h2>
                     <ol>
                         <li><a href="http://127.0.0.1:3307/main">Home</a></li>
-                        <li><%=info.name%></li>
+                        <li>
+                            <%=info.name%>
+                        </li>
                     </ol>
                 </div>
 
             </div>
         </section><!-- End Breadcrumbs -->
-    
+
         <!-- ======= Portfolio Details Section ======= -->
         <section id="portfolio-details" class="portfolio-details">
             <div class="container">
-             
+
 
 
                 <div class="row gy-4">
@@ -138,8 +146,8 @@
                     <div class="col-lg-8">
                         <div class="portfolio-details-slider swiper">
                             <div class="swiper-wrapper align-items-center">
-                                
-                                
+
+
                                 <div class="swiper-slide">
                                     <img src="/assets/img/resimg/75.jpg" alt="">
                                 </div>
@@ -163,40 +171,50 @@
                                 <%=info.name%>
                             </h3>
                             <ul>
-                                <li><strong>식당 분류</strong> <%=info.type%></li>
-                                <li><strong>주소</strong> <%=info.address%></li>
-                                <li><strong>개발원에서의 거리</strong> <%=info.distance%>m</li>
-                                <li><strong>연락처</strong> <%=info.tel%>
+                                <li><strong>식당 분류</strong>
+                                    <%=info.type%>
                                 </li>
-                                <li><strong>영업시간</strong> <%=info.ontime%>
+                                <li><strong>주소</strong>
+                                    <%=info.address%>
                                 </li>
-                                <li><strong>휴무일</strong> <%=info.offtime%>
+                                <li><strong>개발원에서의 거리</strong>
+                                    <%=info.distance%>m
                                 </li>
-                                <li><strong>네이버 별점</strong> <%=info.naver%>점
+                                <li><strong>연락처</strong>
+                                    <%=info.tel%>
+                                </li>
+                                <li><strong>영업시간</strong>
+                                    <%=info.ontime%>
+                                </li>
+                                <li><strong>휴무일</strong>
+                                    <%=info.offtime%>
+                                </li>
+                                <li><strong>네이버 별점</strong>
+                                    <%=info.naver%>점
                                 </li>
                             </ul>
                         </div>
                         <div class="portfolio-description">
                             <h2>메뉴정보</h2>
-                                    <p>
-                                        <table width="300px">
+                            <p>
+                            <table width="300px">
 
 
-                                            <%for(var i=0;i<menu.length;i=i+2){%>
-                                                <tr>
-                                                    <td width="150px">
-                                                        <%=menu[i].menu_name%>
-                                                    </td>
-                                                    <td width="150px">
-                                                        <%=menu[i+1].menu_name%>
-                                                    </td>
-                                                </tr>
-                                            <%}%>
+                                <%for(var i=0;i<menu.length;i=i+2){%>
+                                    <tr>
+                                        <td width="150px">
+                                            <%=menu[i].menu_name%>
+                                        </td>
+                                        <td width="150px">
+                                            <%=menu[i+1].menu_name%>
+                                        </td>
+                                    </tr>
+                                    <%}%>
 
 
 
-                                        </table>
-                                    </p>
+                            </table>
+                            </p>
                         </div>
                     </div>
 
@@ -208,69 +226,70 @@
             </div>
         </section><!-- End Portfolio Details Section -->
 
-<!-- 지도 테스트중 -->
-<div id="map"></div>
+        <!-- 지도 테스트중 -->
+        <div id="map"></div>
 
-<!-- ejs 세션 변수 가져오기 테스트 -->
-<script>
-    const lati = "<%=info.latitude%>";
-    const long = "<%=info.longitude%>";
-    const rname = "<%=info.name%>"
+        <!-- ejs 세션 변수 가져오기 테스트 -->
+        <script>
+            const lati = "<%=info.latitude%>";
+            const long = "<%=info.longitude%>";
+            const rname = "<%=info.name%>"
 
-</script>
+        </script>
 
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6ad58dabb008c1c346a445c887896f6b"></script>
-<script>
+        <script type="text/javascript"
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6ad58dabb008c1c346a445c887896f6b"></script>
+        <script>
 
-    // 지도의 중심을 정하는 코드(마커랑 관계 없음)
-    var mapContainer = document.getElementById('map'), // 지도를 표시할 div  
-        mapOption = {
-            center: new kakao.maps.LatLng(lati, long), // 지도의 중심좌표
-            level: 4 // 지도의 확대 레벨
-        };
-    // 지도판을 보여주는 코드
-    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+            // 지도의 중심을 정하는 코드(마커랑 관계 없음)
+            var mapContainer = document.getElementById('map'), // 지도를 표시할 div  
+                mapOption = {
+                    center: new kakao.maps.LatLng(lati, long), // 지도의 중심좌표
+                    level: 4 // 지도의 확대 레벨
+                };
+            // 지도판을 보여주는 코드
+            var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
-    // 마커를 표시할 위치와 title 객체 배열입니다 
-    var positions = [
-        {
-            title: '스마트인재개발원',
-            latlng: new kakao.maps.LatLng(35.14979621106867, 126.91987705807563)
-        },
-        {
-            title: rname,
-            latlng: new kakao.maps.LatLng(lati, long)
-            // title: `${rest_name}`, 
-            // latlng: new kakao.maps.LatLng(`${re_latitude}`, `${re_longitude}`)
-        }
-    ];
+            // 마커를 표시할 위치와 title 객체 배열입니다 
+            var positions = [
+                {
+                    title: '스마트인재개발원',
+                    latlng: new kakao.maps.LatLng(35.14979621106867, 126.91987705807563)
+                },
+                {
+                    title: rname,
+                    latlng: new kakao.maps.LatLng(lati, long)
+                    // title: `${rest_name}`, 
+                    // latlng: new kakao.maps.LatLng(`${re_latitude}`, `${re_longitude}`)
+                }
+            ];
 
 
-    // 특수마커를 만드는 코드
-    var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
-    var imageSize = new kakao.maps.Size(36, 52); // 마커 이미지의 이미지 크기 입니다
-    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize); // 마커 이미지를 생성합니다   
+            // 특수마커를 만드는 코드
+            var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
+            var imageSize = new kakao.maps.Size(36, 52); // 마커 이미지의 이미지 크기 입니다
+            var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize); // 마커 이미지를 생성합니다   
 
-    for (var i = 0; i < positions.length; i++) {
-        // 마커를 생성합니다
+            for (var i = 0; i < positions.length; i++) {
+                // 마커를 생성합니다
 
-        if (i == 1) {
-            var marker = new kakao.maps.Marker({
-                map: map, // 마커를 표시할 지도
-                position: positions[i].latlng, // 마커를 표시할 위치
-                title: positions[i].title,
-                image: markerImage // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
-            });
-        } else {
-            var marker = new kakao.maps.Marker({
-                map: map, // 마커를 표시할 지도
-                position: positions[i].latlng, // 마커를 표시할 위치
-                title: positions[i].title
-            });
-        }
+                if (i == 1) {
+                    var marker = new kakao.maps.Marker({
+                        map: map, // 마커를 표시할 지도
+                        position: positions[i].latlng, // 마커를 표시할 위치
+                        title: positions[i].title,
+                        image: markerImage // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+                    });
+                } else {
+                    var marker = new kakao.maps.Marker({
+                        map: map, // 마커를 표시할 지도
+                        position: positions[i].latlng, // 마커를 표시할 위치
+                        title: positions[i].title
+                    });
+                }
 
-    }
-</script>
+            }
+        </script>
 
         <!-- ======= Testimonials Section ======= -->
         <section id="testimonials" class="testimonials">
@@ -281,69 +300,76 @@
                     <!-- 리뷰 페이지 -->
                     <% if(user !=null){ %>
                         <!-- <button id="hihi">리뷰 하이</button> -->
-                    
+
                         <div style="text-align : center">
                             <a href="#shadow" id="hihi">이 곳을 클릭해서 소중한 방문 기록을 작성해주세요😊</a>
                         </div>
-                    
-                    <% } %>
-                        <div id="reviewhi">
-                    
-                        </div>
+
+                        <% } %>
+                            <div id="reviewhi">
+
+                            </div>
                 </div>
-<!-- 리뷰 페이지 -->
+                <!-- 리뷰 페이지 -->
 
                 <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                        <div class="swiper-slide">
-                            
-                        <%if(review.length==0) {%>
-                                
-                                <%} else {%>
-                            <%for(var i=0; i < review.length; i++){%>
-                            <div class="testimonial-item">
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    <ul style="display: flex; justify-content: center;">
-                                        <li>
-                                        <ol><strong>총 평가 점수</strong> : <%=review[i].eval%>점 / 5점
-                                        </ol>
-                                        <ol><strong>맛 평가</strong> : <%=review[i].t_score%>
-                                        </ol>
-                                        <ol><strong>가격 평가</strong> : <%=review[i].m_score%>
-                                        </ol>
-                                        <ol><strong>서비스 평가</strong> : <%=review[i].c_score%>
-                                        </ol>
-                                        <ol><strong>회전율 평가 </strong> : <%=review[i].cook_time%>
-                                        </ol>
-                                        <ol><strong>대기시간 평가</strong> : <%=review[i].wait_time%>
-                                        </ol>
-                                    
-                                        <p><%=review[i].contents%></p>
-                                    </li>
-                                    
-                                        <li>
-                                        <img src="\assets\img\review_img<%=review[i].pic_url.substring(30)%>" class="testimonial-img" alt=" ">
-                                    
-                                </ul>
-                                <h3><%=review[i].nick%></h3>
-                                <h4><%=review[i].re_date%></h4>
-                                </li>
-                                </p><i class="bx bxs-quote-alt-right quote-icon-right">
-                                </i>
-                            </div>
-                            
-                        <%}%>
-                    <%}%>
-                        </div><!-- End testimonial item -->
+                    <div class="swiper-slide">
 
-                    </div>
-                    <div class="swiper-pagination"></div>
+                        <%if(review.length==0) {%>
+
+                            <%} else {%>
+                                <%for(var i=0; i < review.length; i++){%>
+                                    <div class="testimonial-item">
+                                        <p>
+                                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                        <ul style="display: flex; justify-content: center;">
+                                            <li>
+                                                <ol><strong>총 평가 점수</strong> : <%=review[i].eval%>점 / 5점
+                                                </ol>
+                                                <ol><strong>맛 평가</strong> : <%=review[i].t_score%>
+                                                </ol>
+                                                <ol><strong>가격 평가</strong> : <%=review[i].m_score%>
+                                                </ol>
+                                                <ol><strong>서비스 평가</strong> : <%=review[i].c_score%>
+                                                </ol>
+                                                <ol><strong>회전율 평가 </strong> : <%=review[i].cook_time%>
+                                                </ol>
+                                                <ol><strong>대기시간 평가</strong> : <%=review[i].wait_time%>
+                                                </ol>
+
+                                                <p>
+                                                    <%=review[i].contents%>
+                                                </p>
+                                            </li>
+
+                                            <li>
+                                                <img src="\assets\img\review_img<%=review[i].pic_url.substring(30)%>"
+                                                    class="testimonial-img" alt=" ">
+
+                                        </ul>
+                                        <h3>
+                                            <%=review[i].nick%>
+                                        </h3>
+                                        <h4>
+                                            <%=review[i].re_date%>
+                                        </h4>
+                                        </li>
+                                        </p><i class="bx bxs-quote-alt-right quote-icon-right">
+                                        </i>
+                                    </div>
+
+                                    <%}%>
+                                        <%}%>
+                    </div><!-- End testimonial item -->
+
                 </div>
+                <div class="swiper-pagination"></div>
+            </div>
 
             </div>
         </section><!-- End Testimonials Section -->
 
-           
+
 
 
         <section id="services" class="services section-bg">
@@ -351,36 +377,42 @@
 
                 <div class="section-title">
                     <h2>블로그 리뷰</h2>
-                    <p>  </p>
+                    <p> </p>
                 </div>
 
-                <div class="row"  style=" border-radius: 20px;">
+                <div class="row" style=" border-radius: 20px;">
                     <%if(blog.length==0) {%>
                         등록된 블로그 리뷰가 없습니다.
                         <%} else {%>
                             <%for (var i=0; i < blog.length; i++) {%>
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style=" border-radius: 20px; width: 300px; height:300px; margin-bottom:30px;" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="icon-box iconbox-blue">
-                            <div class="icon">
-                                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke="none" stroke-width="0" fill="#f5f5f5"
-                                        d="M300,532.3542879108572C369.38199826031484,532.3153073249985,429.10787420159085,491.63046689027357,474.5244479745417,439.17860296908856C522.8885846962883,383.3225815378663,569.1668002868075,314.3205725914397,550.7432151929288,242.7694973846089C532.6665558377875,172.5657663291529,456.2379748765914,142.6223662098291,390.3689995646985,112.34683881706744C326.66090330228417,83.06452184765237,258.84405631176094,53.51806209861945,193.32584062364296,78.48882559362697C121.61183558270385,105.82097193414197,62.805066853699245,167.19869350419734,48.57481801355237,242.6138429142374C34.843463184063346,315.3850353017275,76.69343916112496,383.4422959591041,125.22947124332185,439.3748458443577C170.7312796277747,491.8107796887764,230.57421082200815,532.3932930995766,300,532.3542879108572">
-                                    </path>
-                                </svg>
-                                    <img src="\assets\img\food.png" style="z-index: 10;" width="50" height="50" viewBox="0 0 600 600">
-                                  
-                            </div>
-                            <h4><a href="<%=blog[i].b_url%>"><%=info.name%>의 블로그 리뷰 <%=(i+1)%></a></h4>
-                            <%if(blog.length !=0 & blog[i].ad_nonad==0) {%>
-                            <p>네이버 실제 방문 리뷰입니다</p>
-                            <%} else {%>
-                                <p>네이버 광고 리뷰입니다</p>
+                                <div class="col-lg-4 col-md-6 d-flex align-items-stretch"
+                                    style=" border-radius: 20px; width: 300px; height:300px; margin-bottom:30px;"
+                                    data-aos="zoom-in" data-aos-delay="100">
+                                    <div class="icon-box iconbox-blue">
+                                        <div class="icon">
+                                            <svg width="100" height="100" viewBox="0 0 600 600"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke="none" stroke-width="0" fill="#f5f5f5"
+                                                    d="M300,532.3542879108572C369.38199826031484,532.3153073249985,429.10787420159085,491.63046689027357,474.5244479745417,439.17860296908856C522.8885846962883,383.3225815378663,569.1668002868075,314.3205725914397,550.7432151929288,242.7694973846089C532.6665558377875,172.5657663291529,456.2379748765914,142.6223662098291,390.3689995646985,112.34683881706744C326.66090330228417,83.06452184765237,258.84405631176094,53.51806209861945,193.32584062364296,78.48882559362697C121.61183558270385,105.82097193414197,62.805066853699245,167.19869350419734,48.57481801355237,242.6138429142374C34.843463184063346,315.3850353017275,76.69343916112496,383.4422959591041,125.22947124332185,439.3748458443577C170.7312796277747,491.8107796887764,230.57421082200815,532.3932930995766,300,532.3542879108572">
+                                                </path>
+                                            </svg>
+                                            <img src="\assets\img\food.png" style="z-index: 10;" width="50" height="50"
+                                                viewBox="0 0 600 600">
+
+                                        </div>
+                                        <h4><a href="<%=blog[i].b_url%>">
+                                                <%=info.name%>의 블로그 리뷰 <%=(i+1)%>
+                                            </a></h4>
+                                        <%if(blog.length !=0 & blog[i].ad_nonad==0) {%>
+                                            <p>네이버 실제 방문 리뷰입니다</p>
+                                            <%} else {%>
+                                                <p>네이버 광고 리뷰입니다</p>
+                                                <%}%>
+                                    </div>
+                                </div>
                                 <%}%>
-                        </div>
-                    </div>
-                    <%}%>
-                    <%}%>
-                 
+                                    <%}%>
+
         </section><!-- End Sevices Section -->
 
 
@@ -392,101 +424,101 @@
             class="bi bi-arrow-up-short"></i></a>
 
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="/assets/vendor/purecounter/purecounter.js"></script>
-<script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="/assets/js/appear.js"></script>
-<!-- 자동완성 jquery script -->
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script>
-    $(function () {   //화면 로딩후~
-        $("#search").autocomplete({
-            source: ['왕자관'
-                , '신성식당'
-                , '900달러'
-                , '미미당'
-                , '등촌칼국수'
-                , '낙지한마당'
-                , '종가집'
-                , '월계수식당'
-                , '해뜨는집'
-                , '풍남옥'
-                , '홍능갈비'
-                , '민속촌'
-                , '두레식당'
-                , '1515짜장면'
-                , '오대양횟집'
-                , '3.6식당'
-                , '고려조삼계탕'
-                , '해안식당'
-                , '홍도'
-                , '본전소머리국밥'
-                , '맛집한겨레'
-                , '열도지'
-                , '동부식당'
-                , '청진동해장국'
-                , '잘먹었습니다'
-                , '굴마을'
-                , '구수향'
-                , '춘자생태탕'
-                , '참뫼'
-                , '고봉민김밥인'
-                , '이삭토스트'
-                , '수라상'
-                , '삼진식육식당'
-                , '엄마주방'
-                , '일흥식당'
-                , '영성원'
-                , '마한지'
-                , '말리화반점'
-                , '양촌추어탕'
-                , '화랑궁회관'
-                , '산수모밀'
-                , '신신식당'
-                , '인천닭곰탕'
-                , '임실댁 가마솥 추어탕'
-                , '진진설곰탕'
-                , '박순자 녹두집'
-                , '강황울금국밥'
-                , '좋은국밥'
-                , '시안'
-                , '고기집중'
-                , '역전우동0410'
-                , '대접'
-                , '별채'
-                , '고피자'
-                , '시바카레'
-                , '1966생면파스타'
-                , '청춘덮밥'
-                , '호시마츠라멘'
-                , '밥도둑'
-                , '신묘한 곱도리식당'
-                , '돈부리바쇼 유메노덴'
-                , '손수김밥'
-                , '시골집'
-                , '서울깍두기'
-                , '통큰경양식'
-                , '칠우불고기'
-                , '롯데리아'
-                , '전부'
-                , '고향청국장'
-                , '궁동시골밥상'
-                , '마네키'
-                , '하동정'
-                , '소복'
-                , '솔밭솥밥'
-                , '뼈대있는집 감자탕'
-                , '피자헛'],   // data.js파일 안의 List
-            focus: function (event, ui) { // 방향키로 자동완성단어 선택 가능하게 만들기   
-                return false;
-            },
-            minLength: 1,// 최소 글자
-            delay: 100,   //autocomplete 딜레이 시간(ms)
-            //disabled: true, //자동완성 기능 끄기
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/assets/vendor/purecounter/purecounter.js"></script>
+    <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/js/appear.js"></script>
+    <!-- 자동완성 jquery script -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {   //화면 로딩후~
+            $("#search").autocomplete({
+                source: ['왕자관'
+                    , '신성식당'
+                    , '900달러'
+                    , '미미당'
+                    , '등촌칼국수'
+                    , '낙지한마당'
+                    , '종가집'
+                    , '월계수식당'
+                    , '해뜨는집'
+                    , '풍남옥'
+                    , '홍능갈비'
+                    , '민속촌'
+                    , '두레식당'
+                    , '1515짜장면'
+                    , '오대양횟집'
+                    , '3.6식당'
+                    , '고려조삼계탕'
+                    , '해안식당'
+                    , '홍도'
+                    , '본전소머리국밥'
+                    , '맛집한겨레'
+                    , '열도지'
+                    , '동부식당'
+                    , '청진동해장국'
+                    , '잘먹었습니다'
+                    , '굴마을'
+                    , '구수향'
+                    , '춘자생태탕'
+                    , '참뫼'
+                    , '고봉민김밥인'
+                    , '이삭토스트'
+                    , '수라상'
+                    , '삼진식육식당'
+                    , '엄마주방'
+                    , '일흥식당'
+                    , '영성원'
+                    , '마한지'
+                    , '말리화반점'
+                    , '양촌추어탕'
+                    , '화랑궁회관'
+                    , '산수모밀'
+                    , '신신식당'
+                    , '인천닭곰탕'
+                    , '임실댁 가마솥 추어탕'
+                    , '진진설곰탕'
+                    , '박순자 녹두집'
+                    , '강황울금국밥'
+                    , '좋은국밥'
+                    , '시안'
+                    , '고기집중'
+                    , '역전우동0410'
+                    , '대접'
+                    , '별채'
+                    , '고피자'
+                    , '시바카레'
+                    , '1966생면파스타'
+                    , '청춘덮밥'
+                    , '호시마츠라멘'
+                    , '밥도둑'
+                    , '신묘한 곱도리식당'
+                    , '돈부리바쇼 유메노덴'
+                    , '손수김밥'
+                    , '시골집'
+                    , '서울깍두기'
+                    , '통큰경양식'
+                    , '칠우불고기'
+                    , '롯데리아'
+                    , '전부'
+                    , '고향청국장'
+                    , '궁동시골밥상'
+                    , '마네키'
+                    , '하동정'
+                    , '소복'
+                    , '솔밭솥밥'
+                    , '뼈대있는집 감자탕'
+                    , '피자헛'],   // data.js파일 안의 List
+                focus: function (event, ui) { // 방향키로 자동완성단어 선택 가능하게 만들기   
+                    return false;
+                },
+                minLength: 1,// 최소 글자
+                delay: 100,   //autocomplete 딜레이 시간(ms)
+                //disabled: true, //자동완성 기능 끄기
+            });
         });
-    });
-</script>
+    </script>
 </body>
 
 </html>
