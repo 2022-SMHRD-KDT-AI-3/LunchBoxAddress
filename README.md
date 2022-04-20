@@ -9,6 +9,10 @@
 	ex) 로그인 기능 버그 수정 - 찬둘루
 6. push 코멘트는 자기가 개발한 기능과 자신의 이름 적기
 	ex) 로그인 기능 버그 수정 - 찬둘루
+	
+	
+	
+
 ##대표이미지
 ![main](https://user-images.githubusercontent.com/80933744/164146706-177ddd1f-3f34-4da5-b527-20d8c66ac797.jpg)
 ![세부](https://user-images.githubusercontent.com/80933744/164146715-baec17aa-37f5-46ed-8b5d-d3a8a5cb73cb.jpg)
