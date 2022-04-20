@@ -9,10 +9,12 @@
 	ex) 로그인 기능 버그 수정 - 찬둘루
 6. push 코멘트는 자기가 개발한 기능과 자신의 이름 적기
 	ex) 로그인 기능 버그 수정 - 찬둘루
-	
-	
-	
 
+##서비스소개	
+1. 서비스 소개
+- 스마트 인재 개발원 수강생들을 위한 식당 및 점심메뉴 추천 서비스
+- Challenge Point : 추천 알고리즘(코사인 유사도 활용)
+	
 ##대표이미지
 ![main](https://user-images.githubusercontent.com/80933744/164146706-177ddd1f-3f34-4da5-b527-20d8c66ac797.jpg)
 ![세부](https://user-images.githubusercontent.com/80933744/164146715-baec17aa-37f5-46ed-8b5d-d3a8a5cb73cb.jpg)
