@@ -63,5 +63,3 @@
 # 대표이미지
 ✅ 메인 페이지
 ![main](https://user-images.githubusercontent.com/80933744/164146706-177ddd1f-3f34-4da5-b527-20d8c66ac797.jpg)
-✅ 식당 페이지
-![세부](https://user-images.githubusercontent.com/80933744/164146715-baec17aa-37f5-46ed-8b5d-d3a8a5cb73cb.jpg)
